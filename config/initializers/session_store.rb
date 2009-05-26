@@ -6,7 +6,7 @@
 # no regular words or you'll be exposed to dictionary attacks.
 ActionController::Base.session = {
   :key         => '_bims_session',
-  :secret      => '63870bc0a91df3c441b50973bf0f15fae4616645a3c0e7d4dd554945a7810240cd1e8005029915eacab0707c63e08670572005d009a555ba7f2d01b3b49f93e3'
+  :secret      => '88559d4ef5313f283588fd9736edfb6a7cd980e8aa2291f5cb46b8f8397913d09aea71cb2a1622084da84e78e6f91e5a8130cde5bbc552a65994a7b3d3640917'
 }
 
 # Use the database for sessions instead of the cookie-based default,

@@ -1,0 +1,6 @@
+<h1>Edit Item</h1>
+<%=error_messages_for :item,:status %>
+<% form_for :itemgit do |form| %>
+  <%=render :partial=> "shared/item_fields", :locals=>{:fields=>@item_fields} %>
+  <%=form.submit "Create" %>
+<% end %>

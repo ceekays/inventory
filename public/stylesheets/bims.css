@@ -1,0 +1,19 @@
+html,body{
+  margin:0px;
+  padding:0px;
+  height:100%;
+  backgound-color:Background;
+}
+
+#container{
+  height:100%;
+  width:77%;
+  margin:0px auto;
+  background-color:whiteSmoke;
+}
+form {
+  text-align:justify;
+}
+form label {
+  display:block;
+}

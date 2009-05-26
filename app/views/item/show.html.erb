@@ -1,0 +1,8 @@
+<h1><%=@item.name%></h1>
+<div id="viewport" class="show_options">
+  <p><strong>Model:</strong> <%=@item.model%></p>
+  <p><strong>Serial Number:</strong> <%=@item.serial_number %></p>
+  <p><strong>Status:</strong> <%=@item.statuses.last.message %></p>
+  <p><strong>Reason:</strong> <%=@item.statuses.last.message %></p>
+  <p><strong>Status updated on:</strong> <%=h(@item.statuses.last.updated_at)%></p>
+</div>

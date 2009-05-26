@@ -1,0 +1,21 @@
+<% fields_for :item, @item do |i|%>
+  <%= i.label(:name,"Item Name/Brand") +
+    i.text_field(:name) +
+    tag(:br) if fields.include? :name %>
+  <%= i.label(:model, "Item Model") +
+    i.text_field(:model) +
+    tag(:br) if fields.include? :model %>
+  <%= i.label(:serial_number, "Serial Number for Item") +
+    i.text_field(:serial_number) +
+    tag(:br) if fields.include? :serial_number%>
+  <%= i.label(:barcode, "Barcode for Item") +
+    i.text_field(:barcode) +
+    tag(:br) if fields.include? :barcode %>
+  <%= i.label(:category, "Item Category") +
+    i.text_field(:category) +
+    tag(:br) if fields.include? :category%>
+  <%= i.label(:manufacturer,"Item Manufacturer") +
+    i.text_field(:manufacturer) +
+    tag(:br) if fields.include? :manufacturer %>
+<% end %>
+

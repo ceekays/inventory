@@ -1,0 +1,17 @@
+<% fields_for :status do |s|%>
+  <%=s.label(:message) +
+    s.text_field(:message) +
+    tag(:br) if fields.include? :message%>
+  <%=s.label(:reason) +
+    s.text_field(:reason) +
+    tag(:br) if fields.include? :reason %>
+  <%=s.label(:owner) +
+    s.text_field(:owner) +
+    tag(:br) if fields.include? :owner %>
+  <%=s.label(:location) +
+    s.text_field(:location) +
+    tag(:br) if fields.include? :location%>
+  <%=s.label(:storage_code) +
+    s.text_field(:storage_code) +
+    tag(:br) if fields.include? :storage_code%>
+<% end %>

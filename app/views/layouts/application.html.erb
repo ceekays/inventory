@@ -1,4 +1,21 @@
-<title><%=@pagetitle%></title>
-<h3><%= flash[:notice]%></h3> 
-<%= yield %> <!%=@my_content%>
-
+<html>
+  <head>
+    <title>BIMS</title>
+    <!%=javascript_include_tag "touchscreenToolkit","ttlite" %>
+    <%=stylesheet_link_tag "screen" %>
+  </head>
+  <body>
+    <table id="screen">
+      <tbody>
+        <tr valign="top">
+          <td id="left" class="view">
+            <%=yield%>
+          </td>
+          <td id="right" class="view">
+            <%= render(:partial=>"shared/task_list", :locals=>{:tasks=>@tasks})%>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

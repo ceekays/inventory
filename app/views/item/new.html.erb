@@ -1,0 +1,7 @@
+<h1>New Item</h1>
+<%=error_messages_for :item,:status %>
+<% form_for :item do |form| %>
+  <%=render :partial=> "shared/item_fields", :locals=>{:fields=>@item_fields} %>
+  <%=render :partial=> "shared/status_fields", :locals=>{:fields=>@status_fields} %>
+  <%=form.submit "Create" %>
+<% end %>

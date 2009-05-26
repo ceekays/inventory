@@ -1,3 +1,4 @@
+<<<<<<< HEAD:README
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create 
@@ -241,3 +242,9 @@ vendor
   External libraries that the application depends on. Also includes the plugins subdirectory.
   If the app has frozen rails, those gems also go here, under vendor/rails/.
   This directory is in the load path.
+=======
+This is a simple inventory simple for Baobab Health Trust.
+It is used for managing items in the warehouse
+Developers: Ceekays and Mile
+Comments: <kodwani,edmond,developers> (at) baobabhealth.org
+>>>>>>> 44d61cfd31851e0031bf40840bb6fcfbfd2106f6:README

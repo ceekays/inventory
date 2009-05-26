@@ -1,0 +1,15 @@
+<h1>Incoming Items</h1>
+<p>
+<%="Change new status for <strong>#{@item.name}(serial #{@item.serial_number})</strong>" +
+  tag(:br)  if @item
+%>
+<% form_for :item  do |form| %>
+  <% unless @status_fields%>
+    <%= form.label(:barcode,"Scan for item:") + form.text_field(:barcode) + form.submit("Go") %>
+  <% else %>
+    <%=form.hidden_field(:id, :value=>@item.id) %>
+    <%= render :partial=> "shared/status_fields", :locals=>{:fields=>@status_fields}%>
+    <%= form.submit "save" %>
+  <% end %>
+<% end %>
+</p>

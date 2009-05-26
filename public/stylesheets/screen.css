@@ -1,0 +1,30 @@
+html, body {
+  margin:0;
+  padding:0;
+}
+#screen {
+  height:100%;
+  margin:0 auto;
+  width:100%;
+}
+#left {
+}
+#right {
+  width:17em;
+}
+select {
+}
+.tasks input {
+  //font-size:large;
+  font-weight:bold;
+  padding:1em;
+  text-align:left;
+  width:15em;
+}
+.view {
+  //background-color:threedface;
+  border:2px outset threedshadow;
+  color:infotext;
+  font-size:large;
+  padding:1em;
+}
