@@ -1,8 +1,0 @@
-<h3><%=@pagetitle %></h3>
-<%= error_messages_for "users" %>
-
-<% form_tag :action => 'new' do %>
-	<%= render :partial => 'form2'%>
-	<%= submit_tag "Create" %>
-<%end%>
-<%= button_to "Back to Menu",{:action=> "index"}%>

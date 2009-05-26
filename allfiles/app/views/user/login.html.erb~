@@ -1,6 +1,0 @@
-<% form_for :users do |form| %>
-
-	<%= render :partial => 'form1'%>
-	<input type = 'submit' name = 'submit' value = 'Login'>
-	<input type = 'reset' name = 'reset' value = 'Clear'>
-<%end%>

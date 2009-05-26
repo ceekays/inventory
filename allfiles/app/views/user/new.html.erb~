@@ -1,8 +1,0 @@
-<% form_tag :action => 'new' do %>
-<%= error_messages_for "users" %>
-	
-	<%= render :partial => 'form2'%>
-	<%= submit_tag "Create" %>
-	<!-- input type = 'reset' name = 'reset' value = 'Clear'-->
-
-<%end%>

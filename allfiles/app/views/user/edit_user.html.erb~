@@ -1,7 +1,0 @@
-<%= error_messages_for "users" %>
-
-<% form_tag :action => 'search_user' do %>
-	<%= render :partial => 'form1'%>
-	
-	<%= submit_tag "Update" %>
-<%end%>

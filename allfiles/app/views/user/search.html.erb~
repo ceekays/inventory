@@ -1,6 +1,0 @@
-<%= error_messages_for "users" %>
-
-	<% form_tag :action => 'list' do %>
-	<%= render :partial => 'form1'%>
-	<%= submit_tag "Go" %>
-<%end%>
