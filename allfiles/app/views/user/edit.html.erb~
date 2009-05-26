@@ -1,0 +1,8 @@
+<%= error_messages_for "users" %>
+
+<% form_for :user, @user do %>
+	<%= render :partial => 'form2'%>
+	<%= hidden_field_tag 'update', 'true' %>	
+
+	<%= submit_tag "Update" %>
+<%end%>
