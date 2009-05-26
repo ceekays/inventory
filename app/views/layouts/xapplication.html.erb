@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Exploitable 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20090327
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!-- title><%# =@pagetitle || @page.pg_title%></title -->
+<title><%=@pagetitle%></title>
+<!link href="touch.css" rel="stylesheet" type="text/css" media="screen" />
+<!%= stylesheet_link_tag 'touch'%>
+<!%= javascript_include_tag :defaults %>
+<!%= javascript_include_tag 'touchscreenToolkit', 'ajax_scaffold' %>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#"> <%= "Using Ruby on Rails" %> </a></h1>
+			<p><! Based on design by <a href="http://www.freecsstemplates.org/"><!Free CSS Templates</a></p>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+	<div id="page-bgtop">
+	<div id="page-bgbtm">
+		<div id="content">
+			<div class="post">
+			<div class="post-bgtop">
+			<div class="post-bgbtm">
+				<!-- h1 class="title"><a href="#"> <%# = @my_title||@page.pg_heading %>  </a></h1 -->
+				<h1 class="title"><a href="#"> <%= @my_title%>  </a></h1>
+				<p class="meta"><%=@my_comment  %></p>
+				<div class="entry">
+					<p>
+                  <h3><%= flash[:notice]%></h3> 
+					   <%= yield %> <!%=@my_content%>
+					</p>
+				</div>
+			</div>
+			</div>
+			</div>
+					<div style="clear: both;">&nbsp;</div>
+		</div>
+</div>
+</body>
+</html>
