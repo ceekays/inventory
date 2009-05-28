@@ -1,2 +1,5 @@
-#ignore all yml files
-*.yml
+
+*.yml #ignore all yml files
+*.swp #ignore all swap files
+*~  #ignore all temporary files
+*.sql #ignore all sql files
