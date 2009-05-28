@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :roles
   
   map.with_options(:controller => "user") do |direct|
-    direct.user_to "/:action/:id", :action => 'edit' # helps the edit action not to lose the  user 'id'
+    direct.edit_to "/:action/:id", :action => 'edit' # helps the edit action not to lose the  user 'id'
   end
   # The priority is based upon order of creation: first created -> highest priority.
 

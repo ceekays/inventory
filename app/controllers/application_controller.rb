@@ -17,21 +17,27 @@ class ApplicationController < ActionController::Base
   
   def login
     session[:user_id] = nil
-    user = User.authenticate(username, password)
-    if user
-      session[:user_id] = user.id
-      session[:username] = user.username
-      
-      url = session[:original_url]
-      session[:original_url] = nil
-      
-      #return the user to the previous url or just redirect them to 'home page'
-      redirect_to (url || {action => 'home'})
-      flash[:notice] = "Welcome #{session[:username]}," + 
-                        "you have succesfully logged in"
-          
-    else
-      flash[:notice] = "Invalid user/password combination"
+    
+
+    if request.post?
+    username =  params[:user][:username]
+    password = params[:user][:password]
+    user = User.authenticate(username,password)
+      if user
+        session[:user_id] = user.id
+        session[:username] = user.username
+        
+        url = session[:original_url]
+        session[:original_url] = nil
+        
+        #return the user to the previous url or just redirect them to 'home page'
+        redirect_to (url || {:action => 'index'})
+        flash[:notice] = "Welcome #{session[:username]}," + 
+                          "you have succesfully logged in"
+            
+      else
+        flash[:notice] = "Invalid user/password combination"
+      end
     end
   end
   #============================================================================= 
@@ -41,9 +47,8 @@ class ApplicationController < ActionController::Base
   def logout
     session[:user_id] = nil
     session[:username] = nil
-    
-    flash[:notice] = "You have logged out"
     redirect_to :action =>'index'
+    flash[:notice] = "You have logged out"
   end
   
   #==========================================================================
@@ -58,10 +63,10 @@ class ApplicationController < ActionController::Base
   private
   
   def authorize
-     unless User.find_by_user_id(session[:user_id])
+     unless User.find_by_id(session[:user_id])
        session[:original_uri] = request.request_uri
        flash[:notice] = "Please log in"
-       redirect_to(:controller => "viewer" , :action => "show", :name=> "login" )
+       redirect_to(:action => "login" )
      end
   end
   

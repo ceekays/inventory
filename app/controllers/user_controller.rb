@@ -1,8 +1,12 @@
 class UserController < ApplicationController
 
   # find 'login' and 'logout' in ApplicationController
-  
+  #before_filter :authorize, :except   => :login
   # creates a new user in the database 
+  
+  def index
+    @pagetitle = 'Main Menu'
+  end
   def new
     @pagetitle = 'Create New User'
     @user = User.new(params[:user])
