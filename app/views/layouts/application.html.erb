@@ -1,6 +1,13 @@
+<head>
 <title><%=@pagetitle%></title>
+<link href="touch.css" rel="stylesheet" type="text/css" media="screen" />
+<%= stylesheet_link_tag 'touch'%>
+<!%= javascript_include_tag :defaults %>
+<%= javascript_include_tag 'touchscreenToolkit', 'ajax_scaffold' %>
+</head>
+
 <h3><%= flash[:notice]%></h3> 
-<%= yield %> <!%=@my_content%>
+<%= yield %> <%=@my_content%>
 <%# if User.method != 'index' then %>
 <%= link_to "Back to Menu",{:action=> "index"} unless current_page? :action => "index" %> 
 <%#end%>

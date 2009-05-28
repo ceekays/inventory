@@ -1,7 +1,0 @@
-<title><%=@pagetitle%></title>
-<h3><%= flash[:notice]%></h3> 
-<%= yield %> <!%=@my_content%>
-<%# if User.method != 'index' then %>
-<%= button_to "Back to Menu",{:action=> "index"} unless current_page? :action => "index" %> 
-<%#end%>
-
