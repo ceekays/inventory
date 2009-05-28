@@ -21481,3 +21481,17 @@ Rendering template within layouts/application
 Rendering item/list
 Rendered shared/_task_list (0.4ms)
 Completed in 33ms (View: 3, DB: 3) | 200 OK [http://localhost/item/list]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#list (for 127.0.0.1 at 2009-05-28 12:52:37) [GET]
+  Parameters: {"authenticity_token"=>"bE0884GoQkNn3oI15XO21cLe7iq8JjxOEUkvuhTaV0k="}
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` [0m
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mStatus Load (0.2ms)[0m   [0mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id IN (1,2,3)) [0m
+  [4;36;1mStatus Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `statuses`[0m
+Rendering template within layouts/application
+Rendering item/list
+Rendered shared/_task_list (0.1ms)
+Completed in 33ms (View: 3, DB: 3) | 200 OK [http://localhost/item/list]

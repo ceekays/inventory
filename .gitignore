@@ -1,2 +1,4 @@
 #ignore all yml files
 *.yml
+*.swp
+*.log
