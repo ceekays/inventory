@@ -3,6 +3,8 @@ ActionController::Routing::Routes.draw do |map|
   # Sample of regular route:
   map.item "/item/:action/:id", :controller=>"item"
   map.track "/track/:action/:id", :controller=>"track"
+  map.main "/main/:action/:id", :controller=>"main"
+  map.user "/user/:action/:id", :controller=>"user"
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action
 

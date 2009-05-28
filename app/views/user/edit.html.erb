@@ -1,8 +1,8 @@
 <%= error_messages_for "user" %>
 
 <% form_for :user,@user do |form|%>
-	<%= render :partial => 'form2'%>
-	<!%= form.hidden_field 'update', 'true' %>	
+  <%= render :partial => 'form2'%>
+  <!%= form.hidden_field 'update', 'true' %>
 
-	<%= form.submit "Update" %>
+  <%= form.submit "Update" %>
 <%end%>

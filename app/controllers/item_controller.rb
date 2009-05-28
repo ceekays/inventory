@@ -1,13 +1,10 @@
 class ItemController < ApplicationController
   def new
     if request.post?
-      item=Item.new(params[:item])
-      status=Status.new(params[:status])
-      status.message="item in"
-      item.statuses << status
+      item=Item.new(params[:item]) if params[:item]
       if item.save
         flash[:notice] = "Item registration successful."
-        redirect_to root_path
+        redirect_to item_path(:show,item)
       else
         flash[:error] = "Item registration failed."
       end
@@ -29,12 +26,12 @@ class ItemController < ApplicationController
     else
       @item_fields = [:name,:model,:serial_number,:barcode,:category,:manufacturer]
       @item=Item.find(params[:id])
-    end
+    end if params[:id]
   end
 
   def find
     if request.post?
-      query=params[:item][:query]
+      query=params[:item][:query] if params[:item][:query]
       @items=Item.find(:all,
         :conditions=>[
           "name LIKE  ? OR model LIKE ? OR category LIKE ? OR serial_number LIKE ?",
@@ -58,18 +55,12 @@ class ItemController < ApplicationController
     else
       @items=Item.find(:all,:include=>:statuses)
     end
-    @items_opts=@items.collect{|i| ["#{i.name}(Serial Number: #{i.serial_number})",i.id]} if @items
-    @tasks=[
-        ["Show", item_path(:show,@item)],
-        ["Edit", item_path(:edit,@item)],
-        ["Incoming", item_path(:item_in,@item)],
-        ["Outgoing", item_path(:item_out,@item)],
-      ] if @items
   end
 
   def show
     if params[:id]
       @item=Item.find(params[:id],:include=>:statuses)
+      @item_status = @item.statuses.last || nil
       @tasks=[
         ["Show", item_path(:show,@item)],
         ["Edit", item_path(:edit,@item)],

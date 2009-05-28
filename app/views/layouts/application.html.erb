@@ -1,8 +1,8 @@
 <html>
   <head>
     <title>BIMS</title>
-    <!%=javascript_include_tag "touchscreenToolkit","ttlite" %>
-    <%=stylesheet_link_tag "screen" %>
+    <%=javascript_include_tag "touchscreenToolkit"%>
+    <%=stylesheet_link_tag "screen","touch" %>
   </head>
   <body>
     <table id="screen">
@@ -11,8 +11,8 @@
           <td id="left" class="view">
             <%=yield%>
           </td>
-          <td id="right" class="view">
-            <%= render(:partial=>"shared/task_list", :locals=>{:tasks=>@tasks})%>
+          <td id="right" class="view" >
+            <%= render(:partial=>"shared/task_list", :locals=>{:tasks=>@tasks}) %>
           </td>
         </tr>
       </tbody>

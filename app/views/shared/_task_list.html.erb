@@ -1,8 +1,7 @@
 <div class="tasks">
   <% @tasks.each do |text,action| -%>
-  <%= button_to text,action,:method=>:get %>
+  <%= link_to text,action,:method=>:get%>
   <% end if @tasks %>
-  <%= button_to "Back",root_path,:method=>:get%>
 <div>
 
 

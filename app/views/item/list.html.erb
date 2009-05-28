@@ -1,4 +1,16 @@
 <h1>Item list</h1>
 <p>
-  <%=select_tag(:id,options_for_select(@items_opts),:size=>5)%>
+  <select size=5>
+    <% @items.each do |item| %>
+      <optgroup label="<%=item.name %>">
+        <option value="#{item.id}">
+          <% if  item.serial_number %>
+            <%="Serial Number: #{item.serial_number}" %>
+          <% elsif item.model %>
+            <%="Model: #{item.model}" %>
+          <% end %>
+        </option>
+      </optgroup>
+    <% end %>
+  </select>
 </p>
