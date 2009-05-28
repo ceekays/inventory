@@ -21495,3 +21495,1099 @@ Rendering template within layouts/application
 Rendering item/list
 Rendered shared/_task_list (0.1ms)
 Completed in 33ms (View: 3, DB: 3) | 200 OK [http://localhost/item/list]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-05-28 13:33:09) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (0.7ms)
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 127.0.0.1 at 2009-05-28 13:33:14) [GET]
+  Parameters: {"authenticity_token"=>"/iKE5CcRwu0i7bIW5+rdD1NYvLYSOgBwXzqADT0La34="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.2ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 127.0.0.1 at 2009-05-28 13:36:02) [POST]
+  Parameters: {"authenticity_token"=>"/iKE5CcRwu0i7bIW5+rdD1NYvLYSOgBwXzqADT0La34=", "item"=>{"query"=>"phone"}}
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (name LIKE '%phone%' OR model LIKE '%phone%' OR category LIKE '%phone%' OR serial_number LIKE '%phone%') [0m
+  [4;36;1mItem Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Redirected to http://localhost:3000/item/list/1%2F2%2F3
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#list (for 127.0.0.1 at 2009-05-28 13:36:02) [GET]
+  Parameters: {"id"=>"1/2/3"}
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` IN (1,2,3)) [0m
+Rendering template within layouts/application
+Rendering item/list
+Rendered shared/_task_list (0.3ms)
+Completed in 18ms (View: 6, DB: 2) | 200 OK [http://localhost/item/list/1%2F2%2F3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-05-28 13:40:00) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (0.7ms)
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 127.0.0.1 at 2009-05-28 13:53:22) [GET]
+  Parameters: {"authenticity_token"=>"oDqDbsbLyrXENTViijHSBVDi67Oh0JLLgBtm9sayuts="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.2ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 127.0.0.1 at 2009-05-28 14:00:46) [GET]
+  Parameters: {"authenticity_token"=>"oDqDbsbLyrXENTViijHSBVDi67Oh0JLLgBtm9sayuts="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.2ms)
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 192.168.5.98 at 2009-05-28 14:23:40) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.0ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:23:45) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.2ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:23:57) [POST]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "item"=>{"query"=>"Phones"}}
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (name LIKE '%Phones%' OR model LIKE '%Phones%' OR category LIKE '%Phones%' OR serial_number LIKE '%Phones%') [0m
+  [4;36;1mItem Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Redirected to http://192.168.5.116:3000/item/show/3
+Completed in 9ms (DB: 1) | 302 Found [http://192.168.5.116/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 192.168.5.98 at 2009-05-28 14:23:57) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mItem Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;35;1mStatus Load (0.1ms)[0m   [0mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 3) [0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (0.7ms)
+Completed in 18ms (View: 2, DB: 1) | 200 OK [http://192.168.5.116/item/show/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#edit (for 192.168.5.98 at 2009-05-28 14:24:03) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "id"=>"3"}
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering item/edit
+Rendered shared/_item_fields (5.5ms)
+Rendered shared/_task_list (0.2ms)
+Completed in 22ms (View: 10, DB: 2) | 200 OK [http://192.168.5.116/item/edit/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 192.168.5.98 at 2009-05-28 14:24:13) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.1ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/?no_auto_load_forms=true]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:24:15) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.1ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/item/find]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:24:26) [POST]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "item"=>{"query"=>"Nokia"}}
+  [4;36;1mItem Load (0.5ms)[0m   [0;1mSELECT * FROM `items` WHERE (name LIKE '%Nokia%' OR model LIKE '%Nokia%' OR category LIKE '%Nokia%' OR serial_number LIKE '%Nokia%') [0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Redirected to http://192.168.5.116:3000/item/list/1%2F2
+Completed in 15ms (DB: 2) | 302 Found [http://192.168.5.116/item/find]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#list (for 192.168.5.98 at 2009-05-28 14:24:26) [GET]
+  Parameters: {"id"=>"1/2"}
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` IN (1,2)) [0m
+Rendering template within layouts/application
+Rendering item/list
+Rendered shared/_task_list (0.2ms)
+Completed in 18ms (View: 5, DB: 2) | 200 OK [http://192.168.5.116/item/list/1%2F2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:24:27) [POST]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "item"=>{"query"=>"Nokia"}}
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (name LIKE '%Nokia%' OR model LIKE '%Nokia%' OR category LIKE '%Nokia%' OR serial_number LIKE '%Nokia%') [0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Redirected to http://192.168.5.116:3000/item/list/1%2F2
+Completed in 14ms (DB: 2) | 302 Found [http://192.168.5.116/item/find]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#list (for 192.168.5.98 at 2009-05-28 14:24:27) [GET]
+  Parameters: {"id"=>"1/2"}
+  [4;36;1mItem Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` IN (1,2)) [0m
+Rendering template within layouts/application
+Rendering item/list
+Rendered shared/_task_list (0.1ms)
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://192.168.5.116/item/list/1%2F2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 192.168.5.98 at 2009-05-28 14:24:50) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (0.8ms)
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://192.168.5.116/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrackController#item_in (for 192.168.5.98 at 2009-05-28 14:24:54) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8="}
+Rendering template within layouts/application
+Rendering track/item_in
+Rendered shared/_task_list (0.2ms)
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://192.168.5.116/track/item_in]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 192.168.5.98 at 2009-05-28 14:25:02) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.2ms)
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/?no_auto_load_forms=true]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:25:04) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.2ms)
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://192.168.5.116/item/find]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:25:27) [POST]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "item"=>{"query"=>"Phillips"}}
+  [4;36;1mItem Load (0.5ms)[0m   [0;1mSELECT * FROM `items` WHERE (name LIKE '%Phillips%' OR model LIKE '%Phillips%' OR category LIKE '%Phillips%' OR serial_number LIKE '%Phillips%') [0m
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Redirected to http://192.168.5.116:3000/item/show/3
+Completed in 14ms (DB: 2) | 302 Found [http://192.168.5.116/item/find]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 192.168.5.98 at 2009-05-28 14:25:27) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;36;1mStatus Load (0.2ms)[0m   [0;1mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 3) [0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (1.0ms)
+Completed in 28ms (View: 4, DB: 2) | 200 OK [http://192.168.5.116/item/show/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#item_in (for 192.168.5.98 at 2009-05-28 14:25:37) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "id"=>"3"}
+
+ActionController::UnknownAction (No action responded to item_in. Actions: edit, find, list, new, and show):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 192.168.5.98 at 2009-05-28 14:25:53) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.1ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:25:56) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.1ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://192.168.5.116/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:26:12) [POST]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "item"=>{"query"=>"Phillips"}}
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (name LIKE '%Phillips%' OR model LIKE '%Phillips%' OR category LIKE '%Phillips%' OR serial_number LIKE '%Phillips%') [0m
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Redirected to http://192.168.5.116:3000/item/show/3
+Completed in 14ms (DB: 2) | 302 Found [http://192.168.5.116/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 192.168.5.98 at 2009-05-28 14:26:12) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;35;1mStatus Load (0.2ms)[0m   [0mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 3) [0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (0.7ms)
+Completed in 24ms (View: 3, DB: 2) | 200 OK [http://192.168.5.116/item/show/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 127.0.0.1 at 2009-05-28 14:26:38) [GET]
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.2ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/item/find]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-05-28 14:26:49) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.1ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 127.0.0.1 at 2009-05-28 14:27:07) [GET]
+  Parameters: {"authenticity_token"=>"oDqDbsbLyrXENTViijHSBVDi67Oh0JLLgBtm9sayuts="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.2ms)
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/item/find]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 127.0.0.1 at 2009-05-28 14:27:18) [POST]
+  Parameters: {"authenticity_token"=>"oDqDbsbLyrXENTViijHSBVDi67Oh0JLLgBtm9sayuts=", "item"=>{"query"=>"phillps"}}
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM `items` WHERE (name LIKE '%phillps%' OR model LIKE '%phillps%' OR category LIKE '%phillps%' OR serial_number LIKE '%phillps%') [0m
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.2ms)
+Completed in 15ms (View: 4, DB: 1) | 200 OK [http://localhost/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 127.0.0.1 at 2009-05-28 14:27:29) [POST]
+  Parameters: {"authenticity_token"=>"oDqDbsbLyrXENTViijHSBVDi67Oh0JLLgBtm9sayuts=", "item"=>{"query"=>"Phillips"}}
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (name LIKE '%Phillips%' OR model LIKE '%Phillips%' OR category LIKE '%Phillips%' OR serial_number LIKE '%Phillips%') [0m
+  [4;36;1mItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Redirected to http://localhost:3000/item/show/3
+Completed in 16ms (DB: 2) | 302 Found [http://localhost/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 127.0.0.1 at 2009-05-28 14:27:29) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;35;1mStatus Load (0.2ms)[0m   [0mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 3) [0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (1.0ms)
+Completed in 30ms (View: 4, DB: 2) | 200 OK [http://localhost/item/show/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#item_out (for 192.168.5.98 at 2009-05-28 14:28:12) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "id"=>"3"}
+
+ActionController::UnknownAction (No action responded to item_out. Actions: edit, find, list, new, and show):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 127.0.0.1 at 2009-05-28 14:28:15) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mItem Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;36;1mStatus Load (0.1ms)[0m   [0;1mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 3) [0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (1.1ms)
+Completed in 30ms (View: 4, DB: 2) | 200 OK [http://localhost/item/show/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrackController#item_in (for 127.0.0.1 at 2009-05-28 14:28:17) [GET]
+  Parameters: {"authenticity_token"=>"oDqDbsbLyrXENTViijHSBVDi67Oh0JLLgBtm9sayuts=", "id"=>"3"}
+  [4;35;1mItem Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering track/item_in
+Rendered shared/_status_fields (0.8ms)
+Rendered shared/_task_list (0.1ms)
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/track/item_in/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#item_out (for 192.168.5.98 at 2009-05-28 14:28:20) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "id"=>"3"}
+
+ActionController::UnknownAction (No action responded to item_out. Actions: edit, find, list, new, and show):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrackController#item_out (for 127.0.0.1 at 2009-05-28 14:28:32) [GET]
+  Parameters: {"authenticity_token"=>"oDqDbsbLyrXENTViijHSBVDi67Oh0JLLgBtm9sayuts=", "id"=>"3"}
+  [4;35;1mItem Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering track/item_out
+Rendered shared/_status_fields (1.8ms)
+Rendered shared/_task_list (0.2ms)
+Completed in 23ms (View: 10, DB: 2) | 200 OK [http://localhost/track/item_out/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 192.168.5.98 at 2009-05-28 14:28:46) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.1ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:28:50) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.5ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://192.168.5.116/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:29:02) [POST]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "item"=>{"query"=>"Phillips"}}
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (name LIKE '%Phillips%' OR model LIKE '%Phillips%' OR category LIKE '%Phillips%' OR serial_number LIKE '%Phillips%') [0m
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Redirected to http://192.168.5.116:3000/item/show/3
+Completed in 13ms (DB: 2) | 302 Found [http://192.168.5.116/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 192.168.5.98 at 2009-05-28 14:29:02) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;35;1mStatus Load (0.1ms)[0m   [0mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 3) [0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (1.0ms)
+Completed in 29ms (View: 4, DB: 2) | 200 OK [http://192.168.5.116/item/show/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrackController#item_in (for 192.168.5.98 at 2009-05-28 14:29:10) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "id"=>"3"}
+  [4;36;1mItem Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering track/item_in
+Rendered shared/_status_fields (0.7ms)
+Rendered shared/_task_list (0.1ms)
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://192.168.5.116/track/item_in/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrackController#item_in (for 127.0.0.1 at 2009-05-28 14:29:18) [GET]
+  Parameters: {"authenticity_token"=>"oDqDbsbLyrXENTViijHSBVDi67Oh0JLLgBtm9sayuts=", "id"=>"3"}
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering track/item_in
+Rendered shared/_status_fields (1.0ms)
+Rendered shared/_task_list (0.1ms)
+Completed in 20ms (View: 8, DB: 2) | 200 OK [http://localhost/track/item_in/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 192.168.5.98 at 2009-05-28 14:29:34) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.1ms)
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/?no_auto_load_forms=true]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrackController#item_in (for 192.168.5.98 at 2009-05-28 14:29:36) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8="}
+Rendering template within layouts/application
+Rendering track/item_in
+Rendered shared/_task_list (0.1ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/track/item_in]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 127.0.0.1 at 2009-05-28 14:29:47) [GET]
+  Parameters: {"authenticity_token"=>"oDqDbsbLyrXENTViijHSBVDi67Oh0JLLgBtm9sayuts=", "id"=>"3"}
+  [4;36;1mItem Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;36;1mStatus Load (0.2ms)[0m   [0;1mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 3) [0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (1.0ms)
+Completed in 27ms (View: 4, DB: 2) | 200 OK [http://localhost/item/show/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrackController#item_in (for 192.168.5.98 at 2009-05-28 14:29:53) [POST]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "item"=>{"barcode"=>"04041983"}}
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`barcode` = '04041983') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering track/item_in
+Rendered shared/_status_fields (1.0ms)
+Rendered shared/_task_list (0.1ms)
+Completed in 21ms (View: 8, DB: 2) | 200 OK [http://192.168.5.116/track/item_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 127.0.0.1 at 2009-05-28 14:30:38) [GET]
+  Parameters: {"authenticity_token"=>"oDqDbsbLyrXENTViijHSBVDi67Oh0JLLgBtm9sayuts=", "id"=>"3"}
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;35;1mStatus Load (0.1ms)[0m   [0mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 3) [0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (1.0ms)
+Completed in 28ms (View: 4, DB: 2) | 200 OK [http://localhost/item/show/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-05-28 14:30:51) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.1ms)
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 127.0.0.1 at 2009-05-28 14:30:53) [GET]
+  Parameters: {"authenticity_token"=>"oDqDbsbLyrXENTViijHSBVDi67Oh0JLLgBtm9sayuts="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.1ms)
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/item/find]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 127.0.0.1 at 2009-05-28 14:31:00) [POST]
+  Parameters: {"authenticity_token"=>"oDqDbsbLyrXENTViijHSBVDi67Oh0JLLgBtm9sayuts=", "item"=>{"query"=>"Phillips"}}
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (name LIKE '%Phillips%' OR model LIKE '%Phillips%' OR category LIKE '%Phillips%' OR serial_number LIKE '%Phillips%') [0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Redirected to http://localhost:3000/item/show/3
+Completed in 15ms (DB: 2) | 302 Found [http://localhost/item/find]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 127.0.0.1 at 2009-05-28 14:31:01) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;36;1mStatus Load (0.1ms)[0m   [0;1mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 3) [0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (1.1ms)
+Completed in 28ms (View: 4, DB: 2) | 200 OK [http://localhost/item/show/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 127.0.0.1 at 2009-05-28 14:31:04) [GET]
+  Parameters: {"authenticity_token"=>"oDqDbsbLyrXENTViijHSBVDi67Oh0JLLgBtm9sayuts=", "id"=>"3"}
+  [4;35;1mItem Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;35;1mStatus Load (0.1ms)[0m   [0mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 3) [0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (0.8ms)
+Completed in 27ms (View: 3, DB: 2) | 200 OK [http://localhost/item/show/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrackController#item_in (for 127.0.0.1 at 2009-05-28 14:31:12) [GET]
+  Parameters: {"authenticity_token"=>"oDqDbsbLyrXENTViijHSBVDi67Oh0JLLgBtm9sayuts=", "id"=>"3"}
+  [4;36;1mItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering track/item_in
+Rendered shared/_status_fields (1.0ms)
+Rendered shared/_task_list (0.2ms)
+Completed in 30ms (View: 16, DB: 2) | 200 OK [http://localhost/track/item_in/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrackController#item_in (for 192.168.5.98 at 2009-05-28 14:31:49) [POST]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "status"=>{"reason"=>"Maintenance", "storage_code"=>"Bht/cp/53"}, "item"=>{"id"=>"1"}}
+  [4;36;1mStatus Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `statuses`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mStatus Create (0.6ms)[0m   [0;1mINSERT INTO `statuses` (`location`, `created_at`, `updated_at`, `reason`, `user_id`, `storage_code`, `item_id`, `message`, `owner`) VALUES(NULL, '2009-05-28 12:31:49', '2009-05-28 12:31:49', 'Maintenance', NULL, 'Bht/cp/53', 1, 'item in', NULL)[0m
+  [4;35;1mSQL (5.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://192.168.5.116:3000/
+Completed in 25ms (DB: 8) | 302 Found [http://192.168.5.116/track/item_in]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 192.168.5.98 at 2009-05-28 14:31:49) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.2ms)
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:31:56) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.1ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/item/find]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 127.0.0.1 at 2009-05-28 14:32:00) [GET]
+  Parameters: {"authenticity_token"=>"oDqDbsbLyrXENTViijHSBVDi67Oh0JLLgBtm9sayuts=", "id"=>"3"}
+  [4;36;1mItem Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;36;1mStatus Load (0.3ms)[0m   [0;1mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 3) [0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (0.7ms)
+Completed in 21ms (View: 2, DB: 2) | 200 OK [http://localhost/item/show/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:32:05) [POST]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "item"=>{"query"=>"Phillips"}}
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (name LIKE '%Phillips%' OR model LIKE '%Phillips%' OR category LIKE '%Phillips%' OR serial_number LIKE '%Phillips%') [0m
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Redirected to http://192.168.5.116:3000/item/show/3
+Completed in 14ms (DB: 2) | 302 Found [http://192.168.5.116/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 192.168.5.98 at 2009-05-28 14:32:05) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;35;1mStatus Load (0.1ms)[0m   [0mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 3) [0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (1.1ms)
+Completed in 28ms (View: 4, DB: 2) | 200 OK [http://192.168.5.116/item/show/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 127.0.0.1 at 2009-05-28 14:32:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 2) [0m
+  [4;36;1mStatus Load (0.4ms)[0m   [0;1mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 2) [0m
+  [4;35;1mStatus Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `statuses`[0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (1.1ms)
+Completed in 42ms (View: 12, DB: 4) | 200 OK [http://localhost/item/show/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#list (for 127.0.0.1 at 2009-05-28 14:33:16) [GET]
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mStatus Load (0.4ms)[0m   [0;1mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id IN (1,2,3)) [0m
+  [4;35;1mStatus Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `statuses`[0m
+Rendering template within layouts/application
+Rendering item/list
+Rendered shared/_task_list (0.2ms)
+Completed in 38ms (View: 3, DB: 3) | 200 OK [http://localhost/item/list]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#edit (for 192.168.5.98 at 2009-05-28 14:33:39) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "id"=>"3"}
+  [4;36;1mItem Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering item/edit
+Rendered shared/_item_fields (5.4ms)
+Rendered shared/_task_list (0.1ms)
+Completed in 22ms (View: 10, DB: 2) | 200 OK [http://192.168.5.116/item/edit/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 192.168.5.98 at 2009-05-28 14:33:44) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.2ms)
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://192.168.5.116/?no_auto_load_forms=true]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:33:50) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.2ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/item/find]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:33:52) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Rendered shared/_task_list (0.1ms)
+Completed in 43ms (View: 39, DB: 0) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#new (for 127.0.0.1 at 2009-05-28 14:34:04) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/new
+Rendered user/_form2 (4.6ms)
+Rendered shared/_task_list (0.1ms)
+Completed in 52ms (View: 38, DB: 2) | 200 OK [http://localhost/user/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:34:04) [GET]
+  Parameters: {"field"=>"username", "value"=>nil}
+
+ActionController::RoutingError (No route matches "/search/User" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-05-28 14:51:49) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.2ms)
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-05-28 14:52:05) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.2ms)
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-05-28 14:52:17) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.2ms)
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-05-28 14:52:53) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.1ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-05-28 14:53:13) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.3ms)
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-05-28 14:53:34) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (0.8ms)
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-05-28 14:53:44) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.2ms)
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 192.168.5.98 at 2009-05-28 14:54:03) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.1ms)
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://192.168.5.116/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:54:21) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.2ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:55:26) [POST]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "item"=>{"query"=>"Nokia"}}
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (name LIKE '%Nokia%' OR model LIKE '%Nokia%' OR category LIKE '%Nokia%' OR serial_number LIKE '%Nokia%') [0m
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Redirected to http://192.168.5.116:3000/item/list/1%2F2
+Completed in 13ms (DB: 2) | 302 Found [http://192.168.5.116/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#list (for 192.168.5.98 at 2009-05-28 14:55:26) [GET]
+  Parameters: {"id"=>"1/2"}
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` IN (1,2)) [0m
+Rendering template within layouts/application
+Rendering item/list
+Rendered shared/_task_list (0.2ms)
+Completed in 18ms (View: 5, DB: 2) | 200 OK [http://192.168.5.116/item/list/1%2F2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 192.168.5.98 at 2009-05-28 14:55:44) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.1ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:55:47) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.1ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:55:58) [POST]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "item"=>{"query"=>"Cellphone"}}
+  [4;35;1mItem Load (0.5ms)[0m   [0mSELECT * FROM `items` WHERE (name LIKE '%Cellphone%' OR model LIKE '%Cellphone%' OR category LIKE '%Cellphone%' OR serial_number LIKE '%Cellphone%') [0m
+  [4;36;1mItem Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Redirected to http://192.168.5.116:3000/item/show/1
+Completed in 14ms (DB: 2) | 302 Found [http://192.168.5.116/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 192.168.5.98 at 2009-05-28 14:55:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mItem Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;35;1mStatus Load (0.3ms)[0m   [0mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 1) [0m
+  [4;36;1mStatus Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `statuses`[0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (0.7ms)
+Completed in 86ms (View: 7, DB: 2) | 200 OK [http://192.168.5.116/item/show/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrackController#item_in (for 192.168.5.98 at 2009-05-28 14:56:18) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "id"=>"1"}
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering track/item_in
+Rendered shared/_status_fields (1.0ms)
+Rendered shared/_task_list (0.2ms)
+Completed in 21ms (View: 8, DB: 2) | 200 OK [http://192.168.5.116/track/item_in/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 192.168.5.98 at 2009-05-28 14:56:22) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.1ms)
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/?no_auto_load_forms=true]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:56:25) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.1ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:56:35) [POST]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "item"=>{"query"=>"Cellphone"}}
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (name LIKE '%Cellphone%' OR model LIKE '%Cellphone%' OR category LIKE '%Cellphone%' OR serial_number LIKE '%Cellphone%') [0m
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Redirected to http://192.168.5.116:3000/item/show/1
+Completed in 13ms (DB: 2) | 302 Found [http://192.168.5.116/item/find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 192.168.5.98 at 2009-05-28 14:56:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;35;1mStatus Load (0.1ms)[0m   [0mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 1) [0m
+  [4;36;1mStatus Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `statuses`[0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (1.0ms)
+Completed in 38ms (View: 10, DB: 3) | 200 OK [http://192.168.5.116/item/show/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrackController#item_out (for 192.168.5.98 at 2009-05-28 14:56:39) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "id"=>"1"}
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering track/item_out
+Rendered shared/_status_fields (1.4ms)
+Rendered shared/_task_list (0.2ms)
+Completed in 21ms (View: 9, DB: 2) | 200 OK [http://192.168.5.116/track/item_out/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrackController#item_out (for 192.168.5.98 at 2009-05-28 14:57:20) [POST]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "id"=>"1", "status"=>{"location"=>"Baobab", "reason"=>"Deployment", "owner"=>"Kondwani"}, "item"=>{"id"=>"1"}}
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;35;1mStatus Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `statuses`[0m
+
+NameError (undefined local variable or method `item' for #<TrackController:0xb65e3a88>):
+  app/controllers/track_controller.rb:41:in `item_out'
+
+Rendered rescues/_trace (40.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 192.168.5.98 at 2009-05-28 14:59:44) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.2ms)
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 14:59:53) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8="}
+Rendering template within layouts/application
+Rendering item/find
+Rendered shared/_task_list (0.1ms)
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://192.168.5.116/item/find]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#find (for 192.168.5.98 at 2009-05-28 15:00:03) [POST]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "item"=>{"query"=>"Cellphone"}}
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (name LIKE '%Cellphone%' OR model LIKE '%Cellphone%' OR category LIKE '%Cellphone%' OR serial_number LIKE '%Cellphone%') [0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Redirected to http://192.168.5.116:3000/item/show/1
+Completed in 13ms (DB: 2) | 302 Found [http://192.168.5.116/item/find]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemController#show (for 192.168.5.98 at 2009-05-28 15:00:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mStatus Load (0.1ms)[0m   [0;1mSELECT `statuses`.* FROM `statuses` WHERE (`statuses`.item_id = 1) [0m
+  [4;35;1mStatus Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `statuses`[0m
+Rendering template within layouts/application
+Rendering item/show
+Rendered shared/_task_list (1.0ms)
+Completed in 38ms (View: 10, DB: 3) | 200 OK [http://192.168.5.116/item/show/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrackController#item_out (for 192.168.5.98 at 2009-05-28 15:00:07) [GET]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "id"=>"1"}
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering track/item_out
+Rendered shared/_status_fields (1.3ms)
+Rendered shared/_task_list (0.1ms)
+Completed in 20ms (View: 8, DB: 2) | 200 OK [http://192.168.5.116/track/item_out/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrackController#item_out (for 192.168.5.98 at 2009-05-28 15:00:50) [POST]
+  Parameters: {"authenticity_token"=>"H6gt//UweJJbR0jHd23LO4r362dNuohRScyexnHauB8=", "id"=>"1", "status"=>{"location"=>"Baobab", "reason"=>"Deployment", "owner"=>"Kondwani"}, "item"=>{"id"=>"1"}}
+  [4;36;1mStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `statuses`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mStatus Create (0.3ms)[0m   [0;1mINSERT INTO `statuses` (`location`, `created_at`, `updated_at`, `reason`, `user_id`, `storage_code`, `item_id`, `message`, `owner`) VALUES('Baobab', '2009-05-28 13:00:50', '2009-05-28 13:00:50', 'Deployment', NULL, NULL, 1, 'item in', 'Kondwani')[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mCOMMIT[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name):
+  app/controllers/track_controller.rb:42:in `item_out'
+
+Rendered rescues/_trace (40.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-05-28 15:02:46) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Rendered shared/_task_list (1.3ms)
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/]

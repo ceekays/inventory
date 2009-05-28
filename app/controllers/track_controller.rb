@@ -35,12 +35,11 @@ class TrackController < ApplicationController
   def item_out
     if request.post?
       if params[:status]
-        @item=Item.find(params[:item][:id])
         status=Status.new(params[:status])
-        status.message="item out"
-        item.statuses << status
-        if @item.save
-          flash[:notice]="#{@item.name} recorded as 'out'."
+        status.item_id=session[:item_id]
+        status.message="item in"
+        if status.save
+          flash[:notice]="Item successfully recorded as 'out'."
           redirect_to root_path
         else
           flash[:error]="recording item status failed."

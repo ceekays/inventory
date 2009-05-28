@@ -5,10 +5,12 @@ html, body {
 #screen {
   height:100%;
   margin:0;
+  width:100%;
 }
 #left {
 }
 #right {
+  width:15em;
 }
 select {
 }
@@ -25,9 +27,7 @@ select {
   padding:1em;
 }
 .tasks {
-  width:auto;
   margin:3em auto;
-  display:table;
 }
 
 a {
@@ -39,6 +39,7 @@ a {
   margin:0.5em;
   font-size:1em;
   font-weight:bold;
+  display:block;
 }
 a:hover {
   background-color:ButtonHighlight;
@@ -48,7 +49,6 @@ a:active {
 }
 .tasks a {
   display:block;
-  width:auto;
 }
 select {
 

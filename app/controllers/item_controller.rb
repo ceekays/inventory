@@ -64,8 +64,8 @@ class ItemController < ApplicationController
       @tasks=[
         ["Show", item_path(:show,@item)],
         ["Edit", item_path(:edit,@item)],
-        ["Incoming", item_path(:item_in,@item)],
-        ["Outgoing", item_path(:item_out,@item)],
+        ["Incoming", track_path(:item_in,@item)],
+        ["Outgoing", track_path(:item_out,@item)],
       ]
     end
   end
