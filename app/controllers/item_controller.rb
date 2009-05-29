@@ -60,6 +60,7 @@ class ItemController < ApplicationController
   def show
     if params[:id]
       @item=Item.find(params[:id],:include=>:statuses)
+      session[:item_id]=@item.id
       @item_status = @item.statuses.last || nil
       @tasks=[
         ["Show", item_path(:show,@item)],

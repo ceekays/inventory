@@ -37,7 +37,7 @@ class TrackController < ApplicationController
       if params[:status]
         status=Status.new(params[:status])
         status.item_id=session[:item_id]
-        status.message="item in"
+        status.message="item out"
         if status.save
           flash[:notice]="Item successfully recorded as 'out'."
           redirect_to root_path
