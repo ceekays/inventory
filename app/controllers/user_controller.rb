@@ -1,8 +1,12 @@
 class UserController < ApplicationController
 
   # find 'login' and 'logout' in ApplicationController
-  
+  #before_filter :authorize, :except   => :login
   # creates a new user in the database 
+  
+  def index
+    @pagetitle = 'Main Menu'
+  end
   def new
     @pagetitle = 'Create New User'
     @user = User.new(params[:user])
@@ -21,7 +25,7 @@ class UserController < ApplicationController
   end
   
   # searches for a user to be edited
-  # The request.post? runs by defualt if, called using a 'button_to' or a 
+  # The request.post? runs by defualt if, called using a 'link_to' or a 
   # In the index contoller, there is
   def search
      @pagetitle = 'Search for a Particular User'		

@@ -35,5 +35,6 @@
 </p>
 <p>
 	<label for="user_role" >Enter the role of the user:</label> 
-	<%= text_field 'user', 'role', :xhelpText => 'Role', :size => 40 %>
+	<%= @role = Role.find(:all,:order =>'role').map{|u|[u.role]}
+	select(:user, :role, @role,{},{:tt_onload => "$('keyboard').style='display:block;'",:include_blank => true, :textCase => 'lower'})%>
 </p>

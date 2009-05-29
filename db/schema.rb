@@ -30,6 +30,12 @@ ActiveRecord::Schema.define(:version => 20090520095831) do
     t.string   "location"
     t.string   "storage_code"
     t.integer  "user_id"
+
+  create_table "roles", :force => true do |t|
+    t.string   "role"
+    t.string   "description"
+    t.integer  "created_by"
+    t.integer  "updated_by"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,7 +44,7 @@ ActiveRecord::Schema.define(:version => 20090520095831) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "username"
-    t.string   "password"
+    t.string   "encrypted_password"
     t.string   "salt"
     t.string   "role"
     t.datetime "created_at"

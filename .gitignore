@@ -1,4 +1,14 @@
-#ignore all yml files
-*.yml
-*.swp
-*.log
+config/database.yml
+.DS_Store
+.DS_config
+swp
+tmp
+notes
+public/reports
+*.lbl
+.*swp
+*.swo
+callibrate*
+doc/*
+doc/plugins
+log/*
