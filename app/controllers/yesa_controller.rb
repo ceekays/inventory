@@ -1,14 +1,10 @@
 class UserController < ApplicationController
 
-  # find 'login' and 'logout' in ApplicationController
-  before_filter :authorize, :except   => :login
-  # creates a new user in the database 
-  
   def index
-    @pagetitle = 'Main Menu'
+    @pagetitle = 'Test Main Menu'
   end
   def new
-    @pagetitle = 'Create New User'
+    @pagetitle = 'Test Create New User'
     @user = User.new(params[:user])
     if request.post? && @user.save
       redirect_to(:action => "index")
@@ -16,10 +12,14 @@ class UserController < ApplicationController
       @user = User.new
     end
   end
+
+  def basi
+    render :text => 'aaaaaa'
+  end
   
   #lists users in the users' table
   def list
-    @pagetitle = 'User Details'
+    @pagetitle = 'Test User Details'
     @all_users = User.find(:all)
     #session[:edit_user] = @edit
   end

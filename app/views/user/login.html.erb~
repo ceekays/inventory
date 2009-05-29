@@ -8,3 +8,7 @@
   <%= submit_tag value="Login"%>
   <% end %>
 
+  <div id="popupBox"  align="center">
+  <p>Verifying your username and password</p>
+  <p><blink>Please wait......</blink></p>
+  </div>

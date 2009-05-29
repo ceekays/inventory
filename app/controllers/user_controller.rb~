@@ -1,7 +1,7 @@
 class UserController < ApplicationController
 
   # find 'login' and 'logout' in ApplicationController
-  before_filter :authorize, :except   => :login
+  #before_filter :authorize, :except   => :login
   # creates a new user in the database 
   
   def index

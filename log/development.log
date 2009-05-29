@@ -38105,3 +38105,3203 @@ ActionController::RoutingError (No route matches "/touch.css" with {:method=>:ge
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#list (for 127.0.0.1 at 2009-05-28 13:10:54) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/list
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 18ms (View: 7, DB: 2) | 200 OK [http://localhost/list]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:10:54) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:10:54) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 13:10:57) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` ORDER BY role[0m
+  [4;35;1mRole Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (9.5ms)
+Completed in 28ms (View: 15, DB: 2) | 200 OK [http://localhost/edit/8]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:10:57) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:10:57) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:10:57) [GET]
+  Parameters: {"valueceekays"=>nil, "id"=>"User", "field"=>"username"}
+Rendering template within layouts/application
+Rendering user/search
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` ORDER BY username[0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (5.3ms)
+Completed in 16ms (View: 12, DB: 1) | 200 OK [http://localhost/search/User?field=username&valueceekays]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:10:57) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#new (for 127.0.0.1 at 2009-05-28 13:11:25) [GET]
+  Parameters: {"authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ="}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/new
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM `roles` ORDER BY role[0m
+  [4;35;1mRole Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (14.3ms)
+Completed in 34ms (View: 18, DB: 3) | 200 OK [http://localhost/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:11:25) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:11:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:11:25) [GET]
+  Parameters: {"id"=>"User", "field"=>"username", "value"=>nil}
+Rendering template within layouts/application
+Rendering user/search
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` ORDER BY username[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (6.5ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/search/User?field=username&value]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:11:25) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:11:46) [GET]
+  Parameters: {"id"=>"User", "field"=>"first_name", "value"=>""}
+Rendering template within layouts/application
+Rendering user/search
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` ORDER BY username[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (7.0ms)
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/search/User?field=first_name&value=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:11:46) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:12:00) [GET]
+  Parameters: {"authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ="}
+Rendering template within layouts/application
+Rendering user/search
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` ORDER BY username[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (6.9ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/search]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:12:00) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:12:00) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#list (for 127.0.0.1 at 2009-05-28 13:12:05) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/list
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 19ms (View: 7, DB: 2) | 200 OK [http://localhost/list]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:12:05) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:12:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 13:12:07) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` ORDER BY role[0m
+  [4;36;1mRole Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (14.4ms)
+Completed in 31ms (View: 18, DB: 3) | 200 OK [http://localhost/edit/8]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:12:07) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:12:07) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:12:08) [GET]
+  Parameters: {"valueceekays"=>nil, "id"=>"User", "field"=>"username"}
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (4.8ms)
+Completed in 76ms (View: 71, DB: 1) | 200 OK [http://localhost/search/User?field=username&valueceekays]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:12:08) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:12:14) [GET]
+  Parameters: {"authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ="}
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (6.9ms)
+Completed in 21ms (View: 16, DB: 2) | 200 OK [http://localhost/search]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:12:14) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:12:14) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:12:17) [POST]
+  Parameters: {"authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ=", "user"=>{"id"=>"8"}}
+Redirected to http://localhost:3000/edit/8
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/search]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 13:12:17) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` ORDER BY role[0m
+  [4;36;1mRole Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (14.7ms)
+Completed in 31ms (View: 18, DB: 3) | 200 OK [http://localhost/edit/8]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:12:17) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:12:18) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:12:18) [GET]
+  Parameters: {"valueceekays"=>nil, "id"=>"User", "field"=>"username"}
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (6.4ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/search/User?field=username&valueceekays]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:12:18) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:12:39) [POST]
+  Parameters: {"authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ=", "user"=>{"id"=>"8"}}
+Redirected to http://localhost:3000/edit/8
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/search]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 13:12:39) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` ORDER BY role[0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (9.7ms)
+Completed in 21ms (View: 12, DB: 2) | 200 OK [http://localhost/edit/8]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:12:39) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:12:39) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:12:39) [GET]
+  Parameters: {"valueceekays"=>nil, "id"=>"User", "field"=>"username"}
+Rendering template within layouts/application
+Rendering user/search
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` ORDER BY username[0m
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (4.3ms)
+Completed in 13ms (View: 10, DB: 1) | 200 OK [http://localhost/search/User?field=username&valueceekays]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:12:39) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#new (for 127.0.0.1 at 2009-05-28 13:13:09) [GET]
+  Parameters: {"authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ="}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/new
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM `roles` ORDER BY role[0m
+  [4;35;1mRole Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (14.6ms)
+Completed in 31ms (View: 18, DB: 3) | 200 OK [http://localhost/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:09) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:09) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:13:09) [GET]
+  Parameters: {"id"=>"User", "field"=>"username", "value"=>nil}
+Rendering template within layouts/application
+Rendering user/search
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` ORDER BY username[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (11.0ms)
+Completed in 33ms (View: 26, DB: 3) | 200 OK [http://localhost/search/User?field=username&value]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:10) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-05-28 13:13:19) [GET]
+Rendering template within layouts/application
+Rendering user/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/index]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:19) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:20) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:13:22) [GET]
+  Parameters: {"authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ="}
+Rendering template within layouts/application
+Rendering user/search
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` ORDER BY username[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (6.7ms)
+Completed in 20ms (View: 15, DB: 2) | 200 OK [http://localhost/search]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:22) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:22) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#new (for 127.0.0.1 at 2009-05-28 13:13:26) [GET]
+  Parameters: {"authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ="}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/new
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM `roles` ORDER BY role[0m
+  [4;36;1mRole Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (14.7ms)
+Completed in 32ms (View: 18, DB: 3) | 200 OK [http://localhost/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:26) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:13:27) [GET]
+  Parameters: {"id"=>"User", "field"=>"username", "value"=>nil}
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (6.6ms)
+Completed in 20ms (View: 15, DB: 2) | 200 OK [http://localhost/search/User?field=username&value]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:27) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:13:30) [POST]
+  Parameters: {"commit"=>"Go", "authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ=", "id"=>"User", "user"=>{"id"=>"8"}}
+Redirected to http://localhost:3000/edit/8
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/search/User]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 13:13:31) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` ORDER BY role[0m
+  [4;35;1mRole Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (14.5ms)
+Completed in 32ms (View: 18, DB: 3) | 200 OK [http://localhost/edit/8]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:31) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:31) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:13:31) [GET]
+  Parameters: {"valueceekays"=>nil, "id"=>"User", "field"=>"username"}
+Rendering template within layouts/application
+Rendering user/search
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` ORDER BY username[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (6.7ms)
+Completed in 21ms (View: 16, DB: 2) | 200 OK [http://localhost/search/User?field=username&valueceekays]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:31) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:13:39) [POST]
+  Parameters: {"commit"=>"Go", "authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ=", "id"=>"User", "user"=>{"id"=>"8"}}
+Redirected to http://localhost:3000/edit/8
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/search/User]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 13:13:39) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM `roles` ORDER BY role[0m
+  [4;36;1mRole Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (14.5ms)
+Completed in 31ms (View: 18, DB: 3) | 200 OK [http://localhost/edit/8]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:39) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:39) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:13:39) [GET]
+  Parameters: {"valueceekays"=>nil, "id"=>"User", "field"=>"username"}
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (9.7ms)
+Completed in 28ms (View: 22, DB: 2) | 200 OK [http://localhost/search/User?field=username&valueceekays]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:39) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:13:41) [GET]
+  Parameters: {"id"=>"User", "field"=>"first_name", "value"=>"Edmond"}
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (9.5ms)
+Completed in 24ms (View: 18, DB: 2) | 200 OK [http://localhost/search/User?field=first_name&value=Edmond]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:41) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#new (for 127.0.0.1 at 2009-05-28 13:13:54) [GET]
+  Parameters: {"authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ="}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/new
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM `roles` ORDER BY role[0m
+  [4;36;1mRole Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (14.9ms)
+Completed in 31ms (View: 19, DB: 3) | 200 OK [http://localhost/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:54) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:54) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:13:55) [GET]
+  Parameters: {"id"=>"User", "field"=>"username", "value"=>nil}
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (6.5ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/search/User?field=username&value]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:13:55) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:14:02) [POST]
+  Parameters: {"commit"=>"Go", "authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ=", "id"=>"User", "user"=>{"id"=>"8"}}
+Redirected to http://localhost:3000/edit/8
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/search/User]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 13:14:02) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` ORDER BY role[0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (10.1ms)
+Completed in 21ms (View: 13, DB: 2) | 200 OK [http://localhost/edit/8]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:14:02) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:14:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:14:03) [GET]
+  Parameters: {"valueceekays"=>nil, "id"=>"User", "field"=>"username"}
+Rendering template within layouts/application
+Rendering user/search
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` ORDER BY username[0m
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (4.4ms)
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/search/User?field=username&valueceekays]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:14:03) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 13:14:05) [GET]
+  Parameters: {"id"=>"User", "field"=>"first_name", "value"=>"Edmond"}
+Rendering template within layouts/application
+Rendering user/search
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` ORDER BY username[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (6.8ms)
+Completed in 21ms (View: 15, DB: 2) | 200 OK [http://localhost/search/User?field=first_name&value=Edmond]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 13:14:05) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:35:55) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/user_controller.rb:42:in `edit'
+
+Rendered rescues/_trace (112.8ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#user (for 192.168.5.98 at 2009-05-28 14:36:11) [GET]
+
+ActionController::UnknownAction (No action responded to user. Actions: edit, index, list, login, logout, new, and search):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:36:20) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/user_controller.rb:42:in `edit'
+
+Rendered rescues/_trace (66.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 192.168.5.98 at 2009-05-28 14:36:35) [GET]
+Rendering template within layouts/application
+Rendering user/index
+Completed in 51ms (View: 47, DB: 0) | 200 OK [http://192.168.5.108/index]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:36:35) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:36:35) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 192.168.5.98 at 2009-05-28 14:37:44) [GET]
+Rendering template within layouts/application
+Rendering user/index
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://192.168.5.108/index]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:37:44) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:37:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#new (for 192.168.5.98 at 2009-05-28 14:37:47) [GET]
+  Parameters: {"authenticity_token"=>"0+y4PgrToF1RXmxC75cJlk3MRmwsAhhwm4Ra3QjsSuo="}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/new
+  [4;35;1mRole Load (2.4ms)[0m   [0mSELECT * FROM `roles` ORDER BY role[0m
+  [4;36;1mRole Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (17.4ms)
+Completed in 33ms (View: 18, DB: 5) | 200 OK [http://192.168.5.108/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:37:47) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:37:47) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 192.168.5.98 at 2009-05-28 14:37:48) [GET]
+  Parameters: {"id"=>"User", "field"=>"username", "value"=>nil}
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (12.4ms)
+Completed in 20ms (View: 15, DB: 2) | 200 OK [http://192.168.5.108/search/User?field=username&value]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:37:48) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:38:02) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/user_controller.rb:42:in `edit'
+
+Rendered rescues/_trace (63.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 192.168.5.98 at 2009-05-28 14:38:21) [GET]
+Rendering template within layouts/application
+Rendering user/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.108/index]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:38:21) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:38:21) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#list (for 192.168.5.98 at 2009-05-28 14:38:36) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/list
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 19ms (View: 7, DB: 2) | 200 OK [http://192.168.5.108/list]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:38:36) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:38:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:39:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` ORDER BY role[0m
+  [4;36;1mRole Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (14.2ms)
+Completed in 31ms (View: 17, DB: 3) | 200 OK [http://192.168.5.108/edit/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:39:04) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:39:04) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 192.168.5.98 at 2009-05-28 14:39:04) [GET]
+  Parameters: {"valueceekays"=>nil, "id"=>"User", "field"=>"username"}
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (11.9ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://192.168.5.108/search/User?field=username&valueceekays]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:39:05) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 192.168.5.98 at 2009-05-28 14:39:09) [GET]
+  Parameters: {"id"=>"User", "field"=>"first_name", "value"=>"Edmond"}
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (11.8ms)
+Completed in 19ms (View: 15, DB: 1) | 200 OK [http://192.168.5.108/search/User?field=first_name&value=Edmond]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:39:09) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 192.168.5.98 at 2009-05-28 14:39:11) [GET]
+  Parameters: {"valueceekays"=>nil, "id"=>"User", "field"=>"username"}
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (13.8ms)
+Completed in 22ms (View: 16, DB: 3) | 200 OK [http://192.168.5.108/search/User?field=username&valueceekays]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:39:11) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 192.168.5.98 at 2009-05-28 14:39:12) [GET]
+  Parameters: {"id"=>"User", "field"=>"first_name", "value"=>"Edmond"}
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (12.0ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://192.168.5.108/search/User?field=first_name&value=Edmond]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 192.168.5.98 at 2009-05-28 14:39:12) [GET]
+  Parameters: {"id"=>"User", "field"=>"last_name", "value"=>"Kachale"}
+Rendering template within layouts/application
+Rendering user/search
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` ORDER BY username[0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (12.6ms)
+Completed in 21ms (View: 16, DB: 2) | 200 OK [http://192.168.5.108/search/User?field=last_name&value=Kachale]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:39:12) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:40:03) [POST]
+  Parameters: {"authenticity_token"=>"0+y4PgrToF1RXmxC75cJlk3MRmwsAhhwm4Ra3QjsSuo=", "id"=>"1", "user"=>{"password_confirmation"=>"Shalom", "role"=>"admin", "username"=>"ceekays", "last_name"=>"Kachale", "password"=>"Shalom", "first_name"=>"Edmond"}}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'ceekays' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-05-28 12:40:03', `salt` = 'YncZxmRoH2Cc7XAtnVo4k74ejPBIQJa9dwtiCFhD', `encrypted_password` = 'eddb3e9d57cc5fc8c6f803330e9b076220ab271e' WHERE `id` = 1[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://192.168.5.108:3000/index
+Completed in 44ms (DB: 5) | 302 Found [http://192.168.5.108/edit/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 192.168.5.98 at 2009-05-28 14:40:03) [GET]
+Rendering template within layouts/application
+Rendering user/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://192.168.5.108/index]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:40:03) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:40:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 192.168.5.98 at 2009-05-28 14:40:08) [GET]
+  Parameters: {"authenticity_token"=>"0+y4PgrToF1RXmxC75cJlk3MRmwsAhhwm4Ra3QjsSuo="}
+Rendering template within layouts/application
+Rendering user/search
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` ORDER BY username[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (8.3ms)
+Completed in 13ms (View: 10, DB: 1) | 200 OK [http://192.168.5.108/search]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:40:08) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:40:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 192.168.5.98 at 2009-05-28 14:40:13) [POST]
+  Parameters: {"authenticity_token"=>"0+y4PgrToF1RXmxC75cJlk3MRmwsAhhwm4Ra3QjsSuo=", "user"=>{"id"=>"1"}}
+Redirected to http://192.168.5.108:3000/edit/1
+Completed in 4ms (DB: 0) | 302 Found [http://192.168.5.108/search]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:40:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` ORDER BY role[0m
+  [4;36;1mRole Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (14.6ms)
+Completed in 31ms (View: 18, DB: 3) | 200 OK [http://192.168.5.108/edit/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:40:13) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:40:14) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 192.168.5.98 at 2009-05-28 14:40:14) [GET]
+  Parameters: {"valueceekays"=>nil, "id"=>"User", "field"=>"username"}
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered user/_form1 (12.0ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://192.168.5.108/search/User?field=username&valueceekays]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:40:14) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:40:32) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/user_controller.rb:42:in `edit'
+
+Rendered rescues/_trace (124.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 192.168.5.98 at 2009-05-28 14:41:47) [GET]
+Rendering template within layouts/application
+Rendering user/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.108/index]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:41:47) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:41:47) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 192.168.5.98 at 2009-05-28 14:42:19) [GET]
+  Parameters: {"authenticity_token"=>"0+y4PgrToF1RXmxC75cJlk3MRmwsAhhwm4Ra3QjsSuo="}
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 11ms (DB: 2) | 302 Found [http://192.168.5.108/search]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 192.168.5.98 at 2009-05-28 14:42:19) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://192.168.5.108/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:42:19) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:42:19) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:42:38) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 10ms (DB: 1) | 302 Found [http://192.168.5.108/?no_auto_load_forms=true]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 192.168.5.98 at 2009-05-28 14:42:38) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://192.168.5.108/login]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:42:38) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:42:38) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:42:42) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 10ms (DB: 1) | 302 Found [http://192.168.5.108/?no_auto_load_forms=true]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 192.168.5.98 at 2009-05-28 14:42:42) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.108/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:42:42) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:42:42) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:42:50) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 10ms (DB: 1) | 302 Found [http://192.168.5.108/?no_auto_load_forms=true]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 192.168.5.98 at 2009-05-28 14:42:50) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.108/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:42:50) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:42:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:42:52) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 9ms (DB: 1) | 302 Found [http://192.168.5.108/?no_auto_load_forms=true]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 192.168.5.98 at 2009-05-28 14:42:53) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://192.168.5.108/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:42:53) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:42:53) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:43:58) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 10ms (DB: 2) | 302 Found [http://192.168.5.108/?no_auto_load_forms=true]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 192.168.5.98 at 2009-05-28 14:43:58) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.108/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:43:58) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:43:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:44:29) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 10ms (DB: 1) | 302 Found [http://192.168.5.108/?no_auto_load_forms=true]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 192.168.5.98 at 2009-05-28 14:44:29) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://192.168.5.108/login]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:44:29) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:44:29) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#list (for 127.0.0.1 at 2009-05-28 14:44:54) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/list]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:44:54) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:44:55) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:44:55) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:45:50) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 10ms (DB: 1) | 302 Found [http://192.168.5.108/?no_auto_load_forms=true]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 192.168.5.98 at 2009-05-28 14:45:50) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.108/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:45:50) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:45:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-05-28 14:48:14) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 11ms (DB: 2) | 302 Found [http://localhost/index]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:48:14) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 21ms (View: 12, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:48:23) [POST]
+  Parameters: {"submit"=>"Login", "authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ=", "user"=>{"username"=>"ceekays", "password"=>"shalom"}}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'ceekays') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/login
+Completed in 50ms (View: 3, DB: 2) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:48:42) [POST]
+  Parameters: {"submit"=>"Login", "authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ=", "user"=>{"username"=>"ceekays", "password"=>"shalom"}}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`username` = 'ceekays') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/login
+Completed in 19ms (View: 3, DB: 1) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 14:48:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` ORDER BY role[0m
+  [4;35;1mRole Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (14.6ms)
+Completed in 31ms (View: 18, DB: 3) | 200 OK [http://localhost/edit/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 14:49:00) [POST]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ=", "id"=>"1", "user"=>{"password_confirmation"=>"try", "role"=>"admin", "username"=>"ceekays", "last_name"=>"Kachale", "password"=>"try", "first_name"=>"Edmond"}}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'ceekays' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-05-28 12:49:01', `salt` = 'mOhkbbFFHHaBmq5SClzxdfhSJgTl5Dj3u6RAfhX7', `encrypted_password` = '5ec4bb7cf2f3a86e734122ae80cea759ee1c48cd' WHERE `id` = 1[0m
+  [4;36;1mSQL (18.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/index
+Completed in 41ms (DB: 21) | 302 Found [http://localhost/edit/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-05-28 14:49:01) [GET]
+Rendering template within layouts/application
+Rendering user/index
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/index]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#new (for 127.0.0.1 at 2009-05-28 14:49:14) [GET]
+  Parameters: {"authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ="}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 12ms (DB: 2) | 302 Found [http://localhost/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:49:14) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:49:22) [POST]
+  Parameters: {"submit"=>"Login", "authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ=", "user"=>{"username"=>"ceekays", "password"=>"try"}}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`username` = 'ceekays') LIMIT 1[0m
+Redirected to http://localhost:3000/index
+Completed in 17ms (DB: 2) | 302 Found [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-05-28 14:49:22) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/index
+Completed in 17ms (View: 3, DB: 2) | 200 OK [http://localhost/index]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:49:31) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 10ms (DB: 2) | 302 Found [http://192.168.5.108/?no_auto_load_forms=true]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 192.168.5.98 at 2009-05-28 14:49:31) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://192.168.5.108/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 192.168.5.98 at 2009-05-28 14:49:43) [POST]
+  Parameters: {"submit"=>"Login", "authenticity_token"=>"0+y4PgrToF1RXmxC75cJlk3MRmwsAhhwm4Ra3QjsSuo=", "user"=>{"username"=>"ceekays", "password"=>"try"}}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`username` = 'ceekays') LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/index
+Completed in 15ms (DB: 1) | 302 Found [http://192.168.5.108/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 192.168.5.98 at 2009-05-28 14:49:43) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/index
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://192.168.5.108/index]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2009-05-28 14:49:56) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/index
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-05-28 14:49:57) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 11ms (DB: 2) | 302 Found [http://localhost/index]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:49:57) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:49:59) [GET]
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` ORDER BY role[0m
+  [4;36;1mRole Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (13.0ms)
+Completed in 29ms (View: 15, DB: 3) | 200 OK [http://192.168.5.108/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 192.168.5.98 at 2009-05-28 14:50:11) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/index
+Completed in 13ms (DB: 1) | 302 Found [http://192.168.5.108/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 192.168.5.98 at 2009-05-28 14:50:11) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 10ms (DB: 2) | 302 Found [http://192.168.5.108/index]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 192.168.5.98 at 2009-05-28 14:50:11) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://192.168.5.108/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:50:27) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 19ms (View: 9, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:50:27) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:50:27) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 14:50:45) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 11ms (DB: 2) | 302 Found [http://localhost/?no_auto_load_forms=true]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:50:45) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:50:45) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:50:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:50:56) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 10ms (DB: 2) | 302 Found [http://192.168.5.108/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 192.168.5.98 at 2009-05-28 14:50:56) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.108/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:50:56) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:50:56) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:51:38) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:51:44) [POST]
+  Parameters: {"submit"=>"Login", "authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ=", "user"=>{"username"=>"ceekays", "password"=>"try"}}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'ceekays') LIMIT 1[0m
+Redirected to http://localhost:3000/index
+Completed in 84ms (DB: 4) | 302 Found [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-05-28 14:51:44) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/index
+Completed in 17ms (View: 3, DB: 2) | 200 OK [http://localhost/index]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 14:52:39) [GET]
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 10ms (DB: 1) | 302 Found [http://192.168.5.108/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 192.168.5.98 at 2009-05-28 14:52:40) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://192.168.5.108/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:52:40) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 14:52:40) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:54:02) [POST]
+  Parameters: {"submit"=>"Login", "authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ=", "user"=>{"username"=>"ceekays", "password"=>"try"}}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'ceekays') LIMIT 1[0m
+Redirected to http://localhost:3000/index
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-05-28 14:54:02) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/index
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/index]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:54:02) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:54:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:54:07) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:54:07) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:54:07) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2009-05-28 14:58:08) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 11ms (DB: 2) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:58:08) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 19ms (View: 9, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:58:08) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:58:09) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-05-28 14:58:50) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 11ms (DB: 2) | 302 Found [http://localhost/index]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:58:50) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:58:50) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:58:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:59:04) [POST]
+  Parameters: {"authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ=", "user"=>{"username"=>"ceekays", "password"=>"shalom"}}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'ceekays') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/login
+Completed in 21ms (View: 4, DB: 2) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:59:04) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:59:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:59:25) [POST]
+  Parameters: {"authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ=", "user"=>{"username"=>"ceekays", "password"=>"try"}}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`username` = 'ceekays') LIMIT 1[0m
+Redirected to http://localhost:3000/index
+Completed in 18ms (DB: 2) | 302 Found [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-05-28 14:59:25) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/index
+Completed in 18ms (View: 4, DB: 2) | 200 OK [http://localhost/index]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:59:25) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:59:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2009-05-28 14:59:34) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/index
+Completed in 14ms (DB: 2) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-05-28 14:59:34) [GET]
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/index]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 14:59:34) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:59:34) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 14:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 15:01:30) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 10ms (DB: 1) | 302 Found [http://192.168.5.108/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 192.168.5.98 at 2009-05-28 15:01:30) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.5.108/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 15:01:30) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 15:01:31) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 192.168.5.98 at 2009-05-28 15:01:50) [POST]
+  Parameters: {"authenticity_token"=>"0+y4PgrToF1RXmxC75cJlk3MRmwsAhhwm4Ra3QjsSuo=", "user"=>{"username"=>"ceekays", "password"=>"try"}}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`username` = 'ceekays') LIMIT 1[0m
+Redirected to http://192.168.5.108:3000/index
+Completed in 16ms (DB: 1) | 302 Found [http://192.168.5.108/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 192.168.5.98 at 2009-05-28 15:01:50) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/index
+Completed in 16ms (View: 4, DB: 1) | 200 OK [http://192.168.5.108/index]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 15:01:50) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 15:01:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#list (for 192.168.5.98 at 2009-05-28 15:02:30) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/list
+Completed in 19ms (View: 5, DB: 2) | 200 OK [http://192.168.5.108/list]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 15:02:30) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 15:02:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 192.168.5.98 at 2009-05-28 15:03:20) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/index
+Completed in 17ms (View: 4, DB: 2) | 200 OK [http://192.168.5.108/index]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 15:03:20) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 15:03:20) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#list (for 192.168.5.98 at 2009-05-28 15:03:29) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/list
+Completed in 19ms (View: 5, DB: 2) | 200 OK [http://192.168.5.108/list]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 15:03:29) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 15:03:29) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 15:03:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` ORDER BY role[0m
+  [4;36;1mRole Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (17.3ms)
+Completed in 36ms (View: 20, DB: 3) | 200 OK [http://192.168.5.108/edit/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 192.168.5.98 at 2009-05-28 15:03:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` ORDER BY role[0m
+  [4;36;1mRole Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (14.7ms)
+Completed in 33ms (View: 18, DB: 3) | 200 OK [http://192.168.5.108/edit/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 15:03:38) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 15:03:38) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 192.168.5.98 at 2009-05-28 15:03:38) [GET]
+  Parameters: {"valueceekays"=>nil, "id"=>"User", "field"=>"username"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+Rendered user/_form1 (4.2ms)
+Completed in 21ms (View: 8, DB: 2) | 200 OK [http://192.168.5.108/search/User?field=username&valueceekays]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.5.98 at 2009-05-28 15:03:38) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#new (for 127.0.0.1 at 2009-05-28 15:04:35) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 15:04:35) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 15:04:35) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 15:04:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2009-05-28 15:04:49) [POST]
+  Parameters: {"authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ=", "user"=>{"username"=>"ceekays", "password"=>"try"}}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'ceekays') LIMIT 1[0m
+Redirected to http://localhost:3000/index
+Completed in 16ms (DB: 2) | 302 Found [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-05-28 15:04:49) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/index
+Completed in 17ms (View: 4, DB: 2) | 200 OK [http://localhost/index]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 15:04:49) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 15:04:49) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#list (for 127.0.0.1 at 2009-05-28 15:04:57) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/list
+Completed in 21ms (View: 6, DB: 2) | 200 OK [http://localhost/list]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 15:04:57) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 15:04:57) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 15:04:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` ORDER BY role[0m
+  [4;36;1mRole Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (14.8ms)
+Completed in 34ms (View: 18, DB: 3) | 200 OK [http://localhost/edit/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 15:04:59) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 15:04:59) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 15:04:59) [GET]
+  Parameters: {"valueceekays"=>nil, "id"=>"User", "field"=>"username"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+Rendered user/_form1 (3.7ms)
+Completed in 22ms (View: 8, DB: 2) | 200 OK [http://localhost/search/User?field=username&valueceekays]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 15:04:59) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 15:07:27) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` ORDER BY role[0m
+  [4;36;1mRole Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (11.4ms)
+Completed in 29ms (View: 14, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 15:07:27) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 15:07:27) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 15:07:27) [GET]
+  Parameters: {"id"=>"User", "field"=>"username", "value"=>nil}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/search
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` ORDER BY username[0m
+Rendered user/_form1 (2.5ms)
+Completed in 18ms (View: 5, DB: 2) | 200 OK [http://localhost/search/User?field=username&value]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 15:07:28) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 16:18:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (8.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;36;1mRole Load (11.2ms)[0m   [0;1mSELECT * FROM `roles` ORDER BY role[0m
+  [4;35;1mRole Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (44.2ms)
+Completed in 239ms (View: 90, DB: 22) | 200 OK [http://localhost/edit/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:18:23) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:18:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 16:18:27) [GET]
+  Parameters: {"valueceekays"=>nil, "id"=>"User", "field"=>"username"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/search
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` ORDER BY username[0m
+Rendered user/_form1 (14.1ms)
+Completed in 54ms (View: 43, DB: 2) | 200 OK [http://localhost/search/User?field=username&valueceekays]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:18:27) [GET]
+
+ActionController::RoutingError (No route matches "/edit/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 16:19:00) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` ORDER BY role[0m
+  [4;35;1mRole Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (7.6ms)
+Completed in 19ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:19:00) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:19:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#search (for 127.0.0.1 at 2009-05-28 16:19:01) [GET]
+  Parameters: {"id"=>"User", "field"=>"username", "value"=>nil}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/search
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` ORDER BY username[0m
+Rendered user/_form1 (2.7ms)
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/search/User?field=username&value]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:19:01) [GET]
+
+ActionController::RoutingError (No route matches "/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:37:51) [GET]
+
+ActionController::RoutingError (No route matches "/edit/1" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:37:53) [GET]
+
+ActionController::RoutingError (No route matches "/edit/1" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:37:57) [GET]
+
+ActionController::RoutingError (No route matches "/list" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:38:31) [GET]
+
+ActionController::RoutingError (No route matches "/list" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:38:34) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:38:40) [GET]
+
+ActionController::RoutingError (No route matches "/index" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:38:40) [GET]
+
+ActionController::RoutingError (No route matches "/login" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 16:38:55) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` ORDER BY role[0m
+  [4;36;1mRole Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (9.6ms)
+Completed in 52ms (View: 25, DB: 2) | 200 OK [http://localhost/try/this/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:38:55) [GET]
+
+ActionController::RoutingError (No route matches "/try/this/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:38:56) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:38:56) [GET]
+  Parameters: {"field"=>"username", "value"=>nil}
+
+ActionController::RoutingError (No route matches "/search/User" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:40:18) [GET]
+  Parameters: {"field"=>"first_name", "value"=>""}
+
+ActionController::RoutingError (No route matches "/search/User" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:40:22) [GET]
+  Parameters: {"no_auto_load_forms"=>"true"}
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-05-28 16:40:36) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/index
+Completed in 27ms (View: 18, DB: 1) | 200 OK [http://localhost/try/this/index]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:40:36) [GET]
+
+ActionController::RoutingError (No route matches "/try/this/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:40:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#new (for 127.0.0.1 at 2009-05-28 16:40:42) [GET]
+  Parameters: {"authenticity_token"=>"PmpHY7MqAgRqB/FDbZHmtbeny+JDvAwFYcdqMAlH8AQ="}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/new
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` ORDER BY role[0m
+  [4;35;1mRole Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (9.5ms)
+Completed in 37ms (View: 27, DB: 2) | 200 OK [http://localhost/try/this/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:40:42) [GET]
+
+ActionController::RoutingError (No route matches "/try/this/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:40:42) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:40:42) [GET]
+  Parameters: {"field"=>"username", "value"=>nil}
+
+ActionController::RoutingError (No route matches "/search/User" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#basi (for 127.0.0.1 at 2009-05-28 16:44:06) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to basi. Actions: edit, index, list, login, logout, new, and search):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2009-05-28 16:45:24) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/edit
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` ORDER BY role[0m
+  [4;36;1mRole Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered user/_form2 (10.3ms)
+Completed in 92ms (View: 26, DB: 2) | 200 OK [http://localhost/try/this/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:45:24) [GET]
+
+ActionController::RoutingError (No route matches "/try/this/touch.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:45:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/ajax_scaffold.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:45:25) [GET]
+  Parameters: {"field"=>"username", "value"=>nil}
+
+ActionController::RoutingError (No route matches "/search/User" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#basi (for 127.0.0.1 at 2009-05-28 16:45:28) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to basi. Actions: edit, index, list, login, logout, new, and search):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#basi (for 127.0.0.1 at 2009-05-28 16:45:30) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to basi. Actions: edit, index, list, login, logout, new, and search):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-28 16:46:30) [GET]
+
+ActionController::RoutingError (No route matches "/try/this/basi" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20090523051545)
+  [4;35;1mSQL (19.8ms)[0m   [0mDROP TABLE `roles`[0m
+  [4;36;1mSQL (23.2ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20090523051545'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090515121413)
+Migrating to CreateRoles (20090523051545)
+  [4;35;1mSQL (79.8ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role` varchar(255), `description` varchar(255), `created_by` int(11), `updated_by` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090523051545')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (20.7ms)[0m   [0mDROP DATABASE IF EXISTS `bims_test`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE DATABASE `bims_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (69.1ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role` varchar(255), `description` varchar(255), `created_by` int(11), `updated_by` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (79.3ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `username` varchar(255), `encrypted_password` varchar(255), `salt` varchar(255), `role` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (73.6ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (70.3ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090523051545')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090515121413')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20090523051545)
+  [4;35;1mSQL (5.1ms)[0m   [0mDROP TABLE `roles`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20090523051545'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090515121413)
+Migrating to CreateRoles (20090523051545)
+  [4;35;1mSQL (128.1ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role` varchar(255), `description` varchar(255), `created_by` int(11), `updated_by` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090523051545')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (20.8ms)[0m   [0mDROP DATABASE IF EXISTS `bims_test`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE DATABASE `bims_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (66.8ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role` varchar(255), `description` varchar(255), `created_by` int(11), `updated_by` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (55.2ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `username` varchar(255), `encrypted_password` varchar(255), `salt` varchar(255), `role` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (57.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (59.4ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090523051545')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090515121413')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20090523051545)
+  [4;35;1mSQL (4.5ms)[0m   [0mDROP TABLE `roles`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20090523051545'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090515121413)
+Migrating to CreateRoles (20090523051545)
+  [4;35;1mSQL (76.0ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role` varchar(255), `description` varchar(255), `created_by` int(11), `updated_by` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090523051545')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (35.0ms)[0m   [0mDROP DATABASE IF EXISTS `bims_test`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE DATABASE `bims_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (68.3ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role` varchar(255), `description` varchar(255), `created_by` int(11), `updated_by` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (66.4ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `username` varchar(255), `encrypted_password` varchar(255), `salt` varchar(255), `role` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (84.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (71.9ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090523051545')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090515121413')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20090523051545)
+  [4;35;1mSQL (4.4ms)[0m   [0mDROP TABLE `roles`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20090523051545'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090515121413)
+Migrating to CreateRoles (20090523051545)
+  [4;35;1mSQL (86.4ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role` varchar(255), `description` varchar(255), `created_by` int(11), `updated_by` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090523051545')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (28.4ms)[0m   [0mDROP DATABASE IF EXISTS `bims_test`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE DATABASE `bims_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (89.5ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role` varchar(255), `description` varchar(255), `created_by` int(11), `updated_by` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (65.6ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `username` varchar(255), `encrypted_password` varchar(255), `salt` varchar(255), `role` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (69.8ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090523051545')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090515121413')[0m

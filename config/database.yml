@@ -14,8 +14,6 @@ development:
 
 test:
   adapter: mysql
-  database: openmrs_test
+  database: bims_test
   username: root
-  password:
-  host: localhost
-
+  password: ben979
