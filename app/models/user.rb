@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :statuses
+  has_one :role
 
   validates_presence_of 		:username, :message => "cannot be blank, please check"  
   validates_uniqueness_of	  :username

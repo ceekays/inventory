@@ -53,17 +53,23 @@ class ItemController < ApplicationController
       item_ids=params[:id].split('/')
       @items=Item.find(item_ids)
     else
-      @items=Item.find(:all,:include=>:statuses)
+      @items=Item.find(:all,:order=>"name")
     end
+
+    @items = @items.one? ? @items.first : @items unless @items.empty?
   end
 
   def show
     if params[:id]
-      @item=Item.find(params[:id],:include=>:statuses)
+      id=params[:id].to_s
+      @item=Item.find(id,:include=>:statuses)
       session[:item_id]=@item.id
-      @item_status = @item.statuses.last || nil
+      if @item.statuses
+        @item_status = @item.statuses.last
+      else
+        @item_status = nil
+      end
       @tasks=[
-        ["Show", item_path(:show,@item)],
         ["Edit", item_path(:edit,@item)],
         ["Incoming", track_path(:item_in,@item)],
         ["Outgoing", track_path(:item_out,@item)],

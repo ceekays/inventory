@@ -5,9 +5,9 @@ html, body {
 #screen {
   height:100%;
   margin:0;
-  width:100%;
 }
 #left {
+  width:65%;
 }
 #right {
   width:15em;

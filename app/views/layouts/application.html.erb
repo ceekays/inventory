@@ -8,12 +8,14 @@
     <table id="screen">
       <tbody>
         <tr valign="top">
+          <td></td>
           <td id="left" class="view">
             <%=yield%>
           </td>
           <td id="right" class="view" >
             <%= render(:partial=>"shared/task_list", :locals=>{:tasks=>@tasks}) %>
           </td>
+          <td></td>
         </tr>
       </tbody>
     </table>

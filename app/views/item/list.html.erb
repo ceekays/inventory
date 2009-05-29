@@ -1,16 +1,8 @@
 <h1>Item list</h1>
 <p>
-  <select size=5>
-    <% @items.each do |item| %>
-      <optgroup label="<%=item.name %>">
-        <option value="#{item.id}">
-          <% if  item.serial_number %>
-            <%="Serial Number: #{item.serial_number}" %>
-          <% elsif item.model %>
-            <%="Model: #{item.model}" %>
-          <% end %>
-        </option>
-      </optgroup>
-    <% end %>
-  </select>
+  <% @my=@items.collect{|i| [i.name,i.id]} %>
+  <% form_tag item_path(:show) do %>
+    <%=select("id",'', @my,:include_blank => true, :textCase => 'lower')%>
+    <%=submit_tag "Go" %>
+  <% end %>
 </p>
