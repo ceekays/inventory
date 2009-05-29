@@ -1,0 +1,2 @@
+module SuggestHelper
+end
