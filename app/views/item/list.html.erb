@@ -1,0 +1,8 @@
+<h1>Item list</h1>
+<p>
+  <% @my=@items.collect{|i| [i.name,i.id]} %>
+  <% form_tag item_path(:show) do %>
+    <%=select("id",'', @my,:include_blank => true, :textCase => 'lower')%>
+    <%=submit_tag "Go" %>
+  <% end %>
+</p>

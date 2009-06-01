@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  item_id: 1
+  message: MyString
+  reason: MyString
+  owner: MyString
+  location: MyString
+  storage_code: MyString
+  user_id: 1
+
+two:
+  item_id: 1
+  message: MyString
+  reason: MyString
+  owner: MyString
+  location: MyString
+  storage_code: MyString
+  user_id: 1

@@ -11,11 +11,34 @@
 
 ActiveRecord::Schema.define(:version => 20090523051545) do
 
+  create_table "items", :force => true do |t|
+    t.string   "name"
+    t.string   "model"
+    t.string   "serial_number"
+    t.string   "barcode"
+    t.string   "category"
+    t.string   "manufacturer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "roles", :force => true do |t|
     t.string   "role"
     t.string   "description"
     t.integer  "created_by"
     t.integer  "updated_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "statuses", :force => true do |t|
+    t.integer  "item_id"
+    t.string   "message"
+    t.string   "reason"
+    t.string   "owner"
+    t.string   "location"
+    t.string   "storage_code"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

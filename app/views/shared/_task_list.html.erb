@@ -1,0 +1,9 @@
+<div class="tasks">
+  <% @tasks.each do |text,action| -%>
+  <%= link_to text,action,:method=>:get%>
+  <% end if @tasks %>
+<div>
+
+
+
+

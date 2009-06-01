@@ -1,14 +1,23 @@
-<head>
-<title><%=@pagetitle%></title>
-<link href="touch.css" rel="stylesheet" type="text/css" media="screen" />
-<%= stylesheet_link_tag 'touch'%>
-<!%= javascript_include_tag :defaults %>
-<%= javascript_include_tag 'touchscreenToolkit', 'ajax_scaffold' %>
-</head>
-
-<h3><%= flash[:notice]%></h3> 
-<%= yield %> <%=@my_content%>
-<%# if User.method != 'index' then %>
-<%= link_to "Back to Menu",{:action=> "index"} unless current_page? :action => "index" %> 
-<%#end%>
-
+<html>
+  <head>
+    <title>BIMS</title>
+    <%=javascript_include_tag "touchscreenToolkit"%>
+    <%=stylesheet_link_tag "screen","touch" %>
+  </head>
+  <body>
+    <table id="screen">
+      <tbody>
+        <tr valign="top">
+          <td></td>
+          <td id="left" class="view">
+            <%=yield%>
+          </td>
+          <td id="right" class="view" >
+            <%= render(:partial=>"shared/task_list", :locals=>{:tasks=>@tasks}) %>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

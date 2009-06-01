@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
-  validates_presence_of 		:username,:message => "cannot be blank, please check"  
+  has_many :statuses
+  has_one :role
+
+  validates_presence_of 		:username, :message => "cannot be blank, please check"  
   validates_uniqueness_of	  :username
   validates_presence_of 		:password
   #validates_uniqueness_of	:password
@@ -43,9 +46,8 @@ class User < ActiveRecord::Base
     return if pwd.blank?
 
     create_new_salt
-    self.encrypted_password = User.encrypt_password(self.password, self.salt)
-  end
-
+    self.encrypted_password=User.encrypt_password(self.password,self.salt)
+  end 
   
   def create_new_salt
     self.salt = String.random_alphanumeric

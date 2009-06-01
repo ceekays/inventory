@@ -1,0 +1,64 @@
+html, body {
+  margin:0;
+  padding:0;
+}
+#screen {
+  height:100%;
+  margin:0;
+}
+#left {
+  width:65%;
+}
+#right {
+  width:15em;
+}
+select {
+}
+.tasks input {
+  font-weight:bold;
+  padding:1em;
+  text-align:left;
+  width:15em;
+}
+
+.view {
+  border:2px outset threedshadow;
+  color:infotext;
+  padding:1em;
+}
+.tasks {
+  margin:3em auto;
+}
+
+a {
+  text-decoration:none;
+  border:3px outset ButtonShadow;
+  background-color:buttonFace;
+  color:buttonText;
+  padding:1em;
+  margin:0.5em;
+  font-size:1em;
+  font-weight:bold;
+  display:block;
+}
+a:hover {
+  background-color:ButtonHighlight;
+}
+a:active {
+  border:3px inset ButtonShadow;
+}
+.tasks a {
+  display:block;
+}
+select {
+
+}
+optgroup {
+    margin:1em 0.5em;
+    background:#FF9;
+}
+
+option{
+    margin:0;
+    padding:1em 0;
+}

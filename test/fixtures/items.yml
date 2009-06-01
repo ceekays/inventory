@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  model: MyString
+  serial_number: MyString
+  barcode: MyString
+  type: MyString
+  manufacturer: MyString
+
+two:
+  name: MyString
+  model: MyString
+  serial_number: MyString
+  barcode: MyString
+  type: MyString
+  manufacturer: MyString

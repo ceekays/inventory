@@ -1,0 +1,6 @@
+<h1>Find Item</h1>
+<% form_for :item do |form| %>
+  <%=form.label :query,"Search for"%>
+  <%=form.text_field :query %>
+  <%=form.submit "go" %>
+<% end %>

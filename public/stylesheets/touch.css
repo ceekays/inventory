@@ -32,31 +32,7 @@ body{
   font-family: "Nimbus Sans L", "Arial Narrow", sans-serif;
   overflow: hidden;
 }
-/**************This section was Added by Edmond*********************/
-h1, h2, h3 {
-	/* margin: 0;
-	padding: 0;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-weight: normal;*/
-	color: green;
-}
-h4{
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-weight: bold;
-	font-size: 1.7em;
-	/*background-color:blue;*/
-	color: #FFD700;
-	text-align: left;	
-}
-#content{
-}
-.menu a td h2{
-    padding: 0.4em;
-    text-decoration: none;
-    border: 3;
-    background-color:blue;
-}
-/********************************************************************/
+
 form{
   z-index:0;
 }
