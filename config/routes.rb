@@ -9,10 +9,6 @@ ActionController::Routing::Routes.draw do |map|
   map.main "/main/:action/:id", :controller=>"main"
   map.user "/user/:action/:id", :controller=>"user"
   
-  map.with_options(:controller=>"suggest") do |suggest|
-    suggest.item "/suggest/items/:field/:value", :action=> "items"
-    suggest.user "/suggest/users/:field/:value", :action=> "users"
-  end
   
   # The priority is based upon order of creation: first created -> highest priority.
   # Sample of regular route:
