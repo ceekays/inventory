@@ -1,10 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
   
   
+
+
+
   map.item "/item/:action/:id", :controller=>"item"
   map.track "/track/:action/:id", :controller=> "track"
   map.main "/main/:action/:id", :controller=>"main"
   map.user "/user/:action/:id", :controller=>"user"
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # Sample of regular route:
