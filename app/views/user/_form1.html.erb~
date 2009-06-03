@@ -9,7 +9,6 @@
 <%= error_messages_for 'user' %>
 <p>
 	<label for="user_username" >Username:</label> 
-	<%= text_field 'user', 'username', :xhelpText => 'Username', 
-	:ajaxURL => '/search/User?field=username&value=', 
-	:value => @user_username, :textCase => 'lower' %>
+	<%= @username = User.find(:all,:order =>'username').map{|u|[u.username,u.id]}
+	select(:user, :id, @username,{},{:tt_onload => "$('keyboard').style='display:block;'",:include_blank => true, :textCase => 'lower'})%>
 </p>

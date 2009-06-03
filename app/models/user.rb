@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :statuses
-  has_one :role
+#  has_one :role
 
   validates_presence_of 		:username, :message => "cannot be blank, please check"  
   validates_uniqueness_of	  :username
@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
     
     if user
       expected_password = encrypt_password(password, user.salt)
-      if user.encrypted_password != expected_password
+    if user.encrypted_password != expected_password
         user = nil            
       end
     end
