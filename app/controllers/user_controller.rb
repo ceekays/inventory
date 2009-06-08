@@ -32,9 +32,10 @@ class UserController < ApplicationController
   # In the index contoller, there is
   def search
      @pagetitle = 'Search for a Particular User'		
-    #session[:method] = 'get'
+   	
     if request.post?
-      redirect_to :action=>"edit", :id => params[:user][:id] 
+			#params[:user] = User.find_by_username(params[:user][:username])
+      redirect_to :action=>"edit", :id => params[:user][:username]
     end
   end
   
@@ -43,14 +44,14 @@ class UserController < ApplicationController
   def edit								
     @pagetitle = 'Edit User Details'
     if params[:id]
-    @user = User.find(params[:id])
+    @user = User.find_by_username(params[:id])
     if request.post? &&  @user
       if @user.update_attributes(params[:user])
         redirect_to :action => "index"
         flash[:notice] ="The changes on '#{@user.username}' have been effected succefully!"
       else
         #redirect_to :action => "index"
-        flash[:notice] ="The changes have not been effected on the user!" 
+        flash[:notice] ="The changes have not been effected on the user! Probably the user does not exist."
       end
     end
   end

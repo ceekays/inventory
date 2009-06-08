@@ -1,15 +1,18 @@
 class UserController < ApplicationController
 
   # find 'login' and 'logout' in ApplicationController
-  #before_filter :authorize, :except   => :login
+  before_filter :authorize, :except   => [:login, :logout]
   # creates a new user in the database 
-  
+	def test
+	
+	end  
+
   def index
     @pagetitle = 'Main Menu'
   end
   def new
     @pagetitle = 'Create New User'
-    @user = User.new(params[:user])
+		@user = User.new(params[:user])
     if request.post? && @user.save
       redirect_to(:action => "index")
       flash[:notice] = "User #{@user.username} has been succesfully created"

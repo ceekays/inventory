@@ -8,10 +8,10 @@
 <p>
 <label for="user_username">Enter the username:</label> 
 	<%= text_field 'user', 'username', :xhelpText => 'Username', 
-	:ajaxURL => '/user/User?field=username&value', 
+	:ajaxURL => '/search/User?field=username&value=', 
 	:value => @user_username, :allowFreeText => true, :textCase => 'lower' %>
 </p>                              
-
+<%case controller.name%>
 <p>
 <label for="user_first_name">Enter the first name:</label> 
 	<%= text_field 'user', 'first_name', :xhelpText => 'Firstname', 

@@ -1,8 +1,8 @@
 <html>
   <head>
     <title>BIMS</title>
-    <%=javascript_include_tag "touchscreenToolkit"%>
-    <%=stylesheet_link_tag "screen","touch" %>
+    <!%=javascript_include_tag "touchscreenToolkit"%>
+    <!%=stylesheet_link_tag "screen","touch" %>
   </head>
   <body>
     <table id="screen">
@@ -10,6 +10,7 @@
         <tr valign="top">
           <td></td>
           <td id="left" class="view">
+             <h3><%= flash[:notice]%></h3>
             <%=yield%>
           </td>
           <td id="right" class="view" >

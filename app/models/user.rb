@@ -1,11 +1,12 @@
 class User < ActiveRecord::Base
   has_many :statuses
-#  has_one :role
+  #has_one :role
 
-  validates_presence_of 		:username, :message => "cannot be blank, please check"  
+  validates_presence_of 		:username, :message => "cannot be blank, please check!"
   validates_uniqueness_of	  :username
   validates_presence_of 		:password
-  #validates_uniqueness_of	:password
+  #password lenght should not be less than 4 characters
+  validates_length_of       :password, :minimum => 4, :message => "length cannot be less than 4 characters long, please check!"
   attr_accessor 						:password_confirmation #, :message => "cannot be blank, please check"
   validates_confirmation_of	:password 
 
@@ -62,6 +63,9 @@ class User < ActiveRecord::Base
   # Returns a random alphanumeric string of arbitrary size.
 
   def String.random_alphanumeric(size=40)
+    
+    raise "***The size should not be less than 40***" if size < 40
+      
     s = ""
     size.times { s << (i = Kernel.rand(62); i += ((i < 10) ? 48 : ((i < 36) ? 55 : 61 ))).chr }
     s

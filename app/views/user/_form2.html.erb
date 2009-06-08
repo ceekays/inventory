@@ -11,7 +11,7 @@
 	:ajaxURL => '/search/User?field=username&value=', 
 	:value => @user_username, :allowFreeText => true, :textCase => 'lower' %>
 </p>                              
-
+<!--%case controller.action_name when "new","edit" %-->
 <p>
 <label for="user_first_name">Enter the first name:</label> 
 	<%= text_field 'user', 'first_name', :xhelpText => 'Firstname', 
@@ -38,3 +38,4 @@
 	<%= @role = Role.find(:all,:order =>'role').map{|u|[u.role]}
 	select(:user, :role, @role,{},{:tt_onload => "$('keyboard').style='display:block;'",:include_blank => true, :textCase => 'lower'})%>
 </p>
+<!--%end%-->
