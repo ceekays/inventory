@@ -9,9 +9,10 @@ public/reports
 .*swp
 *.swo
 callibrate*
-doc/*
+doc
 doc/plugins
-log/*
+log
 nbproject
 *.ign
 output.html.erb
+*~
