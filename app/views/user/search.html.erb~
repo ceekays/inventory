@@ -1,6 +1,0 @@
-<h3><%=@pagetitle %></h3>
-<%= error_messages_for "users" %>
-  <% form_for :user do %>
-  <%= render :partial => 'form1'%>
-  <%= submit_tag "Go" %> 
-<%end%>
