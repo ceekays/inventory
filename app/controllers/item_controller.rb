@@ -18,7 +18,7 @@ class ItemController < ApplicationController
     if request.post?
       item=Item.find(params[:id])
       if item and item.update_attributes(params[:item])
-        flash[:notice] = "Item updatingsuccessful."
+        flash[:notice] = "Item updated successfully."
         redirect_to root_path
       else
         flash[:error] = "Item updating failed."
@@ -79,10 +79,12 @@ class ItemController < ApplicationController
   def in
     if request.post?
       if params[:status]
+        #check if the item exists
+        @item = Item.find(params[:status][:item_id])
         status=Status.new(params[:status])
         status.item_id=session[:item_id]
         status.message="item in"
-        if status.save
+        if status.save && @item
           flash[:notice]="Item successfully recorded as 'in'."
           session[:item_id]=nil
           redirect_to root_path
@@ -112,10 +114,12 @@ class ItemController < ApplicationController
    def out
     if request.post?
       if params[:status]
+        #check if the item exists
+        @item = Item.find(params[:status][:item_id])
         status=Status.new(params[:status])
         status.item_id=session[:item_id]
         status.message="item out"
-        if status.save
+        if status.save && @item
           flash[:notice]="Item successfully recorded as 'out'."
           redirect_to root_path
         else
