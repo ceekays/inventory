@@ -13,3 +13,5 @@ doc/*
 doc/plugins
 log/*
 nbproject
+*.ign
+output.html.erb
