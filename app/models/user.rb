@@ -2,13 +2,13 @@ class User < ActiveRecord::Base
   has_many :statuses
   #has_one :role
 
-  validates_presence_of 		:username, :message => "cannot be blank, please check!"
-  validates_uniqueness_of	  :username
-  validates_presence_of 		:password
+  validates_presence_of     :username, :message => "cannot be blank, please check!"
+  validates_uniqueness_of   :username
+  validates_presence_of     :password
   #password lenght should not be less than 4 characters
   validates_length_of       :password, :minimum => 4, :message => "length cannot be less than 4 characters long, please check!"
-  attr_accessor 						:password_confirmation #, :message => "cannot be blank, please check"
-  validates_confirmation_of	:password 
+  attr_accessor             :password_confirmation #, :message => "cannot be blank, please check"
+  validates_confirmation_of :password
 
   #checks whether the password is blank and records an error message
   def validate
@@ -29,7 +29,7 @@ class User < ActiveRecord::Base
     
     if user
       expected_password = encrypt_password(password, user.salt)
-    if user.encrypted_password != expected_password
+      if user.encrypted_password != expected_password
         user = nil            
       end
     end
@@ -43,13 +43,19 @@ class User < ActiveRecord::Base
   end
 
   def password=(pwd)
-    @password = pwd
     return if pwd.blank?
+    @password = pwd
 
     create_new_salt
     self.encrypted_password=User.encrypt_password(self.password,self.salt)
   end 
-  
+
+  # ****************************************************************************
+  # the random salt should have length >= 40 (default)
+  # adding a parameter as in "String.random_alphanumeric(MAX)",
+  # makes it create a salt of size MAX
+  # where MAX is a an integer
+  # ****************************************************************************
   def create_new_salt
     self.salt = String.random_alphanumeric
   end
@@ -60,15 +66,13 @@ class User < ActiveRecord::Base
     Digest::SHA1.hexdigest(string_to_hash)
   end
   
-  # Returns a random alphanumeric string of arbitrary size.
-
+  # Returns a random alphanumeric string of arbitrary size, 40 is default.
   def String.random_alphanumeric(size=40)
     
-    raise "***The size should not be less than 40***" if size < 40
+    #raise "***The size should not be less than 40***" if size < 40
       
-    s = ""
-    size.times { s << (i = Kernel.rand(62); i += ((i < 10) ? 48 : ((i < 36) ? 55 : 61 ))).chr }
-    s
+    str = ""
+    size.times { str << (i = Kernel.rand(62); i += ((i < 10) ? 48 : ((i < 36) ? 55 : 61 ))).chr }
+    str
   end
-
 end

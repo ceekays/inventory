@@ -34,8 +34,8 @@ class UserController < ApplicationController
      @pagetitle = 'Search for a Particular User'		
    	
     if request.post?
-			#params[:user] = User.find_by_username(params[:user][:username])
-      redirect_to :action=>"edit", :id => params[:user][:username]
+	#params[:user] = User.find_by_username(params[:user][:username])
+      	redirect_to :action=>"edit", :id => params[:user][:username]
     end
   end
   

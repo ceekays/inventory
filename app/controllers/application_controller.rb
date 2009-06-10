@@ -35,7 +35,7 @@ class ApplicationController < ActionController::Base
         session[:original_url] = nil
         
         #return the user to the previous url or just redirect them to 'home page'
-        redirect_to (url || {:action => 'index'})
+        redirect_to(url || {:action => 'index'})
         flash[:notice] = "Welcome #{session[:username]}," + 
                           "you have succesfully logged in"
             

@@ -68,12 +68,12 @@ describe ItemController do
       get 'list'
       response.should be_success
     end
-#=begin
+=begin
 
     it"add an exammple here"do
       raise"\"add some examples for 'list' action or comment/remove this example\""
     end
-#=end
+=end
   end
 
   describe "GET 'show'" do
