@@ -5,6 +5,7 @@ class MainController < ApplicationController
       ["User Administration",main_path(:users)],
       ["Generate Reports",item_path(:list)]
     ]
+    #render :text=>"#{@tasks}"
   end
   def items
     @tasks=[

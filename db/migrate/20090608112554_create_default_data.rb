@@ -3,6 +3,9 @@ class CreateDefaultData < ActiveRecord::Migration
     i=Item.new(:name=>"Nokia Cellphone",:model=>"Nokia 6030",:manufacturer=>"Nokia Inc.", :type=>"Cellphone")
     i.statuses<<Status.new(:message=>"item in",:reason=>"Deployment",:owner=>"Kondwani")
     i.save
+    i=Item.new(:name=>"Head Phone",:model=>"Nokia 6030",:manufacturer=>"Nokia Inc.", :type=>"Cellphone")
+    i.statuses<<Status.new(:message=>"item in",:reason=>"Deployment",:owner=>"Kondwani")
+    i.save
     Role.create(:role=>"admin",:description=>"Super User")
     Role.create(:role=>"normal",:description=>"Ordinary User")
 
@@ -17,9 +20,11 @@ class CreateDefaultData < ActiveRecord::Migration
 
   def self.down
     Item.find(:first).destroy
+    Item.find(:first).destroy
     Status.find(:first).destroy
     Role.find(:first).destroy
     Role.find(:first).destroy
+    User.find(:first).destroy
     User.find(:first).destroy
   end
 end

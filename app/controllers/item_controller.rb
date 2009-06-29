@@ -56,7 +56,7 @@ class ItemController < ApplicationController
       @items=Item.find(:all,:order=>"name")
     end
 
-    @items = @items.one? ? @items.first : @items unless @items.empty?
+    @items = [] if @items.nil?
   end
 
   def show
@@ -81,7 +81,7 @@ class ItemController < ApplicationController
       if params[:status]
         #check if the item exists
         @item = Item.find(params[:status][:item_id])
-        status=Status.new(params[:status])
+        status=Status.new#(params[:status])
         status.item_id=session[:item_id]
         status.message="item in"
         if status.save && @item

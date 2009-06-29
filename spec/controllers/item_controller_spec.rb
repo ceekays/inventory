@@ -10,8 +10,7 @@ describe ItemController do
   it "should use ItemController" do
     controller.should be_an_instance_of(ItemController)
   end
-
-
+  
   describe "GET 'new'" do
     it "should be successful" do
       get 'new'
@@ -68,6 +67,8 @@ describe ItemController do
       get 'list'
       response.should be_success
     end
+
+
 =begin
 
     it"add an exammple here"do
@@ -94,6 +95,7 @@ describe ItemController do
       get 'in'
       response.should be_success
     end
+    
     it "should be able to record the status of an incoming item"do
       post :in, :status =>{
         "item_id"=> "1", "message"=>"This has been take in", "reason"=> "defunked",

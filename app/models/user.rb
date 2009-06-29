@@ -75,4 +75,5 @@ class User < ActiveRecord::Base
     size.times { str << (i = Kernel.rand(62); i += ((i < 10) ? 48 : ((i < 36) ? 55 : 61 ))).chr }
     str
   end
+
 end
