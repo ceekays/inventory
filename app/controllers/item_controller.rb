@@ -1,4 +1,5 @@
 class ItemController < ApplicationController
+  before_filter :authorize, :except   => [:login, :logout]
   def new
     if request.post?
       item=Item.new(params[:item]) if params[:item]
@@ -64,40 +65,51 @@ class ItemController < ApplicationController
       id=params[:id].to_s
       @item=Item.find(id,:include=>:statuses)
       session[:item_id]=@item.id
+
       if @item.statuses
         @item_status = @item.statuses.last
+        @x_user_id = @item.statuses.last.user_id
+        #raise @item_status.user.username
+        #@item_status.user = User.find(@x_user_id).username
+        #raise @item_status.user_id.to_s
       else
         @item_status = nil
       end
       @tasks=[
         ["Edit", item_path(:edit,@item)],
-        ["Incoming", track_path(:item_in,@item)],
-        ["Outgoing", track_path(:item_out,@item)],
+        ["Incoming", track_path(:in,@item)],
+        ["Outgoing", track_path(:out,@item)],
+        ["DashBoard",main_path(:index)]
       ]
     end
   end
   def in
     if request.post?
       if params[:status]
+        # section: edited
+        params[:status][:item_id] = params[:id]
+        params[:status][:user_id] = session[:user_id]
+        # end of section
+         #raise session[:user_id].to_s
         #check if the item exists
-        @item = Item.find(params[:status][:item_id])
-        status=Status.new#(params[:status])
-        status.item_id=session[:item_id]
-        status.message="item in"
+        @item  = Item.find(params[:status][:item_id])
+        status = Status.new#(params[:status])
+        status.item_id = session[:item_id]
+        status.message = "item in"
         if status.save && @item
-          flash[:notice]="Item successfully recorded as 'in'."
-          session[:item_id]=nil
+          flash[:notice] = "Item successfully recorded as 'in'."
+          session[:item_id] = nil
           redirect_to root_path
         else
           flash[:error]="recording item status failed."
         end
       elsif params[:item][:barcode]
-        @item=Item.find_by_barcode(params[:item][:barcode])
+        @item = Item.find_by_barcode(params[:item][:barcode])
         if @item
           @status_fields = [:reason,:storage_code]
-          session[:item_id]=@item.id
+          session[:item_id] = @item.id
         else
-          flash[:notice]="Item not found. Please Register it."
+          flash[:notice] = "Item not found. Please Register it."
         end
       end
     elsif params[:id]
@@ -110,17 +122,29 @@ class ItemController < ApplicationController
       end
     end
   end
-
+  
+  ######################################################
+  # Change:   added the "edited" section
+  # Reason:   resolve this bug "Couldn't find Item without an ID"
+  # Solution: set the "id" to "status.item_id"
+  # Author:   Edmond Kachale on 30 July 2009
+  ######################################################
    def out
     if request.post?
       if params[:status]
+
+        # section: edited 
+        params[:status][:item_id] = params[:id]
+        params[:status][:user_id] = session[:user_id]
+        # end of section
+        
         #check if the item exists
-        @item = Item.find(params[:status][:item_id])
-        status=Status.new(params[:status])
-        status.item_id=session[:item_id]
-        status.message="item out"
+        @item  = Item.find(params[:status][:item_id])
+        status = Status.new(params[:status])
+        status.item_id = session[:item_id]
+        status.message = "item out"
         if status.save && @item
-          flash[:notice]="Item successfully recorded as 'out'."
+          flash[:notice] = "Item successfully recorded as 'out'."
           redirect_to root_path
         else
           flash[:error]="recording item status failed."

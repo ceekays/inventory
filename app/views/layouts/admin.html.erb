@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>BIMS</title>
-    <%=javascript_include_tag "touchscreenToolkit"%>
+    <!%=javascript_include_tag "touchscreenToolkit"%>
     <%=stylesheet_link_tag "screen","touch" %>
   </head>
   <body>
@@ -14,7 +14,7 @@
             <%=yield%>
           </td>
           <td id="right" class="view" >
-            <% @tasks<<["Login", user_path(:login)] if @tasks%>
+            <%@tasks<<["Logout", user_path(:logout)] if @tasks%>
             <%= render(:partial=>"shared/task_list", :locals=>{:tasks=>@tasks}) %>
           </td>
           <td></td>

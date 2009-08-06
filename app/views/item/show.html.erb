@@ -11,6 +11,6 @@
     <div><b>Status:</b> <%=@item_status.message %></div>
     <div><b>Reason:</b> <%=@item_status.reason %></div>
     <div><b>Time:</b> <%=@item_status.updated_at.strftime("%H:%M:%S, %a, %d %b %Y")%></div>
-    <div>Updated by <%=@item_status.user%></div>
+    <div>Updated by <%=@item_status.user.username if @item_status.user%></div>
   <% end %>
 </div>

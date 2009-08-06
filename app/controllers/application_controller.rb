@@ -2,6 +2,8 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  layout:get_layout
+  
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
@@ -35,7 +37,7 @@ class ApplicationController < ActionController::Base
         session[:original_url] = nil
         
         #return the user to the previous url or just redirect them to 'home page'
-        redirect_to(url || {:action => 'index'})
+        redirect_to(url || root_path)
         flash[:notice] = "Welcome #{session[:username]}," + 
                           "you have succesfully logged in"
             
@@ -51,7 +53,7 @@ class ApplicationController < ActionController::Base
   def logout
     session[:user_id] = nil
     session[:username] = nil
-    redirect_to :action =>'index'
+    redirect_to root_path
     flash[:notice] = "You have logged out"
   end
   
@@ -77,6 +79,14 @@ class ApplicationController < ActionController::Base
  def get_layout
      if session[:user_id] 
          "admin"   
+      else
+         "application"
+     end
+  end
+
+ def get_layout
+     if session[:user_id]
+         "admin"
       else
          "application"
      end

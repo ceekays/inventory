@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 	
   map.item "/item/:action/:id", :controller=>"item"
-  map.track "/track/:action/:id", :controller=> "track"
+  map.track "/track/:action/:id", :controller=> "item"
   map.main "/main/:action/:id", :controller=>"main"
   map.user "/user/:action/:id", :controller=>"user"
   

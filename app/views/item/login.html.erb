@@ -1,0 +1,10 @@
+<% form_for :user do |form| %>
+
+  <label for="user_username">Username</label>
+  <%=text_field(:user, :username, :helpText=> "Enter Username", :textCase => "lower",:tt_pageonload=>"loadBarcodePage") %><br>
+  <label for="user_password">Password</label>
+  <%=password_field(:user, :password, :helpText => "Enter Password", :textCase => "lower") %><br>
+  
+  <%= submit_tag value="Login"%>
+  <% end %>
+
