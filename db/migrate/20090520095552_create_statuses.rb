@@ -7,6 +7,7 @@ class CreateStatuses < ActiveRecord::Migration
       t.string :owner
       t.string :location
       t.string :storage_code
+      t.string :item_condition
       t.integer :user_id
 
       t.timestamps

@@ -17,5 +17,17 @@
   <%= i.label(:manufacturer,"Item Manufacturer") +
     i.text_field(:manufacturer) +
     tag(:br) if fields.include? :manufacturer %>
+  <%= i.label(:date_of_reception,"Date of Item Reception") +
+    i.text_field(:date_of_reception) +
+    tag(:br) if fields.include? :date_of_reception %>
+  <%= i.label(:owner,"Item Owner (in Charge)") +
+    i.text_field(:owner) +
+    tag(:br) if fields.include? :owner%>
+  <%= i.label(:project_name,"Item Project Name") +
+    i.text_field(:project_name) +
+    tag(:br) if fields.include? :project_name%>
+  <%= i.label(:location,"Item Location") +
+    i.text_field(:location) +
+    tag(:br) if fields.include? :location%>
 <% end %>
 

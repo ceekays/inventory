@@ -18,6 +18,10 @@ ActiveRecord::Schema.define(:version => 20090608112554) do
     t.string   "barcode"
     t.string   "category"
     t.string   "manufacturer"
+    t.string   "owner"
+    t.string   "date_of_reception"
+    t.string   "location"
+    t.string   "project_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20090608112554) do
     t.string   "owner"
     t.string   "location"
     t.string   "storage_code"
+    t.string   "item_condition"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

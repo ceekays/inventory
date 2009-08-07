@@ -7,6 +7,10 @@ class CreateItems < ActiveRecord::Migration
       t.string :barcode
       t.string :category
       t.string :manufacturer
+      t.string :owner
+      t.string :date_of_reception
+      t.string :location
+      t.string :project_name
 
       t.timestamps
     end

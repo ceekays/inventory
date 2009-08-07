@@ -1,21 +1,37 @@
 class CreateDefaultData < ActiveRecord::Migration
   def self.up
-    i=Item.new(:name=>"Nokia Cellphone",:model=>"Nokia 6030",:manufacturer=>"Nokia Inc.", :type=>"Cellphone")
-    i.statuses<<Status.new(:message=>"item in",:reason=>"Deployment",:owner=>"Kondwani", :user_id => "2")
-    i.save
-    i=Item.new(:name=>"Head Phone",:model=>"Panasonic",:manufacturer=>"Panasonic", :type=>"Headphone")
-    i.statuses<<Status.new(:message=>"item in",:reason=>"Deployment",:owner=>"Ceekays", :user_id => "1")
-    i.save
+   # create user roles
     Role.create(:role=>"admin",:description=>"Super User")
     Role.create(:role=>"normal",:description=>"Ordinary User")
-
-    User.create(:username =>"ceekays",:first_name =>"Edmond",
+    
+   #create users
+   User.create(:username =>"ceekays",:first_name =>"Edmond",
                 :role => Role.find(1), :last_name =>"Kachale",  # role == admin
                 :password =>"test", :password_confirmation =>"test")
 
     User.create(:username =>"mile",:first_name =>"Kondwani",
                 :role => Role.find(1), :last_name =>"Hara",     # role == admin
                 :password =>"test", :password_confirmation =>"test")
+    
+    # create new items, a and b
+    a=Item.new(:name=>"Nokia Cellphone",:model=>"Nokia 6030",:manufacturer=>"Nokia Inc.",
+               :owner => "Kondwani Hara",:date_of_reception =>Time.now,:location => "BHT",
+               :barcode =>"unknown",:serial_number => "unknown", :category => "Laptop",:project_name => "Baobab")
+             
+    b=Item.new(:name=>"Laptop",:model=>"VGN-NS240E",:manufacturer=>"Sony",
+               :owner => "Edmond Kachale",:date_of_reception =>Time.now,:location => "BHT",
+               :barcode => "00148-119-342-925",:serial_number => "2828-4933-3034-122", :category => "Laptop",:project_name => "Baobab")
+    
+    # create status
+    a.statuses<<Status.new(:message=>"new",:reason=>"deployed",:owner=>"Kondwani", :user_id => "2")
+    b.statuses<<Status.new(:message=>"new",:reason=>"deployed",:owner=>"Ceekays", :user_id => "1")
+
+    #save the items
+    a.save
+    b.save
+    
+
+    
   end
 
   def self.down

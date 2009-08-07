@@ -10,8 +10,9 @@ class ItemController < ApplicationController
         flash[:error] = "Item registration failed."
       end
     else
-      @item_fields = [:name,:model,:serial_number,:barcode,:category,:manufacturer]
-      @status_fields = [:message,:reason,:owner,:location,:storage_code]
+      @item_fields = [:name,:model,:serial_number,:barcode,:category,
+                      :manufacturer,:owner,:date_of_reception,:location,:catergory,:project_name]
+      @status_fields = [:message,:reason,:owner,:location,:storage_code,:item_condition]
     end
   end
 
@@ -106,7 +107,7 @@ class ItemController < ApplicationController
       elsif params[:item][:barcode]
         @item = Item.find_by_barcode(params[:item][:barcode])
         if @item
-          @status_fields = [:reason,:storage_code]
+          @status_fields = [:reason,:storage_code,:item_condition]
           session[:item_id] = @item.id
         else
           flash[:notice] = "Item not found. Please Register it."
@@ -115,7 +116,7 @@ class ItemController < ApplicationController
     elsif params[:id]
       @item=Item.find(params[:id])
       if @item
-        @status_fields = [:reason,:storage_code]
+        @status_fields = [:reason,:storage_code,:item_condition]
         session[:item_id]=@item.id
       else
         flash[:notice]="Item not found. Please Register it."

@@ -14,4 +14,8 @@
   <%=s.label(:storage_code) +
     s.text_field(:storage_code) +
     tag(:br) if fields.include? :storage_code%>
+
+<%=s.label(:item_condition) +
+    s.text_field(:item_condition) +
+    tag(:br) if fields.include? :item_condition%>
 <% end %>
