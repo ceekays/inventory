@@ -9,6 +9,7 @@ class UserController < ApplicationController
   end
   def new
     @pagetitle = 'Create New User'
+   
 		@user = User.new(params[:user])
     if request.post? && @user.save
       redirect_to(:action => "index")
