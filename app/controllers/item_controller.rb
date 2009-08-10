@@ -1,6 +1,7 @@
 class ItemController < ApplicationController
-  before_filter :authorize, :except   => [:login, :logout]
+  before_filter :authorize, :except   => [:login, :logout, :get_layout]
   def new
+    
     if request.post?
       item=Item.new(params[:item]) if params[:item]
       if item.save

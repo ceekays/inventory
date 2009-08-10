@@ -33,14 +33,14 @@ class ApplicationController < ActionController::Base
         session[:user_id] = user.id
         session[:username] = user.username
         
-        url = session[:original_url]
+        url = session[:original_uri]
         session[:original_url] = nil
         
         #return the user to the previous url or just redirect them to 'home page'
         redirect_to(url || root_path)
         flash[:notice] = "Welcome #{session[:username]}," + 
                           "you have succesfully logged in"
-            
+        
       else
         flash[:notice] = "Invalid user/password combination"
       end
@@ -79,14 +79,6 @@ class ApplicationController < ActionController::Base
  def get_layout
      if session[:user_id] 
          "admin"   
-      else
-         "application"
-     end
-  end
-
- def get_layout
-     if session[:user_id]
-         "admin"
       else
          "application"
      end
