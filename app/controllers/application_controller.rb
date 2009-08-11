@@ -2,8 +2,7 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
-  layout:get_layout
-  
+    
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
@@ -73,14 +72,6 @@ class ApplicationController < ActionController::Base
        session[:original_uri] = request.request_uri
        flash[:notice] = "Please log in"
        redirect_to(:action => "login" )
-     end
-  end
-  
- def get_layout
-     if session[:user_id] 
-         "admin"   
-      else
-         "application"
      end
   end
 end
