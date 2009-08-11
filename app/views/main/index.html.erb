@@ -1,1 +1,8 @@
 <h1 align="center">DashBoard</h1>
+<%
+  if @tasks && session[:user_id] 
+    @tasks<<["Logout", user_path(:logout)]
+  else
+    @tasks<<["Login", user_path(:login)]
+  end
+%>

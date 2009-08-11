@@ -13,8 +13,7 @@
              <h3><%= flash[:notice]%></h3>
             <%=yield%>
           </td>
-          <td id="right" class="view" >
-            <% @tasks<<["Login", user_path(:login)] if @tasks%>
+          <td id="right" class="view" >            
             <%= render(:partial=>"shared/task_list", :locals=>{:tasks=>@tasks}) if @tasks%>
           </td>
           <td></td>

@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>BIMS</title>
+    <title>Baobab Inventory</title>
     <!%=javascript_include_tag "touchscreenToolkit"%>
     <%=stylesheet_link_tag "screen","bims" %>
   </head>
@@ -13,9 +13,8 @@
              <h3><%= flash[:notice]%></h3>
             <%=yield%>
           </td>
-          <td id="right" class="view" >
-            <%@tasks<<["Logout", user_path(:logout)] if @tasks%>
-            <%= render(:partial=>"shared/task_list", :locals=>{:tasks=>@tasks}) %>
+          <td id="right" class="view" >            
+            <%= render(:partial=>"shared/task_list", :locals=>{:tasks=>@tasks}) if @tasks%>
           </td>
           <td></td>
         </tr>
