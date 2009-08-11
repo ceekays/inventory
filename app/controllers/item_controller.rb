@@ -11,9 +11,11 @@ class ItemController < ApplicationController
         flash[:error] = "Item registration failed."
       end
     else
-      @item_fields = [:name,:model,:serial_number,:barcode,:category,
-                      :manufacturer,:owner,:date_of_reception,:location,:catergory,:project_name]
-      @status_fields = [:message,:reason,:owner,:location,:storage_code,:item_condition]
+      @item_fields   = [:name,:model,:serial_number,:barcode,:category,
+                        :manufacturer,:owner,:date_of_reception,:location,
+                        :catergory,:project_name]
+      @status_fields = [:message,:reason,:owner,:location,:storage_code,
+                        :item_condition]
     end
   end
 
