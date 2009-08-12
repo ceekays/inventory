@@ -29,7 +29,7 @@ class ItemController < ApplicationController
         flash[:error] = "Item updating failed."
       end
     else
-      @item_fields = [:name,:model,:serial_number,:barcode,:category,:manufacturer]
+      @item_fields = [:name,:model,:serial_number,:barcode,:project_name,:category,:manufacturer]
       @item=Item.find(params[:id])
     end if params[:id]
   end
