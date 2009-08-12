@@ -1,6 +1,13 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe ItemController do
+
+  integrate_views
+  
+    before(:each)do
+    post :login, :user =>{"username"=>"ceekays","password" =>"test"}
+  end
+  
   before(:each)do
     post :new, :item =>{
     "name"=> "Thinkpad", "model"=>"R50e", "serial_number"=> "",
@@ -13,7 +20,7 @@ describe ItemController do
   
   describe "GET 'new'" do
     it "should be successful" do
-      get 'new'
+      get :new
       response.should be_success
     end
 
@@ -31,24 +38,26 @@ describe ItemController do
 
   describe "GET 'edit'" do
 
+    before(:each)do
+      params[:item][:name] ="Toshiba Satellite L300"
+    end
     it "should be successful" do
-      get 'edit'
+      get :edit, :id => 1 , :item=>params[:item]
       response.should be_success
     end
 
     #This example tries to change the name of the first item in the database
     #and check if the change has been effected
     it "should save changes to an existing item"do
-      params[:item][:name] ="Toshiba Satellite L300"
+      
       post :edit, :id => 1 , :item=>params[:item]
-
       Item.find(1).name.should be_eql("Toshiba Satellite L300")
     end
   end
 
   describe "GET 'find'" do
     it "should be successful" do
-      get 'find'
+      get :find
       response.should be_success
     end
 
@@ -64,7 +73,7 @@ describe ItemController do
 
   describe "GET 'list'" do
     it "should be successful" do
-      get 'list'
+      get :list
       response.should be_success
     end
 
@@ -79,7 +88,7 @@ describe ItemController do
 
   describe "GET 'show'" do
     it "should be successful" do
-      get 'show'
+      get :show, :id => 1
       response.should be_success
     end
     # if we are able to establish a session of an object, then that object exists
@@ -92,13 +101,13 @@ describe ItemController do
 
   describe "GET 'in'" do
     it "should be successful" do
-      get 'in'
+      get :in
       response.should be_success
     end
     
     it "should be able to record the status of an incoming item"do
-      post :in, :status =>{
-        "item_id"=> "1", "message"=>"This has been take in", "reason"=> "defunked",
+      post :in, :id => 1, :status =>{
+        "item_id"=> :id, "message"=>"This has been take in", "reason"=> "defunked",
         "owner"=> "edmond", "user_id"=> "1"}
       
       flash[:notice].should be_eql("Item successfully recorded as 'in'.")
@@ -107,12 +116,12 @@ describe ItemController do
 
   describe "GET 'out'" do
     it "should be successful" do
-      get 'out'
+      get :out
       response.should be_success
     end
     it "should be able to record the status of an outgoing item"do
-      post :out, :status =>{
-        "item_id"=> "1", "message"=>"This has been deployed", "reason"=> "maintained",
+      post :out, :id => 1, :status =>{
+        "item_id"=> :id, "message"=>"This has been deployed", "reason"=> "maintained",
         "owner"=> "edmond", "user_id"=> "1"}
 
       flash[:notice].should be_eql("Item successfully recorded as 'out'.")
