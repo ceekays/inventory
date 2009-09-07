@@ -53,6 +53,10 @@ describe ItemController do
       post :edit, :id => 1 , :item=>params[:item]
       Item.find(1).name.should be_eql("Toshiba Satellite L300")
     end
+    it "should print 'Item updated successfully.' when an item is successfully saved"do
+      post :edit, :id => 1 , :item=>params[:item]
+      flash[:notice].should == "Item updated successfully."
+    end
   end
 
   describe "GET 'find'" do
@@ -69,6 +73,20 @@ describe ItemController do
       query = params[:item][:query]
       flash[:notice].should_not be_eql("#{query} not found.")
     end
+
+=begin
+    it "should redirect to '/list' if there are several search results" do
+      post :new, :item =>{"name"=> "Notebook", "model"=>"VGN-NS240E",
+        "serial_number"=> "","barcode"=> "", "category"=> "Laptop",
+        "manufacturer"=> "Toshiba"}
+
+      post :new, :item =>{"name"=> "Notebook", "model"=>"VGN-NS240E",
+        "serial_number"=> "","barcode"=> "", "category"=> "Laptop",
+        "manufacturer"=> "Toshiba"}
+
+
+    end
+=end
   end
 
   describe "GET 'list'" do

@@ -29,7 +29,7 @@ describe User do
   end
 
    it "should have a password that is not less than 4 characters" do
-    @user.password.length.should >= 4
+    @user.password.length.should_not < 4
   end
   
   it "should have a role" do

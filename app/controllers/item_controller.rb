@@ -48,10 +48,10 @@ class ItemController < ApplicationController
       )
       if @items.empty?
         flash[:notice]="#{query} not found."
-      elsif @items.one?
-        redirect_to item_path(:show,@items.first)
-      else
+      elsif @items.many?
         redirect_to item_path(:list,@items)
+      else
+        redirect_to item_path(:show,@items.first)
       end
     end
   end

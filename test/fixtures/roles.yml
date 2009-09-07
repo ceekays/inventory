@@ -1,7 +1,11 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+admin:
+  role: admin
+  description: super user
+  created_by: user_1
+  updated_by: user_1
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+normal:
+  role: normal
+  description: ordinary user
+  created_by: user_2
+  updated_by: user_2

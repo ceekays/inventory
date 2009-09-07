@@ -1,17 +1,28 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+####################################################################
+#
+#     These are user fixtures
+#
+####################################################################
 
-#one:
-#first_name: MyString
-#last_name: MyString
-#username: MyString
-#password: MyString
+user_1:
+first_name: edmond
+last_name: kachale
+username: ceekays
+password: test
 #salt: MyString
-#role: MyString
+role: admin
 
-#two:
-#first_name: MyString
-#last_name: MyString
-#username: MyString
-#password: MyString
+user_2:
+first_name: kondwani
+last_name: hara
+username: mile
+password: test2
 #salt: MyString
-#role: MyString
+role: admin
+
+#user_3:
+#first_name: kondwani
+#last_name: hara
+#username: mile
+#password: test2
+#salt: MyString
