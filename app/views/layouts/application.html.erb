@@ -1,8 +1,9 @@
 <html>
   <head>
     <title>Baobab Inventory</title>
-    <!%=javascript_include_tag "touchscreenToolkit"%>
-    <%=stylesheet_link_tag "screen","bims" %>
+    <%=javascript_include_tag "touchscreenToolkit"%>
+    <!%=stylesheet_link_tag "screen","bims" %>
+    <%=stylesheet_link_tag "touch"%>
   </head>
   <body>
     <table id="screen">
@@ -10,7 +11,7 @@
         <tr valign="top">
           <td></td>
           <td id="left" class="view">
-             <h3><%= flash[:notice]%></h3>
+             <h3> <%= flash[:notice]%> </h3>
             <%=yield%>
           </td>
           <td id="right" class="view" >            
