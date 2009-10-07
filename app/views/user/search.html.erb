@@ -1,6 +1,6 @@
 <h3><%=@pagetitle %></h3>
 <%= error_messages_for "users" %>
   <% form_for :user do %>
-  <%= render :partial => 'user_details'%>
+  <%= render :partial => 'user_search'%>
   <%= submit_tag "Go" %> 
 <%end%>
