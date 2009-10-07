@@ -20,7 +20,7 @@
   <%= i.label(:date_of_reception,"Date of Item Reception") +
     i.text_field(:date_of_reception) +
     tag(:br) if fields.include? :date_of_reception %>
-  <%= i.label(:owner,"Item Owner (in Charge)") +
+  <%= i.label(:owner,"Assigned to") +
     i.text_field(:owner) +
     tag(:br) if fields.include? :owner%>
   <%= i.label(:project_name,"Item Project Name") +

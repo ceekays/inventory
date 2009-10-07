@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(:version => 20090608112554) do
     t.string   "username"
     t.string   "encrypted_password"
     t.string   "salt"
-    t.string   "role"
+    t.integer  "role"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

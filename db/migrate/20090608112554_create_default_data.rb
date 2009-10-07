@@ -1,23 +1,23 @@
 class CreateDefaultData < ActiveRecord::Migration
   def self.up
    # create user roles
-    Role.create(:role=>"admin",:description=>"super user")
-    Role.create(:role=>"normal",:description=>"ordinary user")
+    Role.create(:role=>"admin",:description=>"Super User")
+    Role.create(:role=>"normal",:description=>"Ordinary User")
     
    #create users
    User.create(:username =>"ceekays",:first_name =>"Edmond",
-                :role => Role.find(1).role, :last_name =>"Kachale",  # role == admin
+                :role => Role.find(:first).id, :last_name =>"Kachale",  # role == admin
                 :password =>"test", :password_confirmation =>"test")
 
     User.create(:username =>"mile",:first_name =>"Kondwani",
-                :role => Role.find(1).role, :last_name =>"Hara",     # role == admin
+                :role => Role.find(:first).id, :last_name =>"Hara",     # role == admin
                 :password =>"test", :password_confirmation =>"test")
     
     # create new items, a and b
     a=Item.new(:name=>"Nokia Cellphone",:model=>"Nokia 6030",:manufacturer=>"Nokia Inc.",
                :owner => "Kondwani Hara",:date_of_reception =>Time.now,:location => "BHT",
                :barcode =>"unknown",:serial_number => "unknown",
-               :category => "Laptop",:project_name => "Baobab")
+               :category => "Cellphone",:project_name => "Baobab")
              
     b=Item.new(:name=>"Laptop",:model=>"VGN-NS240E",:manufacturer=>"Sony",
                :owner => "Edmond Kachale",:date_of_reception =>Time.now,:location => "BHT",

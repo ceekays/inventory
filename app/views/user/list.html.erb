@@ -1,5 +1,7 @@
 <h3>User Details</h3> <br/>
+
   <% for user in @all_users %>
-  <b>Username:</b>  <%= h(user.username) %>  | <b>Role:</b> <%= h(user.role)%>  | <%= link_to "[edit]" , { # link_to options
+  <b>Username:</b>  <%= h(user.username) %>  | <b>Role:</b> <%= h(Role.find(user.role).description)%>  | <%= link_to "[edit]" , { # link_to options
 			  :controller => 'user',:action => 'edit',:id => user}%><br/> <br/>
 <%end%>
+

@@ -11,7 +11,11 @@ class UserController < ApplicationController
     @pagetitle = 'Create New User'
    
 		@user = User.new(params[:user])
-    if request.post? && @user.save
+        
+    if request.post?
+      @user.role = Role.find_by_role(params[:user][:role]).id
+      #raise
+      @user.save
       redirect_to(:action => "index")
       flash[:notice] = "User #{@user.username} has been succesfully created"
       @user = User.new
@@ -20,6 +24,12 @@ class UserController < ApplicationController
   
   #lists users in the users' table
   def list
+        @tasks=[
+      ["Item Management",main_path(:items)],
+      ["User Administration",main_path(:users)],
+      ["Main Dashboard",main_path(:index)]
+    ]
+    
     @pagetitle = 'User Details'
     @all_users = User.find(:all)
     #session[:edit_user] = @edit
