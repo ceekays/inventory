@@ -1,0 +1,15 @@
+<!--
+#****************************************************************************
+#
+# This is a partial login form.
+#
+#****************************************************************************
+-->
+
+<%= error_messages_for 'user' %>
+<p>
+	<label for="user_username" >Username:</label> 
+	<%= text_field 'user', 'username', :xhelpText => 'Username', 
+	:ajaxURL => '/search/User?field=username&value=', 
+	:value => @user_username, :textCase => 'lower' %>
+</p>
