@@ -75,7 +75,7 @@ class ItemController < ApplicationController
 
       if @item.statuses
         @item_status = @item.statuses.last
-        @x_user_id = @item.statuses.last.user_id
+        #@x_user_id = @item.statuses.last.user_id
         #raise @item_status.user.username
         #@item_status.user = User.find(@x_user_id).username
         #raise @item_status.user_id.to_s
@@ -100,7 +100,7 @@ class ItemController < ApplicationController
          #raise session[:user_id].to_s
         #check if the item exists
         @item  = Item.find(params[:status][:item_id])
-        status = Status.new#(params[:status])
+        status = Status.new(params[:status])
         status.item_id = session[:item_id]
         status.message = "item in"
         if status.save && @item
