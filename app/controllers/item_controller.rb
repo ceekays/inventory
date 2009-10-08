@@ -75,10 +75,6 @@ class ItemController < ApplicationController
 
       if @item.statuses
         @item_status = @item.statuses.last
-        #@x_user_id = @item.statuses.last.user_id
-        #raise @item_status.user.username
-        #@item_status.user = User.find(@x_user_id).username
-        #raise @item_status.user_id.to_s
       else
         @item_status = nil
       end
