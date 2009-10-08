@@ -6,11 +6,14 @@
   <div><b>Barcode:</b> <%=@item.barcode%></div>
   <div><b>Category:</b> <%=@item.category%></div>
   <div><b>Manufacturer:</b> <%=@item.manufacturer%></div>
+  <h3>Last Status Update</h3>
   <% if @item_status %>
-    <h3>Last Status Update</h3>
+    
     <div><b>Status:</b> <%=@item_status.message %></div>
     <div><b>Reason:</b> <%=@item_status.reason %></div>
     <div><b>Time:</b> <%=@item_status.updated_at.strftime("%H:%M:%S, %a, %d %b %Y")%></div>
     <div>Updated by <%=@item_status.user.username if @item_status.user%></div>
+  <% else %>
+  <i> No Statuses Recorded yet</i>
   <% end %>
 </div>
