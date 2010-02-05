@@ -1,8 +1,25 @@
+<style type="text/css">
+ #touchscreenInput0{
+  display:none;
+  }
+ .options, .scrollable{
+   width:510px;
+   height: auto;
+ }
+</style>
 <h1>Item list</h1>
 <p>
-  <% @my=@items.collect{|i| [i.name,i.id]} %>
+  <%@real_item%>
+  <% @my=@items.collect{|@real_item| 
+      ["serial No.: #{@real_item.serial_number}" ,@real_item.id]
+     #["#{@real_item.name}-#{@real_item.id}", @real_item.id]
+  } %>
+  } %>
   <% form_tag item_path(:show) do %>
-    <%=select("id",'', @my,:include_blank => true, :textCase => 'lower')%>
+    <%=select(:id, "", @my,{},
+    {:tt_onload => "$('keyboard').style='display:block;'",
+      :include_blank => true, :helpText =>"Select #{@real_item.name}"})
+  %>
     <%=submit_tag "Go" %>
   <% end %>
 </p>

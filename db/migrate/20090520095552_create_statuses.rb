@@ -4,11 +4,15 @@ class CreateStatuses < ActiveRecord::Migration
       t.integer :item_id
       t.string :message
       t.string :reason
-      t.string :owner
+      t.string :assigned_to
       t.string :location
       t.string :storage_code
       t.string :item_condition
-      t.integer :user_id
+      t.integer :created_by
+      t.integer :updated_by
+      t.integer :voided
+      t.integer :voided_by
+      t.text  :void_reason
 
       t.timestamps
     end

@@ -1,6 +1,7 @@
 <h1>Find Item</h1>
 <% form_for :item do |form| %>
-  <%=form.label :query,"Search for"%>
-  <%=form.text_field :query %>
+  <%=form.text_field(:query, :helpText => 'Search for:',
+        :ajaxURL => '/search/by_model?model0=Item&column0=name&model1=Item&column1=barcode&model2=Item&column2=serial_number&value=',
+        :allowFreeText => true) %>
   <%=form.submit "go" %>
 <% end %>

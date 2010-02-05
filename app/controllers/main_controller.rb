@@ -10,12 +10,24 @@ class MainController < ApplicationController
     #render :text=>"#{@tasks}"
   end
   def items
+
+    @categories = Item.find(:all,
+                    :select => "category AS name, COUNT(category) AS quantity",
+                    :group => "category")
+
+
+ if(@categories.count == 1)
+   flash[:num_of_items] = "There <b><i>one category</i></b> of Items."
+ else
+  flash[:num_of_items] = "There are <b><i>#{@categories.count} categories</i></b> of Items."
+ end
+
     @tasks=[
       ["Find Item",item_path(:find)],
       ["Register Item",item_path(:new)],
       ["Record Incoming Item",item_path(:in)],
       ["Record Outgoing Item",item_path(:out)],
-      ["Generate Reports",item_path(:list)],
+      ["Generate Reports",item_path(:report)],
       ["Main Dashboard",main_path(:index)]
     ]
   end
@@ -23,7 +35,8 @@ class MainController < ApplicationController
      num_of_users = User.find(:all)
 
     users = 0
-    @summary = {:user, :log}
+    @summary = {:user=>:user, :log => :log}
+
     num_of_users.each { users += 1 }
 
     @summary[:user] = "There are " + users.to_s + " users in the system."

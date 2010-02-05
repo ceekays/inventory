@@ -1,2 +1,25 @@
+<style type="text/css">
+.double_underline {
+  border-bottom: 3px solid;
+  border-width: medium;
+  text-align:left;
+}
+</style>
+
 <h1>Item Dashboard</h1>
 <p>Summary of Items</p>
+<%if(@categories)%>
+<%=flash[:num_of_items]%>
+<p>
+<table width ="50%">
+  <tbody>
+    <tr><td><b><span class="double_underline">Category</span></b></td><td></td ><td align="right"><b><span class="double_underline">Quantity</span></b></td></tr>
+    <tr></tr><tr></tr>
+
+  <% for @category in @categories %>
+    <tr><td><%=@category.name %></td><td> .......................... </td><td align="right"><%=@category.quantity %></td></tr>
+  <%end%>
+</tbody>
+</table>
+<%end%>
+<br>

@@ -3,13 +3,15 @@
 <%="Change new status for <strong>#{@item.name}(serial #{@item.serial_number})</strong>" +
   tag(:br)  if @item
 %>
-<% form_for :item  do |form| %>
-  <% unless @status_fields%>
-    <%= form.label(:barcode,"Scan for item:") + form.text_field(:barcode) + form.submit("Go") %>
-  <% else %>
-    <%=form.hidden_field(:id, :value=>@item.id) %>
+
+  <% if @item%>
+  <% form_tag :controller =>"item", :action =>"save" do%>  
+    <%= hidden_field_tag :id, @item.id %>
+    <%= hidden_field_tag :message, "item out"%>
     <%= render :partial=> "shared/status_fields", :locals=>{:fields=>@status_fields}%>
-    <%= form.submit "save" %>
+    <%= submit_tag "save" %>
   <% end %>
+  <% else %>
+  <%= render :partial=> "scan_item"%>
 <% end %>
 </p>

@@ -6,36 +6,42 @@
 	#****************************************************************************
 -->
 <p>
-<label for="user_username">Enter the username:</label> 
-	<%= text_field 'user', 'username', :xhelpText => 'Username', 
-	:ajaxURL => '/search/User?field=username&value=', 
-	:value => @user_username, :allowFreeText => true, :textCase => 'lower' %>
+  <%= text_field 'username','user', {:helpText => 'Enter the username:',
+      :value => @username, :allowFreeText => true, :textCase => 'lower'}
+  %>
 </p>                              
 <!--%case controller.action_name when "new","edit" %-->
 <p>
-<label for="user_first_name">Enter the first name:</label> 
-	<%= text_field 'user', 'first_name', :xhelpText => 'Firstname', 
-	:ajaxURL => '/search/User?field=first_name&value=', 
-	:value => @user_first_name, :allowFreeText => true, :textCase => 'lower' %>
+
+	<%= text_field 'user', 'first_name', :helpText => 'Enter the first name:',
+      :ajaxURL => '/search/by_model?model=User&column=first_name&value=',
+      :value => @user_first_name, :allowFreeText => true
+  %>
 </p>
 <p>
-	<label for="user_last_name" >Enter the last name:</label> 
-	<%= text_field 'user', 'last_name', :xhelpText => 'Lastname', 
-	:ajaxURL => '/search/User?field=last_name&value=', 
-	:value => @user_last_name, :allowFreeText => true, :textCase => 'lower' %>
+	<%= text_field 'user', 'last_name', :helpText => 'Enter the last name:',
+      :ajaxURL => '/search/by_model?model=User&column=last_name&value=',
+      :value => @user_last_name, :allowFreeText => true, :textCase => 'lower'
+  %>
 </p>
 <p>
-	<label for="user_password" >Enter the password:</label> 
-	<%= password_field 'user', 'password', :xhelpText => 'Password', :size => 40 %>
+	<%= password_field 'user', 'password', :helpText => 'Enter the password:',
+    :size => 40 %>
 </p>
 	
 <p>
-	<label for="user_password_confirmation" >Confirm the password:</label> 
-	<%= password_field 'user', 'password_confirmation', :xhelpText => 'Password', :size => 40 %>
+	<%= password_field 'user', 'password_confirmation',
+    :helpText => 'Confirm the password:', :size => 40
+  %>
 </p>
 <p>
-	<label for="user_role" >Enter the role of the user:</label> 
-	<%= @role = Role.find(:all,:order =>'role').map{|u|[u.role]}
-	select(:user, :role, @role,{},{:tt_onload => "$('keyboard').style='display:block;'",:include_blank => true, :textCase => 'lower'})%>
+<%  #=# text_field 'user', 'role', :helpText => 'Enter the role of the user:',
+   # :ajaxURL => '/search/by_model?model=Role&column=role',
+    #:value => @user_last_name, :allowFreeText => false
+%>
 </p>
-<!--%end%-->
+<%= @role = Role.find(:all,:order =>'role').map{|u|[u.role]}
+  select(:user, :role, @role,{},
+    {:tt_onload => "$('keyboard').style='display:block;'",
+      :include_blank => true, :textCase => 'lower'})
+%>

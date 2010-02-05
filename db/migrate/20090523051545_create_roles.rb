@@ -5,6 +5,10 @@ class CreateRoles < ActiveRecord::Migration
       t.string  :description
       t.integer :created_by
       t.integer :updated_by
+      t.integer :voided
+      t.integer :voided_by
+      t.text  :void_reason
+
       t.timestamps
     end
   end

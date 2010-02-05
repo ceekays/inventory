@@ -1,22 +1,23 @@
 <html>
   <head>
     <title>Baobab Inventory</title>
-    <%=javascript_include_tag "touchscreenToolkit"%>
+    <!%=javascript_include_tag "touchscreenToolkit"%>
     <%=stylesheet_link_tag "touch","screen"%>
     <!--if you enable the following line comment out the touchscreentoolkit -->
     <!%=stylesheet_link_tag "screen","bims"%>
+
   </head>
   <body id ="mateme">
-    
+
     <table id="screen">
       <tbody>
         <tr valign="top">
           <td></td>
           <td id="left" class="view">
+             <h3><font color="red"><%=flash[:notice]%></font></h3>
             <%=yield%>
-            <h3><font color="red"><%=flash[:notice]%></font></h3>
           </td>
-          <td id="right" class="view" >            
+          <td id="right" class="view" >
             <%= render(:partial=>"shared/task_list", :locals=>{:tasks=>@tasks}) if @tasks%>
           </td>
           <td></td>

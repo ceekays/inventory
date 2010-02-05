@@ -5,9 +5,9 @@
   <%=s.label(:reason) +
     s.text_field(:reason) +
     tag(:br) if fields.include? :reason %>
-  <%=s.label(:owner, "Assigned to") +
-    s.text_field(:owner) +
-    tag(:br) if fields.include? :owner %>
+  <%=s.label(:assigned_to, "Assigned to") +
+    s.text_field(:assigned_to) +
+    tag(:br) if fields.include? :assigned_to %>
   <%=s.label(:location) +
     s.text_field(:location) +
     tag(:br) if fields.include? :location%>

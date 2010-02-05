@@ -1,16 +1,17 @@
 html, body {
   margin:0;
   padding:0;
+  background-color:beige;
 }
 #screen {
   height:100%;
-  margin:0;
+  margin:2px 24px 35px 11px;
 }
 #left {
-  width:65%;
+  width:75%;
 }
 #right {
-  width:15em;
+  width:16em;
 }
 select {
 }
@@ -22,9 +23,9 @@ select {
 }
 
 .view {
-  border:2px outset threedshadow;
+  border: 2px outset threedshadow;
   color:infotext;
-  padding:1em;
+  padding:2em;
 }
 .tasks {
   margin:3em auto;
@@ -32,7 +33,7 @@ select {
 
 a {
   text-decoration:none;
-  border:3px outset ButtonShadow;
+  border:1px outset ButtonShadow;
   background-color:buttonFace;
   color:buttonText;
   padding:1em;
@@ -40,6 +41,7 @@ a {
   font-size:1em;
   font-weight:bold;
   display:block;
+  /*width:85%;*/
 }
 a:hover {
   background-color:ButtonHighlight;

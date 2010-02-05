@@ -1,33 +1,57 @@
 <% fields_for :item, @item do |i|%>
-  <%= i.label(:name,"Item Name/Brand") +
-    i.text_field(:name) +
+  <%= i.text_field(:name, :helpText => 'Item Name/Brand:',
+        :ajaxURL => '/search/by_model?model0=Item&column0=name&value=',
+        :allowFreeText => true)+
     tag(:br) if fields.include? :name %>
-  <%= i.label(:model, "Item Model") +
-    i.text_field(:model) +
+
+  <%=i.text_field(:model,:helpText => 'Item Model:',
+        :ajaxURL => '/search/by_model?model0=Item&column0=model&value=',
+        :allowFreeText => true) +
     tag(:br) if fields.include? :model %>
-  <%= i.label(:serial_number, "Serial Number for Item") +
-    i.text_field(:serial_number) +
+
+  <%=i.text_field(:serial_number, :helpText => 'Serial Number for Item:',
+        #:ajaxURL => '/search/by_model?model0=Item&column0=model&value=',
+        :allowFreeText => true) +
     tag(:br) if fields.include? :serial_number%>
-  <%= i.label(:barcode, "Barcode for Item") +
-    i.text_field(:barcode) +
+
+  <%=i.text_field(:barcode, :helpText => 'Barcode for Item:',
+        #:ajaxURL => '/search/by_model?model0=Item&column0=name&value=',
+        :allowFreeText => true)+
     tag(:br) if fields.include? :barcode %>
-  <%= i.label(:category, "Item Category") +
-    i.text_field(:category) +
+
+  <%=i.text_field(:category, :helpText => 'Item Category:',
+        :ajaxURL => '/search/by_model?model0=Item&column0=category&value=',
+        :allowFreeText => true)+
     tag(:br) if fields.include? :category%>
-  <%= i.label(:manufacturer,"Item Manufacturer") +
-    i.text_field(:manufacturer) +
+
+  <%=i.text_field(:manufacturer, :helpText => 'Item Manufacturer:',
+        :ajaxURL => '/search/by_model?model0=Item&column0=manufacturer&value=',
+        :allowFreeText => true)+
     tag(:br) if fields.include? :manufacturer %>
-  <%= i.label(:date_of_reception,"Date of Item Reception") +
-    i.text_field(:date_of_reception) +
+
+    <%=i.text_field(:quantity, :helpText => 'Quantity for Item:',
+        :ajaxURL => '/search/by_model?model0=Item&column0=quantity&value=',
+        :allowFreeText => true)+
+    tag(:br) if fields.include? :quantity %>
+
+  <%=i.text_field(:date_of_reception, :helpText => 'Date of Item Reception:',
+        :ajaxURL => '/search/by_model?model0=Item&column0=date_of_reception&value=',
+        :allowFreeText => true)+
     tag(:br) if fields.include? :date_of_reception %>
-  <%= i.label(:owner,"Assigned to") +
-    i.text_field(:owner) +
-    tag(:br) if fields.include? :owner%>
-  <%= i.label(:project_name,"Item Project Name") +
-    i.text_field(:project_name) +
+
+  <%=i.text_field(:assigned_to, :helpText => 'Assigned to:',
+        :ajaxURL => '/search/by_model?model0=Item&column0=assigned_to&value=',
+        :allowFreeText => true)+
+    tag(:br) if fields.include? :assigned_to%>
+
+  <%=i.text_field(:project_name, :helpText => 'Item Project Name:',
+        :ajaxURL => '/search/by_model?model0=Item&column0=project_name&value=',
+        :allowFreeText => true)+
     tag(:br) if fields.include? :project_name%>
-  <%= i.label(:location,"Item Location") +
-    i.text_field(:location) +
+    
+  <%=i.text_field(:location, :helpText => 'Item Location:',
+        :ajaxURL => '/search/by_model?model0=Item&column0=location&value=',
+        :allowFreeText => true)+
     tag(:br) if fields.include? :location%>
 <% end %>
 
