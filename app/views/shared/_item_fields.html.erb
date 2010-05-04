@@ -34,9 +34,9 @@
         :allowFreeText => true)+
     tag(:br) if fields.include? :quantity %>
 
-  <%=i.text_field(:date_of_reception, :helpText => 'Date of Item Reception:',
+  <%=i.text_field(:date_of_reception,  :value => DateTime.now().strftime("%Y-%m-%d"), :helpText => 'Date of Item Reception:',
         :ajaxURL => '/search/by_model?model0=Item&column0=date_of_reception&value=',
-        :allowFreeText => true)+
+        :allowFreeText => true, :field_type => 'date')+
     tag(:br) if fields.include? :date_of_reception %>
 
   <%=i.text_field(:assigned_to, :helpText => 'Assigned to:',
