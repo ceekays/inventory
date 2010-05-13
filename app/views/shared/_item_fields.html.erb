@@ -49,7 +49,7 @@
         :allowFreeText => true)+
     tag(:br) if fields.include? :project_name%>
     
-  <%=i.text_field(:location, :helpText => 'Item Location:',
+  <%=i.text_field(:location, :helpText => 'Location of registration:',
         :ajaxURL => '/search/by_model?model0=Item&column0=location&value=',
         :allowFreeText => true)+
     tag(:br) if fields.include? :location%>
