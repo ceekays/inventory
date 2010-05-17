@@ -1445,16 +1445,16 @@ function getABCKeyboard(){
     "<span class='buttonLine'>" +
     getButtons("ABCDEFGH") +
     getButtonString('backspace','<span>BkSp</span>') +
-    getButtonString('num','<span>Num</span>') +
+    getButtonString('num','<span>Numeric</span>') +
 //    getButtonString('date','<span>Date</span>') +
     "</span><span class='buttonLine'>" +
     getButtons("IJKLMNOP") +
     getButtonString('apostrophe',"<span>'</span>") +
-    getButtonString('space','<span>Space</span>') +
+    getButtonString('space','<span> Space </span>') +
     getButtonString('SHIFT','<span>SHIFT</span>') +
-    getButtonString('Unknown','<span>Unknow</span>') +
     "</span><span class='buttonLine'>" +
     getButtons("QRSTUVWXYZ") +
+    getButtonString('Unknown','<span>Unknown</span>') +
     getButtonString('qwerty','<span>qwerty</span>') +
     "</span>" +
     "</span>";
@@ -1508,6 +1508,7 @@ function getDatePicker() {
   }
 
   var defaultDate = joinDateValues(inputElement);
+  defaultDate = defaultDate.replace("-", "/", "g");
   var arrDate = defaultDate.split('/');
   $("touchscreenInput"+tstCurrentPage).value = defaultDate;
 

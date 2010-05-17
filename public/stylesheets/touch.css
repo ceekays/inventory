@@ -144,7 +144,7 @@ form{
   text-align: center;
   border: 3px outset gray;
   font-size: 1.5em;
-  width: 65px;
+  min-width: 55px;
   -moz-user-select:none;
   height: 51px;
 }
@@ -336,7 +336,11 @@ form{
 	width: 250px;
 }
 
-#SHIFT, #space, #qwerty, #showDataButton, #lessthan, #greaterthan, #equals, #unknown {
+/*#SHIFT, #space, #qwerty, #showDataButton, #lessthan, #greaterthan, #equals, #unknown {
+	display: none;
+}*/
+
+#SHIFT, #qwerty, #showDataButton, #lessthan, #greaterthan, #equals {
 	display: none;
 }
 
