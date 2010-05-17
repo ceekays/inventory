@@ -28,11 +28,11 @@ class ItemController < ApplicationController
         flash[:error] = "Item registration failed."
       end
     else
-      @item_fields   = [:name,:model,:serial_number,:barcode,:category,
-                        :manufacturer,:assigned_to,:quantity, :date_of_reception,:location,
-                        :catergory,:project_name]
-      @status_fields = [:message,:reason,:assigned_to,:location,:storage_code,
-                        :item_condition]
+      @item_fields   = [:name, :model, :serial_number, :barcode, 
+                        :category, :manufacturer,:date_of_reception, 
+                        :location, :project_name, :donor, :supplier, :status]
+      @status_fields = [:item_id, :message, :reason, :collected_by, 
+                        :date_dispatched, :location, :storage_code, :item_condition]
     end
   end
 
@@ -49,7 +49,7 @@ class ItemController < ApplicationController
     else
       #@item_fields = [:name,:model,:serial_number,:barcode,:category,:manufacturer]
       @item_fields   = [:name,:model,:serial_number,:barcode,:category,
-                        :manufacturer,:assigned_to,:date_of_reception,:location,
+                        :manufacturer,:collected_by,:date_of_reception,:location,
                         :catergory,:project_name]
       @item=Item.find(params[:id])
     end if params[:id]
@@ -63,7 +63,7 @@ class ItemController < ApplicationController
         :conditions=>[
           "name like  ? OR model like ? OR category like ?
           OR serial_number like ? OR barcode like ?
-          OR manufacturer like ? OR assigned_to like ?
+          OR manufacturer like ? OR collected_by like ?
           OR location like ? OR project_name like ?",
           "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
           "%#{query}%","%#{query}%","%#{query}%","%#{query}%","%#{query}%"
@@ -118,7 +118,7 @@ class ItemController < ApplicationController
 def in
      render_item_menu
    if params[:id]
-      @status_fields = [:reason,:assigned_to,:location]
+      @status_fields = [:reason,:date_dispatched,:collected_by,:location]
       #raise params
       @item=Item.find(params[:id])
    elsif request.get?
@@ -126,7 +126,7 @@ def in
 
         @item=Item.find_by_barcode(params[:barcode])
         if @item
-          @status_fields = [:reason,:assigned_to,:location]
+          @status_fields = [:reason,:date_dispatched, :collected_by,:location]
 
           redirect_to item_path(:in, @item) and return
         else
@@ -148,7 +148,7 @@ def in
    def out
      render_item_menu
    if params[:id]
-      @status_fields = [:reason,:assigned_to,:location]
+      @status_fields = [:reason,:date_dispatched, :collected_by,:location]
       #raise params
       @item=Item.find(params[:id])
    elsif request.get?
@@ -156,7 +156,7 @@ def in
         
         @item=Item.find_by_barcode(params[:barcode])
         if @item
-          @status_fields = [:reason,:assigned_to,:location]
+          @status_fields = [:reason,:date_dispatched,:collected_by,:location]
           
           redirect_to item_path(:out, @item) and return
         else
@@ -214,7 +214,7 @@ def in
         :conditions=>[
           "name like  ? OR model like ? OR category like ?
           OR serial_number like ? OR barcode like ?
-          OR manufacturer like ? OR assigned_to like ?
+          OR manufacturer like ? OR collected_by like ?
           OR location like ? OR project_name like ?",
           "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
           "%#{query}%","%#{query}%","%#{query}%","%#{query}%","%#{query}%"

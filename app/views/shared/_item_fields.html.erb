@@ -29,14 +29,14 @@
         :allowFreeText => true)+
     tag(:br) if fields.include? :manufacturer %>
 
-    <%=i.text_field(:quantity, :helpText => 'Quantity for Item:',
+    <%=i.text_field(:quantity, :field_type => 'number', :helpText => 'Quantity for Item:',
         :ajaxURL => '/search/by_model?model0=Item&column0=quantity&value=',
         :allowFreeText => true)+
     tag(:br) if fields.include? :quantity %>
 
-  <%=i.text_field(:date_of_reception,  :value => DateTime.now().strftime("%Y-%m-%d"), :helpText => 'Date of Item Reception:',
+  <%=i.text_field(:date_of_reception, :field_type => 'date', :value => DateTime.now().strftime("%Y-%m-%d"), :helpText => 'Date of Item Reception:',
         :ajaxURL => '/search/by_model?model0=Item&column0=date_of_reception&value=',
-        :allowFreeText => true, :field_type => 'date')+
+        :allowFreeText => true)+
     tag(:br) if fields.include? :date_of_reception %>
 
   <%=i.text_field(:assigned_to, :helpText => 'Assigned to:',
@@ -48,6 +48,16 @@
         :ajaxURL => '/search/by_model?model0=Item&column0=project_name&value=',
         :allowFreeText => true)+
     tag(:br) if fields.include? :project_name%>
+
+  <%=i.text_field(:donor, :helpText => 'Project Donor:',
+        :ajaxURL => '/search/by_model?model0=Item&column0=donor&value=',
+        :allowFreeText => true)+
+    tag(:br) if fields.include? :donor%>
+
+  <%=i.text_field(:supplier, :helpText => 'Item Supplier:',
+        :ajaxURL => '/search/by_model?model0=Item&column0=supplier&value=',
+        :allowFreeText => true)+
+    tag(:br) if fields.include? :supplier%>
     
   <%=i.text_field(:location, :helpText => 'Location of registration:',
         :ajaxURL => '/search/by_model?model0=Item&column0=location&value=',

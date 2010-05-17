@@ -1,3 +1,6 @@
+<script>
+  tstCurrentDate = null;
+</script>
 <% fields_for :status do |s|%>
   <%=s.label(:message) +
     s.text_field(:message) +
@@ -5,12 +8,20 @@
   <%=s.label(:reason) +
     s.text_field(:reason) +
     tag(:br) if fields.include? :reason %>
-  <%=s.label(:assigned_to, "Assigned to") +
-    s.text_field(:assigned_to) +
+  <%=s.label(:assigned_to) +
+    s.text_field(:assigned_to, :helpText => "Assigned to") +
     tag(:br) if fields.include? :assigned_to %>
   <%=s.label(:location) +
-    s.text_field(:location) +
+    s.text_field(:location, :helpText => "Destination") +
     tag(:br) if fields.include? :location%>
+  <%=s.text_field(:date_dispatched, :field_type => 'date', 
+    :value => DateTime.now().strftime("%Y-%m-%d"), :helpText => 'Date Dispatched:',
+    :ajaxURL => '/search/by_model?model0=Item&column0=date_dispatched&value=',
+    :allowFreeText => true)+
+    tag(:br) if fields.include? :date_dispatched %>    
+  <%=s.label(:location) +
+    s.text_field(:collected_by, :helpText => "Collected by") +
+    tag(:br) if fields.include? :collected_by%>    
   <%=s.label(:storage_code) +
     s.text_field(:storage_code) +
     tag(:br) if fields.include? :storage_code%>

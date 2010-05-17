@@ -4,7 +4,8 @@ class CreateStatuses < ActiveRecord::Migration
       t.integer :item_id
       t.string :message
       t.string :reason
-      t.string :assigned_to
+      t.string :collected_by
+      t.string :date_dispatched
       t.string :location
       t.string :storage_code
       t.string :item_condition

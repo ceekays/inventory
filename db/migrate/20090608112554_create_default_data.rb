@@ -15,26 +15,26 @@ class CreateDefaultData < ActiveRecord::Migration
     
     # create new items, a and b
     a=Item.new(:name=>"Touchscreen",:model=>"Eye Opener",:manufacturer=>"Eye Opener Inc.",
-               :assigned_to => "Samuel Manda",:date_of_reception =>Time.now,
+               :date_of_reception =>Time.now,
                :location => "Operations Dept.",
                :barcode =>"unknown",:serial_number => "unknown",
                :category => "Touchscreen",:project_name => "Baobab",
                :created_by => "1", :updated_by => "1", :voided => "0")
              
     b=Item.new(:name=>"Sony Laptop",:model=>"VGN-NS240E",:manufacturer=>"Sony",
-               :assigned_to => "Edmond Kachale",:date_of_reception =>Time.now,
+               :date_of_reception =>Time.now,
                :location => "Software Dept.",
                :barcode => "00148-119-342-925",:serial_number => "2828-4933-3034-122",
                :category => "Laptop",:project_name => "Baobab", 
                :created_by => "2", :updated_by => "2", :voided => "0")
     
     # create status
-    a.statuses<<Status.new(:message=>"new", :reason=>"deployed", 
-              :assigned_to=>"Soyapi", :location => "Software Dept.", 
+    a.statuses << Status.new(:message=>"new", :reason=>"deployed", 
+              :collected_by=>"Samuel Manda", :location => "Software Dept.", 
               :created_by => "2", :updated_by => "2", :voided => "0")
             
-    b.statuses<<Status.new(:message=>"new",:reason=>"deployed",
-              :assigned_to=>"Ceekays", :location => "Software Dept.",
+    b.statuses << Status.new(:message=>"new",:reason=>"deployed",
+              :collected_by=>"Edmond Kachale", :location => "Software Dept.",
               :created_by => "1", :updated_by => "1", :voided => "0")
 
     #save the items

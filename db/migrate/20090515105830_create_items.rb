@@ -7,10 +7,12 @@ class CreateItems < ActiveRecord::Migration
       t.string :barcode
       t.string :category
       t.string :manufacturer
-      t.string :assigned_to
       t.string :date_of_reception
       t.string :location
       t.string :project_name
+      t.string :donor
+      t.string :supplier
+      t.string :status
       t.integer :created_by
       t.integer :quantity
       t.integer :updated_by
