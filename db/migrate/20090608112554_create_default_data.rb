@@ -12,19 +12,22 @@ class CreateDefaultData < ActiveRecord::Migration
     User.create(:username =>"kaytee",:first_name =>"Thummim",
                 :role => Role.find(:first).id, :last_name =>"Moya",     # role == admin
                 :password =>"test", :password_confirmation =>"test")
-    
+
+# NOTE: The next commented code can only be used/uncommented in test or development enviroment
+=begin
+
     # create new items, a and b
     a=Item.new(:name=>"Touchscreen",:model=>"Eye Opener",:manufacturer=>"Eye Opener Inc.",
                :date_of_reception =>Time.now,
                :location => "Operations Dept.",
-               :barcode =>"unknown",:serial_number => "unknown",
+               :barcode =>"",:serial_number => "unknown",
                :category => "Touchscreen",:project_name => "Baobab",
                :created_by => "1", :updated_by => "1", :voided => "0")
              
     b=Item.new(:name=>"Sony Laptop",:model=>"VGN-NS240E",:manufacturer=>"Sony",
                :date_of_reception =>Time.now,
                :location => "Software Dept.",
-               :barcode => "00148-119-342-925",:serial_number => "2828-4933-3034-122",
+               :barcode => "",:serial_number => "2828-4933-3034-122",
                :category => "Laptop",:project_name => "Baobab", 
                :created_by => "2", :updated_by => "2", :voided => "0")
     
@@ -40,15 +43,16 @@ class CreateDefaultData < ActiveRecord::Migration
     #save the items
     a.save
     b.save
-    
 
+=end
     
   end
 
   def self.down
-    Item.find(:first).destroy
-    Item.find(:first).destroy
-    Status.find(:first).destroy
+    # NOTE: The next commented code can only be used/uncommented in test or development enviroment
+    #Item.find(:first).destroy
+    #Item.find(:first).destroy
+    #Status.find(:first).destroy
     Role.find(:first).destroy
     Role.find(:first).destroy
     User.find(:first).destroy
