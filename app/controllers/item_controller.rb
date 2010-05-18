@@ -23,12 +23,13 @@ class ItemController < ApplicationController
       
       if item.save
         flash[:notice] = "Item registration successful."
-        redirect_to item_path(:show,item)
+        params[:id] = item.id
+        print_and_redirect("/item/printlabel/#{item.id}",item_path(:show,item))
       else
         flash[:error] = "Item registration failed."
       end
     else
-      @item_fields   = [:name, :model, :serial_number, :barcode, 
+      @item_fields   = [:name, :model, :serial_number, #:barcode, 
                         :category, :manufacturer,:date_of_reception, 
                         :location, :project_name, :donor, :supplier, :status]
       @status_fields = [:item_id, :message, :reason, :collected_by, 
