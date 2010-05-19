@@ -64,14 +64,16 @@ class ItemController < ApplicationController
         :conditions=>[
           "name like  ? OR model like ? OR category like ?
           OR serial_number like ? OR barcode like ?
-          OR manufacturer like ? OR collected_by like ?
-          OR location like ? OR project_name like ?",
+          OR manufacturer like ? OR location like ? OR project_name like ?
+          OR donor like ? OR supplier like ? OR status like ?",
           "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
-          "%#{query}%","%#{query}%","%#{query}%","%#{query}%","%#{query}%"
+          "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
+          "%#{query}%","%#{query}%","%#{query}%"
         ]
       )
       if @items.empty?
         flash[:notice]="#{query} not found."
+        redirect_to main_path(:items)
       elsif @items.many?
         redirect_to item_path(:list,@items)
       else
