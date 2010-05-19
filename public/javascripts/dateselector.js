@@ -38,7 +38,7 @@ var DateSelector = function() {
 		year: arguments[0].year || this.date.getFullYear(), 
 		month: arguments[0].month || this.date.getMonth() + 1,
 		date: arguments[0].date || this.date.getDate(),
-		format: "yyyy-MM-dd",
+		format: arguments[0].format || "yyyy-MM-dd",
 		element: arguments[0].element || document.body,
 		target: arguments[0].target
 	};
