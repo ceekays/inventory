@@ -252,12 +252,8 @@ def in
       status.item_id = session[:item_id]
      
       if status.save && @item
-        flash[:notice] = "<b>New item status has been  recorded. </b><br>
-                                    <br><b>Item Name: </b> <i>#{@item.name} ()</i></br>
-                                    <br><b>Serial No.: </b> <i>#{@item.serial_number} ()</i></br>
-                                    <br><b>Barcode No.: </b> <i>#{@item.barcode} ()</i></br>
-                                    <br><b>Status:</b> <i>#{ params[:message]}</i></br>"
-        redirect_to root_path
+        flash[:notice] = "<b>New item status has been  recorded. </b><br>"
+        redirect_to item_path(:show,@item)
       else
         flash[:error]="recording item status failed."
       end

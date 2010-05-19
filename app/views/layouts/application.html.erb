@@ -13,8 +13,8 @@
         <tr valign="top">
           <td></td>
           <td id="left" class="view">
-            <%=yield%>
             <h3><font color="red"><%=flash[:notice]%></font></h3>
+            <%=yield%>
           </td>
           <td id="right" class="view" >            
             <%= render(:partial=>"shared/task_list", :locals=>{:tasks=>@tasks}) if @tasks%>
