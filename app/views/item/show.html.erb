@@ -1,19 +1,50 @@
+<style type="text/css">
+  .title {
+    font-weight:bold;
+  }
+  .heading {
+    font-weight:bold;
+    font-size:1.1em;
+    padding:10px 0;
+  }
+  #data{
+    font-size:1em;
+    /*float:left;*/
+    border: 3px solid #FFFFFF;
+    width: 330px;
+  }
+</style>
+
 <h1><%=@item.name%></h1>
-<div>
-  <h3>Item Details</h3>
-  <div><b>Model:</b> <%=@item.model%></div>
-  <div><b>Serial Number:</b> <%=@item.serial_number %></div>
-  <div><b>Barcode:</b> <%=@item.barcode%></div>
-  <div><b>Category:</b> <%=@item.category%></div>
-  <div><b>Manufacturer:</b> <%=@item.manufacturer%></div>
-  <h3>Last Status Update <%= "(By #{@item_status.who_updated})" if (@item_status && @item_status.who_updated)%></h3>
+<div class="heading">
+  Item Details
+</div>
+<div id="data">
+  <table cellpadding="2" cellspacing="0">
+    <tr> <td> <span class='title'>Model:</span> </td> <td><%=@item.model%> </td></tr>
+    <tr> <td> <span class='title'>Serial Number:</span> </td> <td><%=@item.serial_number %> </span></td></tr>
+    <tr> <td> <span class='title'>Barcode:</span> </td> <td><%=@item.barcode%></td></tr>
+    <tr> <td> <span class='title'>Category:</span> </td> <td><%=@item.category%></td></tr>
+    <tr> <td> <span class='title'>Manufacturer:</span> </td> <td><%=@item.manufacturer%></td></tr>
+    <tr> <td> <span class='title'>Project name:</span> </td> <td><%=@item.project_name%></td></tr>
+    <tr> <td> <span class='title'>Donor:</span> </td> <td><%=@item.donor%></td></tr>
+  </table>
+</div>
+
+<div class="heading">
+  Last Status Update <%= "(By #{@item_status.who_updated})" if (@item_status && @item_status.who_updated)%>
+</div>
+
+<div id="data">
   <% if @item_status %>
-    <div><b>Status:</b> <%=@item_status.message %></div>
-    <div><b>Reason:</b> <%=@item_status.reason %></div>
-    <div><b>Time:</b> <%=@item_status.updated_at.strftime("%H:%M:%S, %a, %d %b %Y")%></div>
-    <div><b>Assigned to:</b> <%=@item_status.assigned_to%></div>
-    <div><b>Location:</b> <%=@item_status.location %></div>
+    <table cellpadding="2" cellspacing="0">
+      <tr> <td> <span class='title'>Status:</span> </td> <td><%=@item_status.message %></td></tr>
+      <tr> <td> <span class='title'>Reason:</span> </td> <td><%=@item_status.reason %></td></tr>
+      <tr> <td> <span class='title'>Time:</span> </td> <td><%=@item_status.updated_at.strftime("%a, %d %b %Y")%></td></tr>
+      <tr> <td> <span class='title'>Collected by:</span> </td> <td><%=@item_status.collected_by%></td></tr>
+      <tr> <td> <span class='title'>Location:</span> </td> <td><%=@item_status.location %></td></tr>
+    </table>
   <% else %>
-  <i> No Statuses Recorded yet</i>
+    <i> No Statuses Recorded yet</i>
   <% end %>
 </div>
