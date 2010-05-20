@@ -32,7 +32,7 @@
 </div>
 
 <div class="heading">
-  Last Status Update <%= "(By #{@item_status.who_updated})" if (@item_status && @item_status.who_updated)%>
+  Last Status Update
 </div>
 
 <div id="data">
@@ -42,6 +42,7 @@
       <tr> <td> <span class='title'>Reason:</span> </td> <td><%=@item_status.reason %></td></tr>
       <tr> <td> <span class='title'>Time:</span> </td> <td><%=@item_status.updated_at.strftime("%a, %d %b %Y")%></td></tr>
       <tr> <td> <span class='title'>Collected by:</span> </td> <td><%=@item_status.collected_by%></td></tr>
+      <tr> <td> <span class='title'>Updated by:</span> </td> <td><%= "#{@item_status.who_updated}" if (@item_status.who_updated)%></td></tr>
       <tr> <td> <span class='title'>Location:</span> </td> <td><%=@item_status.location %></td></tr>
     </table>
   <% else %>
