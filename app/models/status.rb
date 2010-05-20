@@ -4,7 +4,8 @@ class Status < ActiveRecord::Base
 
   def who_updated
     @id = self.updated_by
-    return User.find(@id).username
+    last_user_to_update = User.find(@id)
+    return (last_user_to_update.first_name.to_s + " " + last_user_to_update.last_name.to_s)
   end
 
 end
