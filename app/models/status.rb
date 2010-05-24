@@ -8,4 +8,8 @@ class Status < ActiveRecord::Base
     return (last_user_to_update.first_name.to_s + " " + last_user_to_update.last_name.to_s)
   end
 
+  def void
+    return false if(self.voided == 1)
+    self.update_attribute(:voided,1)
+  end
 end
