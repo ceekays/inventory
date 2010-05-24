@@ -59,6 +59,11 @@ class User < ActiveRecord::Base
   def create_new_salt
     self.salt = String.random_alphanumeric
   end
+
+  def name
+    full_name = self.first_name.to_s + " " + self.last_name.to_s
+    full_name.titleize
+  end
   private
 
   def self.encrypt_password(password, salt)     
@@ -75,8 +80,8 @@ class User < ActiveRecord::Base
     size.times { str << (i = Kernel.rand(62); i += ((i < 10) ? 48 : ((i < 36) ? 55 : 61 ))).chr }
     str
   end
-def fromfield(column)
-  column
-end
-
+  
+  def fromfield(column)
+    column
+  end
 end

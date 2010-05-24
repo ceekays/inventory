@@ -6,7 +6,7 @@
 	#****************************************************************************
 -->
 <p>
-  <%= text_field 'username','user', {:helpText => 'Enter the username:',
+  <%= text_field 'user', 'username', {:helpText => 'Enter the username:',
       :value => @username, :allowFreeText => true, :textCase => 'lower'}
   %>
 </p>                              
@@ -45,3 +45,4 @@
     {:tt_onload => "$('keyboard').style='display:block;'",
       :include_blank => true, :textCase => 'lower'})
 %>
+
