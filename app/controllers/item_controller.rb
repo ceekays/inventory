@@ -174,14 +174,35 @@ def in
 
     def report
       render_item_menu
-      @items=Item.find(:all,:order=>"name", :conditions => ["voided = 0"])
 
-        if params[:id]
-          @item_id=params[:id].to_s
-          if @item_id == ""
+      #void a give status of an item
+      if (params[:void] && params[:void]== "true")
+        status = Status.find(params[:id]) rescue nil
+        if(status)
+          if(status.void)
+            flash[:notice] = "<font color='green'> <b>The status was voided successfully.</b></font>"
+          end
+        else
+          flash[:error] = "Item failed to be voided."
+        end
+        params.delete(:void)
+      end
+
+        if params[:query]
+          query = params[:query].to_s
+          if query == ""
             flash[:msg_on_item] = "That item does not exist in the database"
             return
           else
+            @item_id=Item.find(:all,
+        :conditions=>[
+          "name like  ? OR model like ? OR category like ?
+          OR serial_number like ? OR barcode like ?
+          OR manufacturer like ?
+          OR location like ? OR project_name like ?",
+          "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
+          "%#{query}%","%#{query}%","%#{query}%","%#{query}%"
+        ]).first.id
             @item=Item.find(@item_id,:include=>:statuses)
           end
           
@@ -217,10 +238,10 @@ def in
         :conditions=>[
           "name like  ? OR model like ? OR category like ?
           OR serial_number like ? OR barcode like ?
-          OR manufacturer like ? OR collected_by like ?
+          OR manufacturer like ?
           OR location like ? OR project_name like ?",
           "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
-          "%#{query}%","%#{query}%","%#{query}%","%#{query}%","%#{query}%"
+          "%#{query}%","%#{query}%","%#{query}%","%#{query}%"
         ]
       )
       if @item.empty?
@@ -258,32 +279,4 @@ def in
         flash[:error]="recording item status failed."
       end
     end
-
-  def void
-    #render_item_menu
-      status =Status.find(params[:id])
-
-      if status and status.update_attribute(:voided,1)
-        flash[:notice] = "<font color='green'> <b>The status was voided successfully.</b></font>"
-=begin
-      <br> <br/>
-                          <p>Details<p>
-                           <p> Item Name: #{@item.name}</p>
-      <p>Status</p>
-      <p></p>
-      <p></p>"
-=end
-      else
-        flash[:error] = "Item failed to be voided."
-      end
-    #redirect_to root_path
-    url = session[:original_uri]
-    @item_id = session[:item_id]
-    #raise "#{@item_id}"
-    url += "/"+"#{@item_id}"
-        session[:original_url] = nil
-
-        #return the user to the previous url or just redirect them to 'home page'
-        redirect_to(url || root_path)
-  end
 end
