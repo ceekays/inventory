@@ -5,7 +5,6 @@ overflow: auto;
 }
 </style>
 
-<%=flash[:notice]%>
 <p><%=  flash[:msg_on_item] if (@item_id == "")%></p>
 <%=render "report_list" if (!@item || (@item && @item.nil?))%>
 <%=  flash[:msg_on_item_status] if (@item_statuses.nil? || @item_statuses.empty?)%>
@@ -20,7 +19,7 @@ A list of statuses for <b><%=@item.name%></b> <p>
   
   <% for @item_status in @item_statuses %>
     <tr bgcolor="#CCCCCC" ><td><%=@item_status.message %></td><td><%=@item_status.reason %></td><td><%=@item_status.updated_at.strftime("%H:%M:%S, %a, %d %b %Y")%></td><td><%=@item_status.who_updated if @item_status.who_updated%><br></td><td><%= link_to "Void this record" , { # link_to options
-        :controller => 'item',:action => 'void',:id => @item_status.id}%></td></tr>
+        :controller => 'item',:action => 'report', :void => true, :query=> @item.name, :id => @item_status.id}%></td></tr>
 <%end%>
 </tbody>
 </table>
@@ -28,3 +27,4 @@ A list of statuses for <b><%=@item.name%></b> <p>
 
 </div>
 <%end%>
+

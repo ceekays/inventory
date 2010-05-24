@@ -1,8 +1,8 @@
 <b>Select an item</b>
 <p>
-  <% @my=@items.collect{|i| [i.name,i.id]} %>
   <% form_tag item_path(:report) do %>
-    <%=select("id",'', @my,:include_blank => true, :textCase => 'lower')%>
+    <%=text_field(:query,nil, :include_blank => true, :ajaxURL => '/search/by_model?model0=Item&column0=name&model1=Item&column1=barcode&model2=Item&column2=serial_number&value=',
+    :textCase => 'lower')%>
     <%=submit_tag "Go" %>
   <% end %>
 </p>
