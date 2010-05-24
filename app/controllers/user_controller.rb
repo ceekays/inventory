@@ -14,10 +14,13 @@ class UserController < ApplicationController
         
     if request.post?
       @user.role = Role.find_by_role(params[:user][:role]).id
-      #raise
-      @user.save
+      if (@user.save)
+        flash[:notice] = "User #{@user.username} has been succesfully created"
+      else
+        flash[:notice] = "User #{@user.username} has not been created"
+      end
       redirect_to(:action => "index")
-      flash[:notice] = "User #{@user.username} has been succesfully created"
+
       @user = User.new
     end
   end
