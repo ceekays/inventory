@@ -12,9 +12,7 @@ class CreateItems < ActiveRecord::Migration
       t.string :project_name
       t.string :donor
       t.string :supplier
-      t.string :status
       t.integer :created_by
-      t.integer :quantity
       t.integer :updated_by
       t.integer :voided
       t.integer :voided_by

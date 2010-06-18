@@ -3,12 +3,12 @@ class CreateStatuses < ActiveRecord::Migration
     create_table :statuses do |t|
       t.integer :item_id
       t.string :message
-      t.string :reason
-      t.string :collected_by
-      t.string :date_dispatched
+      t.string :dispatcher
+      t.string :value_datetime
       t.string :location
       t.string :storage_code
       t.string :item_condition
+      t.integer :quantity
       t.integer :created_by
       t.integer :updated_by
       t.integer :voided

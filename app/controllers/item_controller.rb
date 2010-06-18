@@ -9,31 +9,41 @@ class ItemController < ApplicationController
     
     if @tasks && session[:user_id]
     @tasks<<["Logout", user_path(:logout)]
-  else
-    @tasks<<["Login", user_path(:login)]
+    else
+      @tasks<<["Login", user_path(:login)]
+    end
   end
-  end
+
   def new
     render_item_menu
     if request.post?
-
       item=Item.new(params[:item]) if params[:item]
       item.created_by = session[:user_id]
       item.updated_by = session[:user_id]
       
       if item.save
-        flash[:notice] = "Item registration successful."
+        params[:status][:storage_code]  = item.barcode
+        params[:status][:item_id]       = item.id
+        params[:status][:voided]        = 0
+        params[:status][:created_by]    = session[:user_id]
+        params[:status][:updated_by]    = session[:user_id]
+
+        status=Status.new(params[:status]) if params[:status]
+
+        status.save
+
         params[:id] = item.id
+        flash[:notice] = "Item registration successful."
         print_and_redirect("/item/printlabel/#{item.id}",item_path(:show,item))
       else
         flash[:error] = "Item registration failed."
       end
     else
-      @item_fields   = [:name, :model, :serial_number, #:barcode, 
-                        :category, :manufacturer,:date_of_reception, 
-                        :location, :project_name, :donor, :supplier, :status]
-      @status_fields = [:item_id, :message, :reason, :collected_by, 
-                        :date_dispatched, :location, :storage_code, :item_condition]
+      @item_fields   = [:name, :model, :serial_number, :category,
+                        :manufacturer, :project_name, :donor, :supplier]
+
+      @status_fields = [:date_of_reception, :quantity, :delivered_by,
+                        :regstration_location,:item_condition]
     end
   end
 
@@ -50,7 +60,7 @@ class ItemController < ApplicationController
     else
       #@item_fields = [:name,:model,:serial_number,:barcode,:category,:manufacturer]
       @item_fields   = [:name,:model,:serial_number,:barcode,:category,
-                        :manufacturer,:collected_by,:date_of_reception,:location,
+                        :manufacturer,:quantity, :collected_by,:date_of_reception,:location,
                         :catergory,:project_name]
       @item=Item.find(params[:id])
     end if params[:id]
@@ -65,10 +75,10 @@ class ItemController < ApplicationController
           "name like  ? OR model like ? OR category like ?
           OR serial_number like ? OR barcode like ?
           OR manufacturer like ? OR location like ? OR project_name like ?
-          OR donor like ? OR supplier like ? OR status like ?",
+          OR donor like ? OR supplier like ?",
           "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
           "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
-          "%#{query}%","%#{query}%","%#{query}%"
+          "%#{query}%","%#{query}%"
         ]
       )
       if @items.empty?
@@ -121,16 +131,14 @@ class ItemController < ApplicationController
 def in
      render_item_menu
    if params[:id]
-      @status_fields = [:reason,:date_dispatched,:collected_by,:location]
-      #raise params
+      @status_fields = [:reason, :date_of_reception, :quantity,
+                        :collected_by, :regstration_location]
       @item=Item.find(params[:id])
    elsif request.get?
     if params[:barcode]
 
         @item=Item.find_by_barcode(params[:barcode])
         if @item
-          @status_fields = [:reason,:date_dispatched, :collected_by,:location]
-
           redirect_to item_path(:in, @item) and return
         else
           flash[:notice]="The item is not found. Please Register it."
@@ -151,16 +159,15 @@ def in
    def out
      render_item_menu
    if params[:id]
-      @status_fields = [:reason,:date_dispatched, :collected_by,:location]
-      #raise params
+      #@status_fields = [:reason,:quantity, :date_dispatched, :collected_by,:location, :out]
+      @status_fields = [:reason, :date_dispatched, :quantity,
+                        :delivered_by, :destination]
       @item=Item.find(params[:id])
    elsif request.get?
     if params[:barcode]
         
         @item=Item.find_by_barcode(params[:barcode])
         if @item
-          @status_fields = [:reason,:date_dispatched,:collected_by,:location]
-          
           redirect_to item_path(:out, @item) and return
         else
           flash[:notice]="The item (<i>barcode: #{params[:barcode]}</i>) is not found. Please Register it."
@@ -188,46 +195,46 @@ def in
         params.delete(:void)
       end
 
-        if params[:query]
-          query = params[:query].to_s
-          if query == ""
-            flash[:msg_on_item] = "That item does not exist in the database"
-            return
-          else
-            @item_id=Item.find(:all,
-        :conditions=>[
-          "name like  ? OR model like ? OR category like ?
-          OR serial_number like ? OR barcode like ?
-          OR manufacturer like ?
-          OR location like ? OR project_name like ?",
-          "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
-          "%#{query}%","%#{query}%","%#{query}%","%#{query}%"
-        ]).first.id
-            @item=Item.find(@item_id,:include=>:statuses)
-          end
-          
-          if !@item
-            flash[:msg_on_item] = "There are no items in the database"
-            return
-          end
-          session[:item_id]=@item.id
+      if params[:query]
+        query = params[:query].to_s
+        if query == ""
+          flash[:msg_on_item] = "That item does not exist in the database"
+          return
+        else
+          @item_id=Item.find(:all,
+      :conditions=>[
+        "name like  ? OR model like ? OR category like ?
+        OR serial_number like ? OR barcode like ?
+        OR manufacturer like ?
+        OR location like ? OR project_name like ?",
+        "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
+        "%#{query}%","%#{query}%","%#{query}%","%#{query}%"
+      ]).first.id
+          @item=Item.find(@item_id,:include=>:statuses)
+        end
 
-          if (@item.statuses.nil? || @item.statuses.empty?)
-            flash[:msg_on_item_status] = "There are no statuses for this item"
-            return
-          elsif (@item.statuses)
-            @item_statuses = @item.statuses.find(:all, :conditions => ["voided = 0"])
-          else
-            @item_status = nil
-          end
-          @tasks=[
-            ["Edit", item_path(:edit,@item)],
-            ["Incoming", track_path(:in,@item)],
-            ["Outgoing", track_path(:out,@item)],
-            ["Item Management",main_path(:items)],
-            ["Main Dashboard",main_path(:index)]
-          ]
-      end
+        if !@item
+          flash[:msg_on_item] = "There are no items in the database"
+          return
+        end
+        session[:item_id]=@item.id
+
+        if (@item.statuses.nil? || @item.statuses.empty?)
+          flash[:msg_on_item_status] = "There are no statuses for this item"
+          return
+        elsif (@item.statuses)
+          @item_statuses = @item.statuses.find(:all, :conditions => ["voided = 0"])
+        else
+          @item_status = nil
+        end
+        @tasks=[
+          ["Edit", item_path(:edit,@item)],
+          ["Incoming", track_path(:in,@item)],
+          ["Outgoing", track_path(:out,@item)],
+          ["Item Management",main_path(:items)],
+          ["Main Dashboard",main_path(:index)]
+        ]
+    end
       
   end
   def report_list

@@ -29,12 +29,7 @@
         :allowFreeText => true)+
     tag(:br) if fields.include? :manufacturer %>
 
-    <%=i.text_field(:quantity, :field_type => 'number', :helpText => 'Quantity for Item:',
-        :ajaxURL => '/search/by_model?model0=Item&column0=quantity&value=',
-        :allowFreeText => true)+
-    tag(:br) if fields.include? :quantity %>
-
-  <%=i.text_field(:date_of_reception, :field_type => 'date', :value => DateTime.now().strftime("%d-%m-%Y"), :helpText => 'Date of Item Reception:',
+  <%#=i.text_field(:date_of_reception, :field_type => 'date', :value => DateTime.now().strftime("%d-%m-%Y"), :helpText => 'Date of Item Reception:',
         :ajaxURL => '/search/by_model?model0=Item&column0=date_of_reception&value=',
         :allowFreeText => true)+
     tag(:br) if fields.include? :date_of_reception %>
@@ -59,9 +54,5 @@
         :allowFreeText => true)+
     tag(:br) if fields.include? :supplier%>
     
-  <%=i.text_field(:location, :helpText => 'Location of registration:',
-        :ajaxURL => '/search/by_model?model0=Item&column0=location&value=',
-        :allowFreeText => true)+
-    tag(:br) if fields.include? :location%>
 <% end %>
 
