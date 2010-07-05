@@ -2,7 +2,7 @@ class ItemController < ApplicationController
   before_filter :authorize, :except   => [:login, :logout, :get_layout]
   def render_item_menu
     @tasks=[
-      ["Generate Reports",item_path(:report)],
+      ["Generate Reports",reports_path(:report)],
       ["Item Management",main_path(:items)],
       ["Main Dashboard",main_path(:index)]
     ]

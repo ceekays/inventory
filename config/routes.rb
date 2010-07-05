@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.track "/track/:action/:id", :controller=> "item"
   map.main "/main/:action/:id", :controller=>"main"
   map.user "/user/:action/:id", :controller=>"user"
+  map.reports "/reports/:action/:id", :controller=>"reports"
   
   
   # The priority is based upon order of creation: first created -> highest priority.

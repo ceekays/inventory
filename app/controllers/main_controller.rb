@@ -27,7 +27,7 @@ class MainController < ApplicationController
       ["Register Item",item_path(:new)],
       ["Record Incoming Item",item_path(:in)],
       ["Record Outgoing Item",item_path(:out)],
-      ["Generate Reports",item_path(:report)],
+      ["Generate Reports",reports_path(:index)],
       ["Main Dashboard",main_path(:index)]
     ]
   end
