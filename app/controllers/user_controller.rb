@@ -35,6 +35,8 @@ class UserController < ApplicationController
     
     @pagetitle = 'User Details'
     @all_users = User.find(:all)
+    @admin = false
+    @admin = true if (Role.find(User.find(session[:user_id]).role).role.downcase == "admin")
     #session[:edit_user] = @edit
   end
   
