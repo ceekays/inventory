@@ -1,7 +1,7 @@
 html, body {
   margin:0;
   padding:0;
-  background-color:beige;
+  background-color:#f5f5dc;
 }
 #screen {
   height:100%;
@@ -15,7 +15,7 @@ html, body {
 }
 select {
 }
-.tasks input {
+#tasks input {
   font-weight:bold;
   padding:1em;
   text-align:left;
@@ -27,7 +27,7 @@ select {
   color:infotext;
   padding:2em;
 }
-.tasks {
+#tasks {
   margin:3em auto;
 }
 
@@ -49,7 +49,7 @@ a:hover {
 a:active {
   border:3px inset ButtonShadow;
 }
-.tasks a {
+#tasks a {
   display:block;
 }
 select {
