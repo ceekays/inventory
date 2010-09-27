@@ -340,7 +340,7 @@ form{
 	display: none;
 }*/
 
-#SHIFT, #qwerty, #showDataButton, #lessthan, #greaterthan, #equals {
+#qwerty, #showDataButton, #lessthan, #greaterthan, #equals {
 	display: none;
 }
 

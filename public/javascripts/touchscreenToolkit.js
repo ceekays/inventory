@@ -1746,7 +1746,7 @@ function getRightCaseValue(aChar) {
       newChar = aChar.toUpperCase();
       break;
     default:    // Capitalise First Letter
-      if (inputElement.value.length == 0)
+      if (inputElement.value.length == 0 || tstShiftPressed)
         newChar = aChar.toUpperCase();
       else
         newChar = aChar.toLowerCase();
