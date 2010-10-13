@@ -55,4 +55,22 @@ class Item < ActiveRecord::Base
     checkdigit = checkdigit +1 while ((sum+(checkdigit))%10)!=0
     return checkdigit
   end
+
+  def self.collect(query)
+    self.find(:all,
+        :conditions=>[
+          "name like  ? OR model like ? OR category like ?
+          OR serial_number like ? OR barcode like ?
+          OR manufacturer like ? OR location like ? OR project_name like ?
+          OR donor like ? OR supplier like ?",
+          "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
+          "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
+          "%#{query}%","%#{query}%"
+        ]
+      )
+  end
+
+  def self.search_all()
+    
+  end
 end

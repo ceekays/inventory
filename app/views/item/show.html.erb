@@ -42,12 +42,18 @@
       <tr> <td> <span class='title'>Item condition:</span> </td> <td><%=@item_status.item_condition %></td></tr>
       <tr> <td> <span class='title'>Time:</span> </td> <td><%=@item_status.updated_at.strftime("%a, %d %b %Y")%></td></tr>
       <%if @item_status.message == "item in"%>
-      <tr> <td> <span class='title'>Collected by:</span> </td> <td><%=@item_status.dispatcher%></td></tr>
+        <tr> <td> <span class='title'>Delivered by:</span> </td> <td><%=@item_status.dispatcher%></td></tr>
       <%else%>
-      <tr> <td> <span class='title'>Dispatched by:</span> </td> <td><%=@item_status.dispatcher%></td></tr>
+        <tr> <td> <span class='title'>Collected by:</span> </td> <td><%=@item_status.dispatcher%></td></tr>
       <%end%>
       <tr> <td> <span class='title'>Updated by:</span> </td> <td><%= "#{@item_status.who_updated}" if (@item_status.who_updated)%></td></tr>
-      <tr> <td> <span class='title'>Location:</span> </td> <td><%=@item_status.location %></td></tr>
+      <%if @item_status.message == "item in"%>
+        <tr> <td> <span class='title'>Location:</span> </td> <td><%=@item_status.location %></td></tr>
+      <%else%>
+        <tr> <td> <span class='title'>Destination:</span> </td> <td><%=@item_status.location %></td></tr>
+      <%end%>
+      
+      
     </table>
   <% else %>
     <i> No Statuses Recorded yet</i>

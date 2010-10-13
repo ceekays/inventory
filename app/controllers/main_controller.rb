@@ -25,8 +25,7 @@ class MainController < ApplicationController
     @tasks=[
       ["Find Item",item_path(:find)],
       ["Register Item",item_path(:new)],
-      ["Record Incoming Item",item_path(:in)],
-      ["Record Outgoing Item",item_path(:out)],
+      ["Scan Item Barcode",item_path(:scan)],
       ["Generate Reports",reports_path(:index)],
       ["Main Dashboard",main_path(:index)]
     ]

@@ -9,8 +9,8 @@
   <%=s.text_field(:quantity, :field_type => 'number', :helpText => 'Quantity for Item:',
     :allowFreeText => true) + tag(:br) if fields.include? :quantity %>
 
-  <%=s.text_field(:item_conditon, :helpText => 'Condition of Item:',
-    :allowFreeText => true) + tag(:br) if fields.include? :item_conditon %>
+  <%=s.text_field(:item_condition, :helpText => 'Condition of Item:',
+    :allowFreeText => true) + tag(:br) if fields.include? :item_condition %>
 
   <%=s.text_field(:value_datetime, :field_type => 'date',
     :value => DateTime.now().strftime("%d-%m-%Y"), :helpText => 'Date of Reception:',
@@ -31,4 +31,7 @@
   <%=s.text_field(:location, :helpText => 'Location of Registration:',
     :ajaxURL => '/search/by_model?model0=Status&column0=location&value=',
     :allowFreeText => true) + tag(:br) if fields.include? :regstration_location%>
+  <%=s.text_field(:location, :helpText => 'Destination:',
+    :ajaxURL => '/search/by_model?model0=Status&column0=location&value=',
+    :allowFreeText => true) + tag(:br) if fields.include? :destination%>    
 <% end %>

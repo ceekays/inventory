@@ -70,17 +70,7 @@ class ItemController < ApplicationController
     render_item_menu
     if request.post?
       query=params[:item][:query] if params[:item][:query]
-      @items=Item.find(:all,
-        :conditions=>[
-          "name like  ? OR model like ? OR category like ?
-          OR serial_number like ? OR barcode like ?
-          OR manufacturer like ? OR location like ? OR project_name like ?
-          OR donor like ? OR supplier like ?",
-          "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
-          "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
-          "%#{query}%","%#{query}%"
-        ]
-      )
+      @items = Item.collect(query)
       if @items.empty?
         flash[:notice]="#{query} not found."
         redirect_to main_path(:items)
@@ -121,8 +111,8 @@ class ItemController < ApplicationController
 
       if @tasks
         @tasks<< ["Edit", item_path(:edit,@item)]
-        @tasks<< ["Incoming", track_path(:in,@item)]
-        @tasks<< ["Outgoing", track_path(:out,@item)]
+        @tasks<< ["Incoming", track_path(:in,@item)] unless (@item_status.message == "item in")
+        @tasks<< ["Outgoing", track_path(:out,@item)] unless (@item_status.message == "item out")
         @tasks<< ["Print Label", track_path(:printlabel,@item)]
       end
 
@@ -132,19 +122,8 @@ def in
      render_item_menu
    if params[:id]
       @status_fields = [:reason, :date_of_reception, :quantity,
-                        :collected_by, :regstration_location]
+                        :delivered_by, :regstration_location]
       @item=Item.find(params[:id])
-   elsif request.get?
-    if params[:barcode]
-
-        @item=Item.find_by_barcode(params[:barcode])
-        if @item
-          redirect_to item_path(:in, @item) and return
-        else
-          flash[:notice]="The item is not found. Please Register it."
-          redirect_to main_path(:items) and return
-        end
-      end
     end
 
   render :layout => "barcodelayout" unless @item
@@ -161,22 +140,25 @@ def in
    if params[:id]
       #@status_fields = [:reason,:quantity, :date_dispatched, :collected_by,:location, :out]
       @status_fields = [:reason, :date_dispatched, :quantity,
-                        :delivered_by, :destination]
+                        :collected_by, :destination]
       @item=Item.find(params[:id])
-   elsif request.get?
+    end
+
+  render :layout => "barcodelayout" unless @item
+  end
+  
+  def scan
     if params[:barcode]
         
         @item=Item.find_by_barcode(params[:barcode])
         if @item
-          redirect_to item_path(:out, @item) and return
+          redirect_to item_path(:show, @item) and return
         else
           flash[:notice]="The item (<i>barcode: #{params[:barcode]}</i>) is not found. Please Register it."
           redirect_to main_path(:items) and return
         end
       end
-    end
-
-  render :layout => "barcodelayout" unless @item
+    render :layout => "barcodelayout" unless @item      
   end
 
     def report
@@ -201,23 +183,15 @@ def in
           flash[:msg_on_item] = "That item does not exist in the database"
           return
         else
-          @item_id=Item.find(:all,
-      :conditions=>[
-        "name like  ? OR model like ? OR category like ?
-        OR serial_number like ? OR barcode like ?
-        OR manufacturer like ?
-        OR location like ? OR project_name like ?",
-        "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
-        "%#{query}%","%#{query}%","%#{query}%","%#{query}%"
-      ]).first.id
-          @item=Item.find(@item_id,:include=>:statuses)
+          @item_id  = Item.Item.seach_all(query).first.id
+          @item     = Item.find(@item_id,:include=>:statuses)
         end
 
         if !@item
           flash[:msg_on_item] = "There are no items in the database"
           return
         end
-        session[:item_id]=@item.id
+        session[:item_id] = @item.id
 
         if (@item.statuses.nil? || @item.statuses.empty?)
           flash[:msg_on_item_status] = "There are no statuses for this item"
@@ -240,17 +214,8 @@ def in
   def report_list
     render_item_menu
     if request.post?
-      query=params[:item][:query] if params[:item][:query]
-      @item=Item.find(:all,
-        :conditions=>[
-          "name like  ? OR model like ? OR category like ?
-          OR serial_number like ? OR barcode like ?
-          OR manufacturer like ?
-          OR location like ? OR project_name like ?",
-          "%#{query}%","%#{query}%","%#{query}%","%#{query}%",
-          "%#{query}%","%#{query}%","%#{query}%","%#{query}%"
-        ]
-      )
+      query = params[:item][:query] if params[:item][:query]
+      @item = Item.seach_all(params[:item])
       if @item.empty?
         flash[:notice]="#{query} not found."
       elsif @item.many?
