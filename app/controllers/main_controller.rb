@@ -27,6 +27,7 @@ class MainController < ApplicationController
       ["Register Item",item_path(:new)],
       ["Scan Item Barcode",item_path(:scan)],
       ["Generate Reports",reports_path(:index)],
+      ["Generate Serial Codes",item_path(:print_serial_label)],
       ["Main Dashboard",main_path(:index)]
     ]
   end

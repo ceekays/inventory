@@ -251,4 +251,12 @@ def in
         flash[:error]="recording item status failed."
       end
     end
+
+    def print_serial_label
+      serial_codes = []
+      4.times { serial_codes << Item.generate_serial_code}
+      send_data(Item.print_serial_codes(serial_codes),
+        :type=> "application/label; charset=utf-8", :stream=> false,
+        :filename=>"#{rand(1000000)}.lbl", :disposition => 'inline')
+    end
 end

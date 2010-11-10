@@ -50,13 +50,13 @@ class Item < ActiveRecord::Base
 
     sum = 0
     number.each_with_index do |digit,index|
-      digit = digit * 2 if index%2==parity
+      digit = digit * 2 if (index % 2 == parity)
       digit = digit - 9 if digit > 9
       sum = sum + digit
     end
 
     checkdigit = 0
-    checkdigit = checkdigit +1 while ((sum+(checkdigit))%10)!=0
+    checkdigit = checkdigit + 1 while ((sum +(checkdigit)) % 10)!= 0
     return checkdigit
   end
 
@@ -76,5 +76,37 @@ class Item < ActiveRecord::Base
 
   def self.search_all()
     
+  end
+
+  # generate a random serial code from a given set of characters
+  # we are taking out the following letters B, I, O, Q, S, Z
+  # because the might be mistaken for 8, 1, 0, 0, 5, 2 respectively
+  def self.generate_serial_code
+    base = ["0","1","2","3","4","5","6","7","8","9","A","C","D","E","F",
+            "G","H","J","K","L","M","N","P","R","T","U","V","W","X","Y"]
+    (1..8).collect { base[rand(base.size)] }.to_s
+  end
+
+  def self.print_serial_codes(data)
+
+    label = ZebraPrinter::StandardLabel.new
+    label.font_size = 1
+    label.font_horizontal_multiplier = 2
+    label.font_vertical_multiplier = 2
+    label.left_margin = 50
+
+    y_axis = 50
+
+    lines = data.count/2 #summing it is even
+
+    lines.times do |i|
+      #label.draw_text("#{data[i]}", 100,  y_axis, 0, 1, 2, 2, false)
+      #label.draw_text("#{data[(i+2)]}", 3000, y_axis, 0, 1, 2, 2, false)
+      label.draw_barcode(100,  y_axis, 0, 1, 2, 4, 40, true, "#{data[i]}")
+      label.draw_barcode(2880, y_axis, 0, 1, 2, 4, 40, true, "#{data[i+2]}")
+      y_axis += 150
+    end
+
+	  label.print(1)
   end
 end
