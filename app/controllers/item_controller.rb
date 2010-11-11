@@ -16,34 +16,44 @@ class ItemController < ApplicationController
 
   def new
     render_item_menu
-    if request.post?
-      item=Item.new(params[:item]) if params[:item]
-      item.created_by = session[:user_id]
-      item.updated_by = session[:user_id]
-      
-      if item.save
-        params[:status][:storage_code]  = item.barcode
-        params[:status][:item_id]       = item.id
-        params[:status][:voided]        = 0
-        params[:status][:created_by]    = session[:user_id]
-        params[:status][:updated_by]    = session[:user_id]
-
-        status=Status.new(params[:status]) if params[:status]
-
-        status.save
-
-        params[:id] = item.id
-        flash[:notice] = "Item registration successful."
-        print_and_redirect("/item/printlabel/#{item.id}",item_path(:show,item))
-      else
-        flash[:error] = "Item registration failed."
-      end
-    else
-      @item_fields   = [:name, :model, :serial_number, :category,
+    @item_fields   = [:name, :model, :serial_number, :category,
                         :manufacturer, :project_name, :donor, :supplier]
 
-      @status_fields = [:date_of_reception, :quantity, :delivered_by,
+    @status_fields = [:date_of_reception, :quantity, :delivered_by,
                         :regstration_location,:item_condition]
+    if request.post?
+      unless params[:item][:serial_number] == "Unknown"
+        if (Item.collect(params[:item][:serial_number]).count > 0)
+
+          flash[:notice] = "Item registration failed."+
+                           "An item with the same serial code"+
+                           "<i>(#{params[:item][:serial_number]})</i> already exists."
+
+          redirect_to main_path(:items) and return
+        else
+          item = Item.new(params[:item]) if params[:item]
+          item.created_by = session[:user_id]
+          item.updated_by = session[:user_id]
+
+          if item.save
+            params[:status][:storage_code]  = item.barcode
+            params[:status][:item_id]       = item.id
+            params[:status][:voided]        = 0
+            params[:status][:created_by]    = session[:user_id]
+            params[:status][:updated_by]    = session[:user_id]
+
+            status = Status.new(params[:status]) if params[:status]
+
+            status.save
+
+            params[:id] = item.id
+            flash[:notice] = "Item registration successful."
+            print_and_redirect("/item/printlabel/#{item.id}",item_path(:show,item))
+          else
+            flash[:error] = "Item registration failed."
+          end
+        end
+      end
     end
   end
 
