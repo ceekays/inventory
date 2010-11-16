@@ -21,17 +21,17 @@
 <p>
 	<%= text_field 'user', 'last_name', :helpText => 'Enter the last name:',
       :ajaxURL => '/search/by_model?model=User&column=last_name&value=',
-      :value => @user_last_name, :allowFreeText => true, :textCase => 'lower'
+      :value => @user_last_name, :allowFreeText => true
   %>
 </p>
 <p>
-	<%= password_field 'user', 'password', :helpText => 'Enter the password:',
+	<%= password_field 'user', 'password', :helpText => 'Enter the password:',:textCase => 'lower'
     :size => 40 %>
 </p>
 	
 <p>
 	<%= password_field 'user', 'password_confirmation',
-    :helpText => 'Confirm the password:', :size => 40
+    :helpText => 'Confirm the password:', :textCase => 'lower'
   %>
 </p>
 <p>
