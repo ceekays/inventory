@@ -59,13 +59,13 @@ class UserController < ApplicationController
     if params[:id]
     @user = User.find(params[:id])
     if request.post? &&  @user
-      @user.role = Role.find_by_role(params[:user][:role]).id
+      params[:user][:role] = Role.find_by_role(params[:user][:role]).id
       if @user.update_attributes(params[:user])
         redirect_to :action => "index"
         flash[:notice] ="The changes on '#{@user.username}' have been effected succefully!"
       else
         redirect_to :action => "index"
-        flash[:notice] ="The changes have not been effected on the user! Probably the user does not exist."
+        flash[:notice] ="The changes have not been effected on the user!"
       end
     end
   end
