@@ -14,7 +14,7 @@ class Item < ActiveRecord::Base
     label.font_vertical_multiplier = 2
     label.left_margin = 50
 	  label.draw_text("Name: #{self.name.titleize}", 40, 30, 0, 1, 2, 2, false)
-	  label.draw_text("Serial #: #{self.serial_number}", 40, 80, 0, 1, 2, 2, false)
+	  label.draw_text("Serial No.: #{self.serial_number}", 40, 80, 0, 1, 2, 2, false)
     label.draw_barcode(40, 120, 0, 1, 5, 15, 120, true, "#{self.barcode}")
 	  #label.draw_text("Collected y: #{self.collected_by rescue ''}", 40, 130, 0, 2, 2, 2, false)
 	  label.print(num)
