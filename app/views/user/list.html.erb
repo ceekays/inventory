@@ -8,16 +8,17 @@
   <% for user in @all_users %>
   <tr>
     <td><%= h(user.username) %></td> <td> <%= h(user.name)%></td> <td> <%= h(Role.find(user.role).description)%></td>
- <%if(@admin || user.id == session[:user_id])%>
-    <td>
-  <%= link_to "[edit]" , { # link_to options
-			  :controller => 'user',:action => 'edit',:id => user}%>
-  </td>
-  <td>
-  <%= link_to "[show]" , { # link_to options
-			  :controller => 'user',:action => 'show',:id => user}%>
-  </td>
-  <%end%>
+ 		
+ 		<%if(@admin || user.id == session[:user_id])%>
+		  <td>
+				<%= link_to "[edit]" , { # link_to options
+				 :controller => 'user',:action => 'edit',:id => user}%>
+			</td>
+			<td>
+				<%= link_to "[show]" , { # link_to options
+					:controller => 'user',:action => 'show',:id => user}%>
+			</td>
+  	<%end%>
   </tr>
-<%end%>
+	<%end%>
 </table>

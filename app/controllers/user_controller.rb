@@ -64,14 +64,20 @@ class UserController < ApplicationController
     end
   end
   
-  #displays user details
+  #show user details
   def show
   	render_user_menu
   	@user = User.find(params[:id])
-  	
   	if @tasks
        @tasks<< ["Edit", user_path(:edit,@user)]
     end
+  end
+  
+  #remove/delete user from the database
+  def delete_user
+  	render_user_menu
+  	@user = User.find(params[:id])
+    @user.destroy
   end
   
   # edits user details

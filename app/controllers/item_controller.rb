@@ -121,12 +121,12 @@ class ItemController < ApplicationController
       end
     end
 
-      if @tasks
-        @tasks<< ["Edit", item_path(:edit,@item)]
-        @tasks<< ["Incoming", track_path(:in,@item)] unless (@item_status.message == "item in")
-        @tasks<< ["Outgoing", track_path(:out,@item)] unless (@item_status.message == "item out")
-        @tasks<< ["Print Label", track_path(:printlabel,@item)]
-      end
+    if @tasks
+		  @tasks<< ["Edit", item_path(:edit,@item)]
+		  @tasks<< ["Incoming", track_path(:in,@item)] unless (@item_status.message == "item in")
+		  @tasks<< ["Outgoing", track_path(:out,@item)] unless (@item_status.message == "item out")
+		  @tasks<< ["Print Label", track_path(:printlabel,@item)]
+	  end
 
   end
 
