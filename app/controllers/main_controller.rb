@@ -9,6 +9,7 @@ class MainController < ApplicationController
     ]
     #render :text=>"#{@tasks}"
   end
+  
   def items
 
     @categories = Item.find(:all,
@@ -16,11 +17,12 @@ class MainController < ApplicationController
                     :group => "category")
 
 
- if(@categories.count == 1)
-   flash[:num_of_items] = "There <b><i>one category</i></b> of Items."
- else
-  flash[:num_of_items] = "There are <b><i>#{@categories.count} categories</i></b> of Items."
- end
+
+		if(@categories.count == 1)
+			flash[:num_of_items] = "There <b><i>one category</i></b> of Items."
+		else
+			flash[:num_of_items] = "There are <b><i>#{@categories.count} categories</i></b> of Items."
+		end
 
     @tasks=[
       ["Find Item",item_path(:find)],
@@ -31,6 +33,7 @@ class MainController < ApplicationController
       ["Main Dashboard",main_path(:index)]
     ]
   end
+  
   def users
      num_of_users = User.find(:all)
 
@@ -46,6 +49,7 @@ class MainController < ApplicationController
     else
       @summary[:log] = "You are not logged in, please log in."
     end
+    
     @tasks=[
       ["Add User",user_path(:new)],
       ["Find User",user_path(:search)],

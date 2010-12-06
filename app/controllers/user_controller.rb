@@ -64,27 +64,33 @@ class UserController < ApplicationController
     end
   end
   
+  #displays user details
   def show
   	render_user_menu
   	@user = User.find(params[:id])
+  	
+  	if @tasks
+       @tasks<< ["Edit", user_path(:edit,@user)]
+    end
   end
+  
   # edits user details
   # requires an id paramter from the search action 
   def edit								
     @pagetitle = 'Edit User Details'
     if params[:id]
-    @user = User.find(params[:id])
-    if request.post? &&  @user
-      params[:user][:role] = Role.find_by_role(params[:user][:role]).id
-      if @user.update_attributes(params[:user])
-        redirect_to :action => "index"
-        flash[:notice] ="The changes on '#{@user.username}' have been effected succefully!"
-      else
-        redirect_to :action => "index"
-        flash[:notice] ="The changes have not been effected on the user!"
-      end
-    end
-  end
+    	@user = User.find(params[:id])
+		  if request.post? &&  @user
+		    params[:user][:role] = Role.find_by_role(params[:user][:role]).id
+		    if @user.update_attributes(params[:user])
+		      redirect_to :action => "index"
+		      flash[:notice] ="The changes on '#{@user.username}' have been effected succefully!"
+		    else
+		      redirect_to :action => "index"
+		      flash[:notice] ="The changes have not been effected on the user!"
+		    end
+		  end
+  	end
   end
   
 end
