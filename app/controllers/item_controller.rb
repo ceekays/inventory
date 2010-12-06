@@ -80,7 +80,9 @@ class ItemController < ApplicationController
     render_item_menu
     if request.post?
       query=params[:item][:query] if params[:item][:query]
+            
       @items = Item.collect(query)
+      
       if @items.empty?
         flash[:notice]="#{query} not found."
         redirect_to main_path(:items)

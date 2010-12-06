@@ -6,10 +6,9 @@
 #****************************************************************************
 -->
 
-<%= error_messages_for 'user' %>
-<p>
-	<label for="user_username" >Username:</label> 
-	<%= text_field 'user', 'username', :xhelpText => 'Username', 
-	:ajaxURL => '/search/User?field=username&value=', 
-	:value => @user_username, :textCase => 'lower' %>
-</p>
+<% form_for :user do |form| %>
+  <%=form.text_field(:query, :helpText => 'Username:',
+        :ajaxURL => '/search/by_model?model0=User&column0=username&',
+        :allowFreeText => true) %>
+  <%=form.submit "go" %>
+<% end %>

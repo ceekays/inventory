@@ -7,6 +7,20 @@ class UserController < ApplicationController
   def index
     @pagetitle = 'Main Menu'
   end
+
+	def render_user_menu
+		 @tasks=[
+      ["Item Management",main_path(:items)],
+      ["User Administration",main_path(:users)],
+      ["Main Dashboard",main_path(:index)]
+    ]
+    
+    @pagetitle = 'User Details'
+    @all_users = User.find(:all)
+    @admin = false
+    @admin = true if (Role.find(User.find(session[:user_id]).role).role.downcase == "admin")
+	end
+  
   def new
     @pagetitle = 'Create New User'
    
@@ -27,16 +41,7 @@ class UserController < ApplicationController
   
   #lists users in the users' table
   def list
-        @tasks=[
-      ["Item Management",main_path(:items)],
-      ["User Administration",main_path(:users)],
-      ["Main Dashboard",main_path(:index)]
-    ]
-    
-    @pagetitle = 'User Details'
-    @all_users = User.find(:all)
-    @admin = false
-    @admin = true if (Role.find(User.find(session[:user_id]).role).role.downcase == "admin")
+    render_user_menu
     #session[:edit_user] = @edit
   end
   
@@ -47,11 +52,22 @@ class UserController < ApplicationController
      @pagetitle = 'Search for a Particular User'		
    	
     if request.post?
-	#params[:user] = User.find_by_username(params[:user][:username])
-      	redirect_to :action=>"edit", :id => params[:user][:username]
+			#query=params[:user][:query] if params[:user][:query]
+		  
+		  query = User.find_by_username(params[:user][:query])
+			if !(query == nil)
+      	redirect_to :action=>"show", :id => query.id
+      else
+      	flash[:notice] = "#{params[:user][:query]} not found"
+      	redirect_to main_path(:users)
+      end
     end
   end
   
+  def show
+  	render_user_menu
+  	@user = User.find(params[:id])
+  end
   # edits user details
   # requires an id paramter from the search action 
   def edit								
