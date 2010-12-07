@@ -70,6 +70,7 @@ class UserController < ApplicationController
   	@user = User.find(params[:id])
   	if @tasks
        @tasks<< ["Edit", user_path(:edit,@user)]
+       @tasks<< ["List", user_path(:list,@user)]
     end
   end
   
@@ -78,6 +79,9 @@ class UserController < ApplicationController
   	render_user_menu
   	@user = User.find(params[:id])
     @user.destroy
+    
+    redirect_to :action => "list"
+    flash[:notice] ="#{@user.username} successfully deleted!"
   end
   
   # edits user details

@@ -106,6 +106,16 @@ class ItemController < ApplicationController
     @items = [] if @items.nil?
   end
 
+	#delete item from the database
+	def delete_item
+		render_item_menu
+  	@item = Item.find(params[:id])
+    @Item.destroy
+    
+    redirect_to :action => "list"
+    flash[:notice] ="#{@item.name} successfully deleted!"
+	end
+
   def show
     render_item_menu
 

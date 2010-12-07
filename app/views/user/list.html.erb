@@ -1,24 +1,28 @@
 <h3>User Details</h3> <br/>
 <table width="75%">
   <tr>
-   <td><h4><u>Username</u></h4></td> <td><h4><u>Full name</u></h4> </td> <td><h4><u>Role</u></h4> </td>
-   <td><h4><u> Action</u></h4></td>
+  	<td><h4><u>Username</u></h4></td> <td><h4><u>Full name</u></h4> </td> <td><h4><u>Role</u></h4> </td>
+   	<td><h4><u> Action</u></h4></td>
   </tr>
 
   <% for user in @all_users %>
-  <tr>
-    <td><%= h(user.username) %></td> <td> <%= h(user.name)%></td> <td> <%= h(Role.find(user.role).description)%></td>
- 		
- 		<%if(@admin || user.id == session[:user_id])%>
-		  <td>
-				<%= link_to "[edit]" , { # link_to options
-				 :controller => 'user',:action => 'edit',:id => user}%>
-			</td>
-			<td>
-				<%= link_to "[show]" , { # link_to options
-					:controller => 'user',:action => 'show',:id => user}%>
-			</td>
-  	<%end%>
-  </tr>
-	<%end%>
+		<tr>
+		  <td><%= h(user.username) %></td> <td> <%= h(user.name)%></td> <td> <%= h(Role.find(user.role).description)%></td>
+		 		<%if(@admin || user.id == session[:user_id])%>
+					<td>
+						<%= link_to "[edit]" , { # link_to options
+							:controller => 'user',:action => 'edit',:id => user}%>
+					</td>
+					<td>
+						<%= link_to "[show]" , { # link_to options
+							:controller => 'user',:action => 'show',:id => user}%>
+					</td>
+					<td>
+      			<%= link_to "[Delete]", {# link_to options
+        			  :controller => 'user', :action => 'delete_user', :id => user},
+        			  :confirm => "Are you sure?" %>
+    			</td>
+			<%end%>
+		</tr>
+ 	<%end%>
 </table>
