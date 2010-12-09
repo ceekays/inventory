@@ -1,5 +1,7 @@
 class ItemController < ApplicationController
+ 
   before_filter :authorize, :except   => [:login, :logout, :get_layout]
+ 
   def render_item_menu
     @tasks=[
       ["Generate Reports",reports_path(:report)],
@@ -47,10 +49,10 @@ class ItemController < ApplicationController
             status.save
 
             params[:id] = item.id
-            flash[:notice] = "Item registration successful."
+            flash[:notice] = "#{params[:item][:name]} registration successful."
             print_and_redirect("/item/printlabel/#{item.id}",item_path(:show,item))
           else
-            flash[:error] = "Item registration failed."
+            flash[:error] = "#{params[:item][:name]} registration failed."
           end
         end
       end
@@ -110,7 +112,7 @@ class ItemController < ApplicationController
 	def delete_item
 		render_item_menu
   	@item = Item.find(params[:id])
-    @Item.destroy
+  	@item.destroy
     
     redirect_to :action => "list"
     flash[:notice] ="#{@item.name} successfully deleted!"
@@ -136,11 +138,11 @@ class ItemController < ApplicationController
 		  @tasks<< ["Incoming", track_path(:in,@item)] unless (@item_status.message == "item in")
 		  @tasks<< ["Outgoing", track_path(:out,@item)] unless (@item_status.message == "item out")
 		  @tasks<< ["Print Label", track_path(:printlabel,@item)]
+		  @tasks<< ["Delete Item", item_path(:delete_item,@item)]
 	  end
-
   end
 
-def in
+	def in
      render_item_menu
    if params[:id]
       @status_fields = [:reason, :date_of_reception, :quantity,
@@ -149,7 +151,7 @@ def in
     end
 
   render :layout => "barcodelayout" unless @item
-  end
+ end
   
   ######################################################
   # Change:   added the "edited" section
@@ -157,7 +159,7 @@ def in
   # Solution: set the "id" to "status.item_id"
   # Author:   Edmond Kachale on 30 July 2009
   ######################################################
-   def out
+  def out
      render_item_menu
    if params[:id]
       #@status_fields = [:reason,:quantity, :date_dispatched, :collected_by,:location, :out]
@@ -167,7 +169,7 @@ def in
     end
 
   render :layout => "barcodelayout" unless @item
-  end
+ end
   
   def scan
     if params[:barcode]
@@ -233,6 +235,7 @@ def in
     end
       
   end
+
   def report_list
     render_item_menu
     if request.post?
@@ -248,12 +251,12 @@ def in
     end
   end
 
-    def printlabel
+   def printlabel
       item = Item.find(params[:id])
       send_data(item.print_label, :type=> "application/label; charset=utf-8", :stream=> false, :filename=>"#{item.id}#{rand(10000)}.lbl", :disposition => 'inline')
-    end
+   end
 
-    def save
+   def save
 
       params[:status][:voided]        = 0
       params[:status][:item_id]       = params[:id]
@@ -272,9 +275,9 @@ def in
       else
         flash[:error]="recording item status failed."
       end
-    end
+   end
 
-    def print_serial_label
+   def print_serial_label
       serial_codes = []
       4.times do
 

@@ -71,6 +71,7 @@ class UserController < ApplicationController
   	if @tasks
        @tasks<< ["Edit", user_path(:edit,@user)]
        @tasks<< ["List", user_path(:list,@user)]
+       @tasks<< ["Delete", user_path(:delete_user,@user)]
     end
   end
   
