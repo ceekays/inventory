@@ -1252,7 +1252,7 @@ function cancelEntry() {
   //disableTouchscreenInterface();
   //window.location.reload();
 
-  window.location.href = tstCancelURL;
+  window.location.href = (window.tt_cancel_destination || tstCancelURL);
 }
 
 // format the given element's value for display on the Progress Indicator
