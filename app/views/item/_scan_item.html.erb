@@ -1,7 +1,20 @@
 <%= javascript_include_tag "barcode"%>
-Scan item barcode:
+<style>
+  .ttScanInput {
+    background: none repeat scroll 0 0 transparent;
+    border-color: -moz-use-text-color -moz-use-text-color silver;
+    border-style: none none solid;
+    border-width: medium medium 2px;
+    font-family: "Nimbus Sans L","Arial Narrow",sans-serif;
+    font-size: 2.2em;
+    padding-left: 5px;
+}
+
+
+</style>
+<h2>Scan item barcode:</h2>
 <form id='barcodeForm'>
   <div>
-    <input id="barcode" name="barcode" type="text"></input>
+    <input id="barcode" class="ttScanInput" name="barcode" type="text"></input>
   </div>
 </form>
