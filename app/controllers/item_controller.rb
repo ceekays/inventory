@@ -158,6 +158,7 @@ def in
   end
   
   def scan
+    render_item_menu
     if params[:barcode]
         
         @item=Item.find_by_barcode(params[:barcode])
