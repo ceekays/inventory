@@ -15,7 +15,7 @@ class ItemController < ApplicationController
   end
 
   def new
-    render_item_menu
+    #render_item_menu
     @item_fields   = [:name, :model, :serial_number, :category,
                         :manufacturer, :project_name, :donor, :supplier]
 
@@ -58,7 +58,7 @@ class ItemController < ApplicationController
   end
 
   def edit
-    render_item_menu
+    #render_item_menu
     if request.post?
       item=Item.find(params[:id])
       if item and item.update_attributes(params[:item])
@@ -77,7 +77,7 @@ class ItemController < ApplicationController
   end
 
   def find
-    render_item_menu
+    #render_item_menu
     if request.post?
       query=params[:item][:query] if params[:item][:query]
       @items = Item.collect(query)
@@ -129,7 +129,7 @@ class ItemController < ApplicationController
   end
 
 def in
-     render_item_menu
+     #render_item_menu
    if params[:id]
       @status_fields = [:reason, :date_of_reception, :quantity,
                         :delivered_by, :regstration_location]
