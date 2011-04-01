@@ -41,6 +41,7 @@ class ApplicationController < ActionController::Base
                           "you have succesfully logged in"
         
       else
+        redirect_to(url || root_path)
         flash[:notice] = "Invalid user/password combination"
       end
     end
