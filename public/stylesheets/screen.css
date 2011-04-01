@@ -3,14 +3,21 @@ html, body {
   padding:0;
   background-color:#f5f5dc;
 }
+#container {
+  display: table;
+}
 #screen {
+  display: table-row;
   height:100%;
   margin:2px 24px 35px 11px;
 }
 #left {
+  display: table-cell;
   width:75%;
+  height: 500px;
 }
 #right {
+  display: table-cell;
   width:16em;
 }
 select {
