@@ -1,0 +1,21 @@
+ <%= stylesheet_link_tag "report" %>
+<div id="metaData" onclick="javascript:printContent('document');"style="float: right;">
+  <a>Print Report</a></div>
+
+<div id="report">
+  <div id="document">
+  <div id="reportHeader"> Baobab Health</div>
+  <div id="reportSubHeader"> Consumables Consumption Analysis for  <%=Date.today%></div>
+    <table border="0" width="90%" class="niceTable">
+      <tr>
+        <th>Donor</th> <th>Site</th> <th class="textposition"> Quality Used</th>
+      </tr>
+      <tr>
+        <td> CDC </td> <td> Salima</td> <td class="textposition"> 4 </td>
+      </tr>
+      <tr style="font-size: larger; font-weight: bolder">
+        <td colspan="2" align="right"> Totals </td> <td class="textposition"> 4 </td>
+      </tr>
+    </table>
+  </div>
+</div>
