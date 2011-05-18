@@ -1,0 +1,7 @@
+<h5><%=flash[:notice]%></h5>
+<h1>New Report</h1>
+<%=error_messages_for :report %>
+<% form_for :report do |form| %>
+  <%=render :partial=> "shared/report_fields", :locals=>{:fields=>@report_fields} %>
+  <%=form.submit "Create" %>
+<% end %>
