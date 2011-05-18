@@ -1,0 +1,37 @@
+<style type="text/css">
+  #report-content{
+    border: 1px solid;
+    /*min-height: 200px;*/
+    width: 866px;
+    background: #fefefe;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+</style>
+<% @report_name = 'Label Analysis'%>
+<div id="report-content">
+  <%= render "report_header"%>
+  <div id="report-section">
+  <%= render "organizational_details"%>
+  <div id='data'>
+    
+    <table border="0" class="niceTable" >
+       <tr class="row">
+        <th>Name</th>
+        <th>Amount</th>
+      </tr>
+      <%@Stock_distribution_list.each do |data_row|%>
+          <tr class="row">
+              <td ><%= data_row.location %></td>
+              <td ><%= data_row.amount%></td>             
+          </tr>
+       <%end rescue nil%>
+
+    </table>
+    
+    <div id="totals">
+      <i> Total Items In for the period: </i> <%=@total_items_in.to_s%>                            
+    </div>
+  </div>
+  </div>
+</div>
