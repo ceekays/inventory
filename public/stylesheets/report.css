@@ -1,0 +1,197 @@
+body{
+  overflow: auto;
+}
+
+.main_legend {
+    font-size:2em;
+    padding: 15px;
+    border:1px #CCCCCC dotted;
+    -moz-border-radius:20px;
+    color:white; background-color:green;
+}
+
+.main_fieldset {
+    margin: 30px;
+    border:1px #CCCCCC dotted;
+    -moz-border-radius:20px;
+    padding:20px;
+}
+
+.niceTable, tr, th, td{
+    position : relative;
+    border-collapse:collapse;
+      
+    /*border-bottom:1px #000000 solid;*/
+}
+
+tr.row{
+    border-bottom:1px dotted;
+}
+
+.cellright {
+    border-right:1px #ccc dotted;
+}
+
+.celltop {
+    border-top:1px #ccc dotted;
+}
+
+.cellbottom {
+    border-bottom:1px #ccc dotted;
+}
+
+.textbold {
+    font-weight:bold;
+}
+
+.topic {
+    font-size:1.3em;
+}
+
+.SelectList {
+    background-color:#FFFF99;
+    list-style: none;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size:2em;
+    width: 500px;
+    border:1px #ADD8E6 solid;
+    margin-left:15px;
+    margin-bottom:20px;
+    margin-top:20px;
+}
+
+.menu-buttons {
+    border:1px dotted #ccc;
+    background-color:#eee;
+    -moz-border-radius:20px;
+    margin-top:15px;
+    margin-left:50px;
+    width:400px;
+    padding:30px;
+    height:420px;
+}
+
+.input-date {
+    width:100%;
+    text-align:center;
+    font-size:2em;
+    margin-top:10px;
+    margin-bottom:10px;
+    border:#ccc 1px solid;
+    -moz-border-radius:30px;
+    background-color:#ADD8E6;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.label-text {
+    font-size:1.8em;
+}
+
+.main_heading {
+    font-size:1.5em;
+    padding: 10px;
+    color:white;
+    border:1px #CCCCCC dotted;
+    -moz-border-radius:20px;
+    background-color:black;
+}
+.textposition{
+    text-align:right;
+}
+
+#report{
+    background-color: #fff;
+    padding: 75px;
+    overflow: auto;
+    height: 250px;
+    border-style:groove;
+}
+
+#document{
+    height: 750px;
+    width:550px;
+    padding: 40px;
+    border:3px outset black;
+    overflow: auto;
+}
+
+#reportHeader{
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+#reportSubHeader{
+    font-size:1.0em;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+/*LaTex like font definitions*/
+#report, #document, #reportHeader, #reportSubHeader, .niceTable{
+    font-family: Times, "Times New Roman", serif;
+    letter-spacing: 1.2px;
+    color: #000000;
+    text-align: left;
+    width: 98%;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-width: 1px;
+}
+
+.niceButton {
+  text-decoration:none;
+  border:1px outset ButtonShadow;
+  background-color:buttonFace;
+  color:buttonText;
+  padding:1em;
+  margin:0.5em;
+  font-size:1em;
+  font-weight:bold;
+  display:block;
+  min-width: 50px;
+  /*width:85%;*/
+}
+#metaData{
+    
+}
+
+#organization-name{
+    text-align: center;
+    font-size:  x-large;
+    margin-bottom: 10px;
+  }
+  
+  #report-name{
+    float: left;
+  }
+  #print-date{
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  #quarter{
+  }
+  
+  #report-subheader{
+    border: 1px solid #eee;
+    background: #eee;
+  }
+  #menu-buttons{
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  
+    #report-content{
+    border: 1px solid;
+    /*min-height: 200px;*/
+    width: 866px;
+    background: #fefefe;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  
