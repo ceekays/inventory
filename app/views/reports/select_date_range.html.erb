@@ -1,0 +1,10 @@
+<script>
+  var tt_cancel_destination = '/reports';
+</script>
+<form method='get' action="report_lists" >
+  <%= select_tag :report_quarter, options_for_select(@reports_range), {:helpText => "Select Quarter"} %>
+  <%if @funders%>
+    <%= select_tag :funder, options_for_select(@funders), {:helpText => "Select Donor/Funder"} %>
+  <%end%>
+  <%= hidden_field_tag:report_name, "#{@report_type}" %>
+</form>
