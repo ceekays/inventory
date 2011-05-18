@@ -1,0 +1,15 @@
+<%=stylesheet_link_tag "report"%>
+<script src="/javascripts/report_printer.js" type="text/javascript"> </script>
+
+<link href="/stylesheets/report.css" media="print" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/report.css" media="screen" rel="stylesheet" type="text/css" />
+
+<div id="report-header">
+
+  <div id="menu-buttons">
+    <button id="pdf-button" class="buttons" onclick="window.location='<%=reports_path(params)+'&format=pdf'%>'"> PDF </button>
+    <button id="print-button" class="buttons" onclick="print_content('report-section')"> Print </button>
+    <button id="finish-button" class="buttons" onclick="window.location='/reports'"> Finish </button>
+  </div>
+</div>
+
