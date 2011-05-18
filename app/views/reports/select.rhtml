@@ -1,0 +1,20 @@
+<% form_tag :action => 'report_date_select' do %>
+  <select tt_onLoad="changeButtons()" tt_pageStyleClass="ShortSelectList" name="report" helpText="Select Report">
+    <option>Current Stock List</option>
+    <option>CDC Label Analysis</option>
+    <option>Label Activity</option>
+    <option>CDC Ribbon Analysis</option>
+    <option>Ribbon Activity</option>
+    <option>CDC Specimen Label Analysis</option>
+    <option>Specimen Label Activity</option>
+  </select>
+<% end %>
+<script>
+function changeButtons(){
+  $('nextButton').innerHTML = "Select"
+  $('cancelButton').innerHTML = "Finish"
+  $('cancelButton').style.backgroundColor = "lightgray"
+  $('cancelButton').style.borderColor = "gray"
+  tstConfirmCancel = false;
+}
+</script>
