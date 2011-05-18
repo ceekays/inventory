@@ -64,10 +64,10 @@ class ItemController < ApplicationController
     if request.post?
       item=Item.find(params[:id])
       if item and item.update_attributes(params[:item])
-        flash[:notice] = "Item updated successfully."
+        flash[:notice] = "#{item.name} updated successfully."
         redirect_to root_path
       else
-        flash[:error] = "Item updating failed."
+        flash[:error] = "#{item.name} updating failed."
       end
     else
       #@item_fields = [:name,:model,:serial_number,:barcode,:category,:manufacturer]
