@@ -1,0 +1,11 @@
+<% fields_for :reports do |r|%>
+  <%=r.text_field(:value_datetime, :field_type => 'date',
+    :value => @start_date, :helpText => 'Report Start Date:',
+    :allowFreeText => true) + tag(:br) if fields.include? :start_date%>
+  <%=r.text_field(:value_datetime, :field_type => 'date',
+    :value => @end_date, :helpText => 'Report End Date:',
+    :allowFreeText => true) + tag(:br) if fields.include? :stop_date%>
+  <%= select_tag(:report_type, options_for_select(@report_types), {:helpText => 'Select the type of report:',
+        :allowFreeText => true})+ tag(:br) if fields.include? :report_type %>
+
+<% end %>
